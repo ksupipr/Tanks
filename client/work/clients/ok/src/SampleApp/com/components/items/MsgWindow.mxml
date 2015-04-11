@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:TitleWindow xmlns:mx="http://www.adobe.com/2006/mxml" layout="vertical" width="350" height="250" showCloseButton="true" close="PopUpManager.removePopUp(this);">
+	<mx:Script>
+		<![CDATA[
+			import mx.managers.PopUpManager;
+		]]>
+	</mx:Script>
+	
+	<mx:Label text="Message:" />
+	<mx:TextArea id="txt" width="100%" height="100%" maxChars="1000"/>
+	
+	<mx:ControlBar>
+		<mx:Button label="send" click="this.dispatchEvent(new DataEvent('snd', false, false, this.txt.text));"/>
+	</mx:ControlBar>
+</mx:TitleWindow>

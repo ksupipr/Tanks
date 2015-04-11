@@ -1,0 +1,4 @@
+./rebar clean && ./rebar compile && ./rebar generate && cd rel/etanksnode && sh bin/etanksnode console
+
+
+

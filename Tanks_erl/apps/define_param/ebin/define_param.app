@@ -1,0 +1,8 @@
+{application,define_param,
+             [{description,[]},
+              {vsn,"1"},
+              {registered,[]},
+              {applications,[kernel,stdlib]},
+              {mod,{define_param_app,[]}},
+              {env,[]},
+              {modules,[define_param_app]}]}.

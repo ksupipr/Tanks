@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:HBox xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100%" verticalScrollPolicy="off" label="Messages" xmlns:items="com.components.items.*" creationComplete="this.init();">
+	
+	<mx:Script>
+		<![CDATA[
+			import com.api.forticom.SignUtil;
+			import com.components.items.MessageWindow;
+			
+			import mx.controls.Alert;
+			import mx.managers.PopUpManager;
+			
+			protected function init() : void
+			{
+				this.getConversations.send(SignUtil.signRequest({method: "messages.getConversations"}));
+			}
+			
+			protected function handleConversationsData(data : XML) : void
+			{
+				this.userList.data = data.conversation;
+			}
+			
+			protected function userSelected(uid : String) : void
+			{
+				this.getMessages.send(SignUtil.signRequest({method : "messages.getList", first: "0", count: "100", friend_uid : uid}));
+			}
+			
+			protected function handleMessages(data : XML) : void
+			{
+				this.msgList.data = data.message;
+			}
+			
+			protected function msgSelected(mid : String) : void
+			{
+				this.getMsg.send(SignUtil.signRequest({method : "messages.get", msg_id : mid}));
+			}
+			
+			protected function handleMsg(data : XML) : void
+			{
+				var window : MessageWindow = new MessageWindow;
+					window.data = data.message[0];
+					window.addEventListener(Event.SELECT, this.handleMessageSelect, false, 0, true);
+					
+				PopUpManager.addPopUp(window, this.root, true);
+				PopUpManager.centerPopUp(window);
+			}
+			
+			protected function handleMessageSelect(event : DataEvent) : void
+			{
+				var request : Object = {};
+				switch(event.data)
+				{
+					case "read":
+						request["msg_id"] = event.target.data.msg_id;
+						request["method"] = "messages.markAsRead";
+						break;
+					case "spam":
+						request["msg_ids"] = event.target.data.msg_id;
+						request["method"] = "messages.markAsSpam";
+						break;
+					case "del":
+						request["msg_ids"] = event.target.data.msg_id;
+						request["method"] = "messages.delete";
+						break;
+				}
+				
+				this.msgOperation.send(SignUtil.signRequest(request));
+			}
+			
+			protected function handleMsgOp(data : XML) : void
+			{
+				if(data)
+				{
+					Alert.show(data.toXMLString(), "Message operation error:");
+				}
+				else
+				{
+					Alert.show("Message operation successfull!", "Status:");
+				}
+			}
+			
+			protected function handleMessageSend(event : DataEvent) : void
+			{
+				this.sendMsg.send(SignUtil.signRequest({method : "messages.send", friend_uid : event.target.data.friend_uid, text : event.data}));
+			}
+			
+			protected function handleSend(data : XML) : void
+			{
+				Alert.show(data.toXMLString(), "Msg send status:");
+			}
+			
+		]]>
+	</mx:Script>
+	
+	<items:MsgUserList id="userList" select="this.userSelected(event.data);" snd="this.handleMessageSend(event);"/>
+	<items:MsgList id="msgList" select="this.msgSelected(event.data);"/>
+	
+	<mx:HTTPService
+		id="getConversations"
+		url="{this.parentApplication._dataURL}"
+		method="GET"
+		resultFormat="e4x"
+		result="{this.handleConversationsData(this.getConversations.lastResult as XML)}"	
+	/>
+	
+	<mx:HTTPService
+		id="getMessages"
+		url="{this.parentApplication._dataURL}"
+		method="GET"
+		resultFormat="e4x"
+		result="{this.handleMessages(this.getMessages.lastResult as XML);}"
+	/>
+	
+	<mx:HTTPService
+		id="getMsg"
+		url="{this.parentApplication._dataURL}"
+		method="GET"
+		resultFormat="e4x"
+		result="{this.handleMsg(this.getMsg.lastResult as XML);}"
+		/>
+	
+	<mx:HTTPService
+		id="sendMsg"
+		url="{this.parentApplication._dataURL}"
+		method="GET"
+		resultFormat="e4x"
+		result="{this.handleSend(this.sendMsg.lastResult as XML);}"
+		/>
+	
+	<mx:HTTPService
+		id="msgOperation"
+		url="{this.parentApplication._dataURL}"
+		method="GET"
+		resultFormat="e4x"
+		result="{this.handleMsgOp(this.msgOperation.lastResult as XML);}"
+	/>
+	
+</mx:HBox>

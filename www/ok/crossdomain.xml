@@ -1,0 +1,33 @@
+<cross-domain-policy>
+<site-control permitted-cross-domain-policies="all"/>
+<allow-access-from domain="*" />
+<allow-access-from domain="unlexx.ath.cx"/>
+<allow-access-from domain="*.appsmail.ru"/>
+<allow-access-from domain="109.234.156.114"/>
+<allow-access-from domain="109.234.156.115"/>
+<allow-access-from domain="109.234.156.116"/>
+<allow-access-from domain="109.234.156.117"/>
+<allow-access-from domain="109.234.156.118"/>
+<allow-access-from domain="*.xlab.su"/>
+<allow-access-from domain="*.vkontakte.ru"/>
+<allow-access-from domain="*.vk.com"/>
+<allow-access-from domain="*.odnoklassniki.ru"/>
+<allow-access-from domain="*.xlab.su"/>
+<allow-access-from domain="unlexx.ath.cx" to-ports="*"/>
+<allow-access-from domain="109.234.156.114" to-ports="*"/>
+<allow-access-from domain="109.234.156.115" to-ports="*"/>
+<allow-access-from domain="109.234.156.116" to-ports="*"/>
+<allow-access-from domain="109.234.156.117" to-ports="*"/>
+<allow-access-from domain="109.234.156.118" to-ports="*"/>
+<allow-access-from domain="*.xlab.su" to-ports="*"/>
+<allow-access-from domain="*.vkontakte.ru" to-ports="*"/>
+<allow-access-from domain="*.vk.com" to-ports="*"/>
+<allow-access-from domain="*.appsmail.ru" to-ports="*"/>
+<allow-access-from domain="*.mail.ru"/>
+<allow-access-from domain="*.arbatsoft.ru/*"/>
+<allow-access-from domain="arbatsoft.ru"/>
+<allow-access-from domain="*.arbatsoft.ru"/>
+<allow-access-from domain="*.mail.ru" to-ports="*"/>
+<allow-access-from domain="*.odnoklassniki.ru" to-ports="*"/>
+<allow-access-from domain="*.xlab.su" to-ports="*"/>
+</cross-domain-policy>

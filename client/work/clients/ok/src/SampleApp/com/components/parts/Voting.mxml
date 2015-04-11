@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<mx:VBox
+	xmlns:mx="http://www.adobe.com/2006/mxml"
+	label="Votes"
+	width="100%"
+	height="100%">
+		
+	<mx:Script>
+		<![CDATA[
+import com.api.forticom.SignUtil;
+import mx.controls.Alert;
+			
+		public function submit() : void
+		{
+			var item : Object = {};
+				item["vid"] = this.vid.toString();
+				item["vrid"] = this.vrid.toString();
+				item["vote"] = this.vote.toString();
+				item["method"] = "odkl_voting.vote";
+					
+			this.submitUrl.send(SignUtil.signRequest(item));
+		}
+		
+		public function handleData(data : XML) : void
+		{
+			Alert.show(data.toXMLString(), "Server returned:");
+		}
+		
+		]]>
+	</mx:Script>
+		
+	<mx:Form>
+		
+		<mx:FormItem label="vote id:">
+			<mx:TextInput id="vid" />
+		</mx:FormItem>
+		<mx:FormItem label="vote record id:">
+			<mx:TextInput id="vrid" />
+		</mx:FormItem>
+		<mx:FormItem label="vote record value:">
+			<mx:TextInput id="vote" />
+		</mx:FormItem>
+		<mx:FormItem>
+			<mx:Button label="submit" click="submit();" />
+		</mx:FormItem>
+	</mx:Form>
+	
+	<mx:HTTPService
+		id="submitUrl"
+		url="{this.parentApplication._dataURL}"
+		method="GET"
+		resultFormat="e4x"
+		result="this.handleData(submitUrl.lastResult as XML);"
+	/>
+	
+</mx:VBox>

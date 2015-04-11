@@ -1,0 +1,563 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../../print.css" type="text/css" media="print">
+<meta content="IQ,org.igniterealtime.xiff.data.IQ,TYPE_ERROR,TYPE_GET,TYPE_RESULT,TYPE_SET,callback,errorCallback,deserialize,serialize" name="keywords">
+<title>org.igniterealtime.xiff.data.IQ</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'IQ - API Documentation';
+				var baseRef = '../../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">API Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../index-list.html')" href="../../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../../index.html?org/igniterealtime/xiff/data/IQ.html&amp;org/igniterealtime/xiff/data/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;IQ</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#constantSummary">Constants</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class IQ"); titleBar_setSubNav(true,true,false,false,false,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">org.igniterealtime.xiff.data</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public class IQ</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">IQ <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../../../images/inherit-arrow.gif"> <a href="XMPPStanza.html">XMPPStanza</a> <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../../../images/inherit-arrow.gif"> <a href="XMLStanza.html">XMLStanza</a> <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../../../images/inherit-arrow.gif"> <a href="ExtensionContainer.html">ExtensionContainer</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Implements</td><td><a href="ISerializable.html">ISerializable</a></td>
+</tr>
+</table>
+<p></p>
+  A class for abstraction and encapsulation of IQ (info-query) data.
+  <p></p>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<div class="showHideLinks">
+<div class="hideInheritedProperty" id="hideInheritedProperty">
+<a onclick="javascript:setInheritedVisible(false,'Property');" href="#propertySummary" class="showHideLink"><img src="../../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Properties</a>
+</div>
+<div class="showInheritedProperty" id="showInheritedProperty">
+<a onclick="javascript:setInheritedVisible(true,'Property');" href="#propertySummary" class="showHideLink"><img src="../../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Properties</a>
+</div>
+</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#callback">callback</a> : Function<div class="summaryTableDescription">
+   The function that will be called when an IQ result
+   is received with the same ID as one you send.</div>
+</td><td class="summaryTableOwnerCol">IQ</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#errorCallback">errorCallback</a> : Function<div class="summaryTableDescription">
+   The function that will be called when an IQ error
+   is received with the same ID as one you send.</div>
+</td><td class="summaryTableOwnerCol">IQ</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="XMPPStanza.html#errorCode">errorCode</a> : int<div class="summaryTableDescription">
+   The error code, assuming this stanza contains error information.</div>
+</td><td class="summaryTableOwnerCol"><a href="XMPPStanza.html">XMPPStanza</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="XMPPStanza.html#errorCondition">errorCondition</a> : String<div class="summaryTableDescription">
+   The error condition, assuming this stanza contains error information.</div>
+</td><td class="summaryTableOwnerCol"><a href="XMPPStanza.html">XMPPStanza</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="XMPPStanza.html#errorMessage">errorMessage</a> : String<div class="summaryTableDescription">
+   The error message, assuming this stanza contains error information.</div>
+</td><td class="summaryTableOwnerCol"><a href="XMPPStanza.html">XMPPStanza</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="XMPPStanza.html#errorType">errorType</a> : String<div class="summaryTableDescription">
+   The error type, assuming this stanza contains error information.</div>
+</td><td class="summaryTableOwnerCol"><a href="XMPPStanza.html">XMPPStanza</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="ExtensionContainer.html#_exts">_exts</a> : Object<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="ExtensionContainer.html">ExtensionContainer</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="XMPPStanza.html#from">from</a> : <a href="../core/EscapedJID.html">EscapedJID</a>
+<div class="summaryTableDescription">
+   The JID of the sender.</div>
+</td><td class="summaryTableOwnerCol"><a href="XMPPStanza.html">XMPPStanza</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="XMPPStanza.html#id">id</a> : String<div class="summaryTableDescription">
+   The unique identifier of this stanza.</div>
+</td><td class="summaryTableOwnerCol"><a href="XMPPStanza.html">XMPPStanza</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="XMPPStanza.html#to">to</a> : <a href="../core/EscapedJID.html">EscapedJID</a>
+<div class="summaryTableDescription">
+   The JID of the recipient.</div>
+</td><td class="summaryTableOwnerCol"><a href="XMPPStanza.html">XMPPStanza</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="XMPPStanza.html#type">type</a> : String<div class="summaryTableDescription">
+   The stanza type.</div>
+</td><td class="summaryTableOwnerCol"><a href="XMPPStanza.html">XMPPStanza</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="XMLStanza.html#XMLData">XMLData</a> : XML<div class="summaryTableDescription">[static]</div>
+</td><td class="summaryTableOwnerCol"><a href="XMLStanza.html">XMLStanza</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="XMLStanza.html#XMLFactory">XMLFactory</a> : XMLDocument<div class="summaryTableDescription">[static]</div>
+</td><td class="summaryTableOwnerCol"><a href="XMLStanza.html">XMLStanza</a></td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<div class="showHideLinks">
+<div class="hideInheritedMethod" id="hideInheritedMethod">
+<a onclick="javascript:setInheritedVisible(false,'Method');" href="#methodSummary" class="showHideLink"><img src="../../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Methods</a>
+</div>
+<div class="showInheritedMethod" id="showInheritedMethod">
+<a onclick="javascript:setInheritedVisible(true,'Method');" href="#methodSummary" class="showHideLink"><img src="../../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Methods</a>
+</div>
+</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#IQ()">IQ</a>(recipient:<a href="../core/EscapedJID.html">EscapedJID</a> = null, iqType:String = null, iqID:String = null, iqCallback:Function = null, iqErrorCallback:Function = null)</div>
+<div class="summaryTableDescription">
+   A class for abstraction and encapsulation of IQ (info-query) data.</div>
+</td><td class="summaryTableOwnerCol">IQ</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="ExtensionContainer.html#addExtension()">addExtension</a>(ext:<a href="../data/IExtension.html">IExtension</a>):<a href="../data/IExtension.html">IExtension</a>
+</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="ExtensionContainer.html">ExtensionContainer</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="XMLStanza.html#addTextNode()">addTextNode</a>(parent:XMLNode, elementName:String, value:String):XMLNode</div>
+<div class="summaryTableDescription">
+   Adds a simple text node to the parent node specified.</div>
+</td><td class="summaryTableOwnerCol"><a href="XMLStanza.html">XMLStanza</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#deserialize()">deserialize</a>(xmlNode:XMLNode):Boolean</div>
+<div class="summaryTableDescription">
+   Deserializes an XML object and populates the IQ instance with its data.</div>
+</td><td class="summaryTableOwnerCol">IQ</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="XMLStanza.html#ensureNode()">ensureNode</a>(node:XMLNode, elementName:String):XMLNode</div>
+<div class="summaryTableDescription">
+   Ensures that a node with a specific element name exists in the stanza.</div>
+</td><td class="summaryTableOwnerCol"><a href="XMLStanza.html">XMLStanza</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="XMLStanza.html#exists()">exists</a>(value:*):Boolean</div>
+<div class="summaryTableDescription">[static]
+   A helper method to determine if a value is both not null
+   and not undefined.</div>
+</td><td class="summaryTableOwnerCol"><a href="XMLStanza.html">XMLStanza</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="XMPPStanza.html#generateID()">generateID</a>(prefix:String):String</div>
+<div class="summaryTableDescription">[static]
+   (Static method) Generates a unique ID for the stanza.</div>
+</td><td class="summaryTableOwnerCol"><a href="XMPPStanza.html">XMPPStanza</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="ExtensionContainer.html#getAllExtensions()">getAllExtensions</a>():Array</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="ExtensionContainer.html">ExtensionContainer</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="ExtensionContainer.html#getAllExtensionsByNS()">getAllExtensionsByNS</a>(ns:String):Array</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="ExtensionContainer.html">ExtensionContainer</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="ExtensionContainer.html#getExtension()">getExtension</a>(name:String):<a href="../data/Extension.html">Extension</a>
+</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="ExtensionContainer.html">ExtensionContainer</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="XMLStanza.html#getNode()">getNode</a>():XMLNode</div>
+<div class="summaryTableDescription">
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="XMLStanza.html">XMLStanza</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="ExtensionContainer.html#removeAllExtensions()">removeAllExtensions</a>(ns:String):void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="ExtensionContainer.html">ExtensionContainer</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="ExtensionContainer.html#removeExtension()">removeExtension</a>(ext:<a href="../data/IExtension.html">IExtension</a>):Boolean</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="ExtensionContainer.html">ExtensionContainer</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="XMLStanza.html#replaceTextNode()">replaceTextNode</a>(parent:XMLNode, original:XMLNode, elementName:String, value:String):XMLNode</div>
+<div class="summaryTableDescription">
+   Replaces one node in the stanza with another simple text node.</div>
+</td><td class="summaryTableOwnerCol"><a href="XMLStanza.html">XMLStanza</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#serialize()">serialize</a>(parentNode:XMLNode):Boolean</div>
+<div class="summaryTableDescription">
+   Serializes the IQ into XML form for sending to a server.</div>
+</td><td class="summaryTableOwnerCol">IQ</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="XMPPStanza.html#setIDGenerator()">setIDGenerator</a>(generator:<a href="id/IIDGenerator.html">IIDGenerator</a>):void</div>
+<div class="summaryTableDescription">[static]
+    (Static method) Sets the ID generator for this stanza type.</div>
+</td><td class="summaryTableOwnerCol"><a href="XMPPStanza.html">XMPPStanza</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="XMLStanza.html#setNode()">setNode</a>(node:XMLNode):Boolean</div>
+<div class="summaryTableDescription">
+   Sets the XML node that should be used for this stanza's internal XML representation.</div>
+</td><td class="summaryTableOwnerCol"><a href="XMLStanza.html">XMLStanza</a></td>
+</tr>
+</table>
+</div>
+<a name="constantSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Constants</div>
+<div class="showHideLinks">
+<div class="hideInheritedConstant" id="hideInheritedConstant">
+<a onclick="javascript:setInheritedVisible(false,'Constant');" href="#constantSummary" class="showHideLink"><img src="../../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Constants</a>
+</div>
+<div class="showInheritedConstant" id="showInheritedConstant">
+<a onclick="javascript:setInheritedVisible(true,'Constant');" href="#constantSummary" class="showHideLink"><img src="../../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Constants</a>
+</div>
+</div>
+<table id="summaryTableConstant" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Constant</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="XMPPStanza.html#CLIENT_NAMESPACE">CLIENT_NAMESPACE</a> : String = "jabber:client"<div class="summaryTableDescription">[static]</div>
+</td><td class="summaryTableOwnerCol"><a href="XMPPStanza.html">XMPPStanza</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="XMPPStanza.html#CLIENT_VERSION">CLIENT_VERSION</a> : String = "1.0"<div class="summaryTableDescription">[static]
+   The version of XMPP specified in RFC 3920 is "1.0"; in particular, this
+   encapsulates the stream-related protocols (Use of TLS (Section 5),
+   Use of SASL (Section 6), and Stream Errors (Section 4.7)), as well as
+   the semantics of the three defined XML stanza types (<message/>,
+   <presence/>, and <iq/>).</div>
+</td><td class="summaryTableOwnerCol"><a href="XMPPStanza.html">XMPPStanza</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="XMPPStanza.html#NAMESPACE_FLASH">NAMESPACE_FLASH</a> : String = "http://www.jabber.com/streams/flash"<div class="summaryTableDescription">[static]</div>
+</td><td class="summaryTableOwnerCol"><a href="XMPPStanza.html">XMPPStanza</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="XMPPStanza.html#NAMESPACE_STREAM">NAMESPACE_STREAM</a> : String = "http://etherx.jabber.org/streams"<div class="summaryTableDescription">[static]</div>
+</td><td class="summaryTableOwnerCol"><a href="XMPPStanza.html">XMPPStanza</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#TYPE_ERROR">TYPE_ERROR</a> : String = "error"<div class="summaryTableDescription">[static]
+   The stanza reports an error that has occurred
+   regarding processing or delivery of a previously-sent get or
+   set request.</div>
+</td><td class="summaryTableOwnerCol">IQ</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#TYPE_GET">TYPE_GET</a> : String = "get"<div class="summaryTableDescription">[static]
+   The stanza requests information, inquires about what
+   data is needed in order to complete further operations, etc.</div>
+</td><td class="summaryTableOwnerCol">IQ</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#TYPE_RESULT">TYPE_RESULT</a> : String = "result"<div class="summaryTableDescription">[static]
+   The stanza is a response to a successful get or set request.</div>
+</td><td class="summaryTableOwnerCol">IQ</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#TYPE_SET">TYPE_SET</a> : String = "set"<div class="summaryTableDescription">[static]
+   The stanza provides data that is needed for an
+   operation to be completed, sets new values, replaces existing
+   values, etc.</div>
+</td><td class="summaryTableOwnerCol">IQ</td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="XMPPStanza.html#XML_LANG">XML_LANG</a> : String = "en"<div class="summaryTableDescription">[static]</div>
+</td><td class="summaryTableOwnerCol"><a href="XMPPStanza.html">XMPPStanza</a></td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="propertyDetail"></a>
+<div class="detailSectionHeader">Property detail</div>
+<a name="callback"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">callback</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>callback:Function</code>&nbsp;&nbsp;[read-write]<p>
+   The function that will be called when an IQ result
+   is received with the same ID as one you send.
+      </p><p>Callback functions take one parameter which will be the IQ instance
+   received from the server.</p>
+      <p>This isn't a required property, but is useful if you
+   need to respond to server responses to an IQ.</p>
+   <span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get callback():Function</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set callback(value:Function):void</code>
+<br>
+</div>
+<a name="errorCallback"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">errorCallback</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>errorCallback:Function</code>&nbsp;&nbsp;[read-write]<p>
+   The function that will be called when an IQ error
+   is received with the same ID as one you send.
+      </p><p>Callback functions take one parameter which will be the IQ instance
+   received from the server.</p>
+      <p>This isn't a required property, but is useful if you
+   need to respond to server responses to an IQ.</p>
+   <span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get errorCallback():Function</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set errorCallback(value:Function):void</code>
+<br>
+</div>
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor detail</div>
+<a name="IQ()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">IQ</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function IQ(recipient:<a href="../core/EscapedJID.html">EscapedJID</a> = null, iqType:String = null, iqID:String = null, iqCallback:Function = null, iqErrorCallback:Function = null)</code><p>
+   A class for abstraction and encapsulation of IQ (info-query) data.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">recipient</span>:<a href="../core/EscapedJID.html">EscapedJID</a></code> (default = <code>null</code>)<code></code> &mdash; The JID of the IQ recipient
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">iqType</span>:String</code> (default = <code>null</code>)<code></code> &mdash; The type of the IQ - there are static variables declared for each type
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">iqID</span>:String</code> (default = <code>null</code>)<code></code> &mdash; The unique ID of the IQ
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">iqCallback</span>:Function</code> (default = <code>null</code>)<code></code> &mdash; The function to be called when the server responds to the IQ
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">iqErrorCallback</span>:Function</code> (default = <code>null</code>)<code></code> &mdash; The object instance containing the callback method
+   </td>
+</tr>
+</table>
+</div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="deserialize()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">deserialize</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public override function deserialize(xmlNode:XMLNode):Boolean</code><p>
+   Deserializes an XML object and populates the IQ instance with its data.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">xmlNode</span>:XMLNode</code> &mdash; The XML to deserialize
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Boolean</code> &mdash; An indication as to whether deserialization was sucessful
+   </td>
+</tr>
+</table>
+</div>
+<a name="serialize()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">serialize</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public override function serialize(parentNode:XMLNode):Boolean</code><p>
+   Serializes the IQ into XML form for sending to a server.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">parentNode</span>:XMLNode</code></td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Boolean</code> &mdash; An indication as to whether serialization was successful
+   </td>
+</tr>
+</table>
+</div>
+<a name="constantDetail"></a>
+<div class="detailSectionHeader">Constant detail</div>
+<a name="TYPE_ERROR"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">TYPE_ERROR</td><td class="detailHeaderType">constant</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const TYPE_ERROR:String = "error"</code><p>
+   The stanza reports an error that has occurred
+   regarding processing or delivery of a previously-sent get or
+   set request.
+   </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://tools.ietf.org/html/draft-ietf-xmpp-3920bis-00#section-9.3" target="mm_external">http://tools.ietf.org/html/draft-ietf-xmpp-3920bis-00#section-9.3</a>
+</div>
+</div>
+<a name="TYPE_GET"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">TYPE_GET</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const TYPE_GET:String = "get"</code><p>
+   The stanza requests information, inquires about what
+   data is needed in order to complete further operations, etc.
+   </p></div>
+<a name="TYPE_RESULT"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">TYPE_RESULT</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const TYPE_RESULT:String = "result"</code><p>
+   The stanza is a response to a successful get or set request.
+   </p></div>
+<a name="TYPE_SET"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">TYPE_SET</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const TYPE_SET:String = "set"</code><p>
+   The stanza provides data that is needed for an
+   operation to be completed, sets new values, replaces existing
+   values, etc.
+   </p></div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> 
+</center>
+</div>
+</body>
+</html>
+<!-- -->

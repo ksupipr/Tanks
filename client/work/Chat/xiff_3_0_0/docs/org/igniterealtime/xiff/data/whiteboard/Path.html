@@ -1,0 +1,419 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../../../print.css" type="text/css" media="print">
+<meta content="Path,org.igniterealtime.xiff.data.whiteboard.Path,ELEMENT_NAME,fill,segments,stroke,addPoints,addSegment,deserialize,serialize,serializeSegments" name="keywords">
+<title>org.igniterealtime.xiff.data.whiteboard.Path</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'Path - API Documentation';
+				var baseRef = '../../../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">API Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../../../all-classes.html')" href="../../../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../../all-classes.html')" href="../../../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../../index-list.html')" href="../../../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../../../index.html?org/igniterealtime/xiff/data/whiteboard/Path.html&amp;org/igniterealtime/xiff/data/whiteboard/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;Path</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#constantSummary">Constants</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class Path"); titleBar_setSubNav(true,true,false,false,false,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">org.igniterealtime.xiff.data.whiteboard</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public class Path</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Implements</td><td><a href="../ISerializable.html">ISerializable</a></td>
+</tr>
+</table>
+<p></p>
+  A message extension for whitboard exchange. This class is the base class
+  for other extension classes such as Path
+  <p></p>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#fill">fill</a> : <a href="../whiteboard/Fill.html">Fill</a>
+<div class="summaryTableDescription">[read-only]
+      The Fill object that contains the properties describing the fill of this
+      path
+            </div>
+</td><td class="summaryTableOwnerCol">Path</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#segments">segments</a> : Array<div class="summaryTableDescription">[read-only]
+      The read-only list of start and end points encoded as an array of objects with the 
+      format { from: { x: ###, y: ### }, to: { x: ###, y: ### } }
+            You should not modify this list.</div>
+</td><td class="summaryTableOwnerCol">Path</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#stroke">stroke</a> : <a href="../whiteboard/Stroke.html">Stroke</a>
+<div class="summaryTableDescription">[read-only]
+      The Stroke object that contains the properties describing the stroke of this
+      path
+            </div>
+</td><td class="summaryTableOwnerCol">Path</td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#Path()">Path</a>(parent:XMLNode = null)</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">Path</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#addPoints()">addPoints</a>(from_x:Number, from_y:Number, to_x:Number, to_y:Number):Object</div>
+<div class="summaryTableDescription">
+      Another interface to add segments to this extension.</div>
+</td><td class="summaryTableOwnerCol">Path</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#addSegment()">addSegment</a>(seg:Object):Object</div>
+<div class="summaryTableDescription">
+      Adds a start point and end point to this path.</div>
+</td><td class="summaryTableOwnerCol">Path</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#deserialize()">deserialize</a>(node:XMLNode):Boolean</div>
+<div class="summaryTableDescription">
+   Deserializes the Path data.</div>
+</td><td class="summaryTableOwnerCol">Path</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#serialize()">serialize</a>(parent:XMLNode):Boolean</div>
+<div class="summaryTableDescription">
+   Serializes the Path data to XML for sending.</div>
+</td><td class="summaryTableOwnerCol">Path</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#serializeSegments()">serializeSegments</a>():String</div>
+<div class="summaryTableDescription">
+   Creates the compact form of the segments
+   in the fomrmat defined by SVG
+   Example: M100 200L14 -15 L 125 100L150 200 300 400M10 20L30 40 50 60 z
+         </div>
+</td><td class="summaryTableOwnerCol">Path</td>
+</tr>
+</table>
+</div>
+<a name="constantSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Constants</div>
+<table id="summaryTableConstant" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Constant</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#ELEMENT_NAME">ELEMENT_NAME</a> : String = "path"<div class="summaryTableDescription">[static]</div>
+</td><td class="summaryTableOwnerCol">Path</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="propertyDetail"></a>
+<div class="detailSectionHeader">Property detail</div>
+<a name="fill"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">fill</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>fill:<a href="../whiteboard/Fill.html">Fill</a></code>&nbsp;&nbsp;[read-only]<p>
+      The Fill object that contains the properties describing the fill of this
+      path
+            </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get fill():<a href="../whiteboard/Fill.html">Fill</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../whiteboard/Fill.html" target="">org.igniterealtime.xiff.data.whiteboard.Fill</a>
+</div>
+</div>
+<a name="segments"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">segments</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>segments:Array</code>&nbsp;&nbsp;[read-only]<p>
+      The read-only list of start and end points encoded as an array of objects with the 
+      format { from: { x: ###, y: ### }, to: { x: ###, y: ### } }
+            You should not modify this list.  Segments should be added with addSegment
+            </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get segments():Array</code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../whiteboard/Path.html#addSegment" target="">addSegment</a>
+</div>
+</div>
+<a name="stroke"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">stroke</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>stroke:<a href="../whiteboard/Stroke.html">Stroke</a></code>&nbsp;&nbsp;[read-only]<p>
+      The Stroke object that contains the properties describing the stroke of this
+      path
+            </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get stroke():<a href="../whiteboard/Stroke.html">Stroke</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../whiteboard/Stroke.html" target="">org.igniterealtime.xiff.data.whiteboard.Stroke</a>
+</div>
+</div>
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor detail</div>
+<a name="Path()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">Path</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function Path(parent:XMLNode = null)</code><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">parent</span>:XMLNode</code> (default = <code>null</code>)<code></code></td>
+</tr>
+</table>
+</div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="addPoints()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">addPoints</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function addPoints(from_x:Number, from_y:Number, to_x:Number, to_y:Number):Object</code><p>
+      Another interface to add segments to this extension.  Instead of passing
+      an object, you can pass parameters that will be converted into a segment
+      and passed to addSegment
+            </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">from_x</span>:Number</code> &mdash; the start x coordinate
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">from_y</span>:Number</code> &mdash; the start y coordinate
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">to_x</span>:Number</code> &mdash; the destination x coordinate
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">to_y</span>:Number</code> &mdash; the destination y coordinate
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Object</code> &mdash; the segment object created from the parameters with the rounded values
+      from being modified in addSegment
+      </td>
+</tr>
+</table>
+</div>
+<a name="addSegment()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">addSegment</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function addSegment(seg:Object):Object</code><p>
+      Adds a start point and end point to this path.  The points will be rounded
+      to the nearest integer to save serialization space.  10.0000001 takes 
+      4 times as much spaces as 10
+            </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">seg</span>:Object</code> &mdash; An object containing the properties "from" and "to" which
+      are objects with the properties "x" and "y".  An example would 
+      be { from: { x: 100, y: 200 }, to: { x: 200, y: 300 } }
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Object</code> &mdash; the segment parameter with the rounded values
+      </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../whiteboard/Path.html#addPoints" target="">addPoints</a>
+</div>
+</div>
+<a name="deserialize()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">deserialize</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function deserialize(node:XMLNode):Boolean</code><p>
+   Deserializes the Path data.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">node</span>:XMLNode</code> &mdash; The XML node associated this data
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Boolean</code> &mdash; true if deserialization was successful
+   </td>
+</tr>
+</table>
+</div>
+<a name="serialize()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">serialize</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function serialize(parent:XMLNode):Boolean</code><p>
+   Serializes the Path data to XML for sending.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">parent</span>:XMLNode</code> &mdash; The parent node that this extension should be serialized into
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Boolean</code> &mdash; An indicator as to whether serialization was successful
+   </td>
+</tr>
+</table>
+</div>
+<a name="serializeSegments()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">serializeSegments</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function serializeSegments():String</code><p>
+   Creates the compact form of the segments
+   in the fomrmat defined by SVG
+   Example: M100 200L14 -15 L 125 100L150 200 300 400M10 20L30 40 50 60 z
+         </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>String</code> &mdash; String containging the compact version
+   </td>
+</tr>
+</table>
+</div>
+<a name="constantDetail"></a>
+<div class="detailSectionHeader">Constant detail</div>
+<a name="ELEMENT_NAME"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">ELEMENT_NAME</td><td class="detailHeaderType">constant</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const ELEMENT_NAME:String = "path"</code>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> 
+</center>
+</div>
+</body>
+</html>
+<!-- -->

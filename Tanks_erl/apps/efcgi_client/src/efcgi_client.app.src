@@ -1,0 +1,21 @@
+{application, efcgi_client,
+ [
+  {description, "Elrlang FastCGI client"},
+  {vsn, ""},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib,
+                  sasl,
+                  gproc,
+                  efcgi
+                 ]},
+
+  
+  {modules, [ efcgi_client
+            , efcgi_client_app
+            , efcgi_client_fcgi
+  ]},
+  {mod, {efcgi_client_app,[]}},
+  {env, []}
+ ]}.

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<mx:VBox label="Notifications" xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100%">
+	
+	<mx:Script>
+		<![CDATA[
+			import com.api.forticom.SignUtil;
+			protected function save() : void
+			{
+				var item : Object = { };
+					item['type'] = "app_to_user"
+					item['method'] = "notifications.send";
+					item['notification'] = NotificationField.text;
+				
+				this.sendNotifications.send(SignUtil.signRequest(item));
+			}
+		]]>
+	</mx:Script>
+	
+	<mx:Label text="Send notification to all application users:" />
+	<mx:TextArea id="NotificationField" text="Message" width="100%" height="400" />
+	<mx:Button label="Save" click="save();" />
+	
+	<mx:HTTPService
+		id="sendNotifications"
+		url="{this.parentApplication._dataURL}"
+		method="GET"
+		resultFormat="e4x"
+	/>
+</mx:VBox>

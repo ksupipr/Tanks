@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<mx:VBox xmlns:mx="http://www.adobe.com/2006/mxml" label="API"
+addedToStage="{this.test();}">
+	
+	<mx:Script>
+		<![CDATA[
+		import com.api.forticom.SignUtil;
+			import com.api.forticom.ForticomAPI;
+			import flash.external.ExternalInterface;
+			import flash.net.navigateToURL;
+			import flash.net.URLRequest;
+			import mx.controls.Alert;
+			protected var _test : Boolean = false;
+			
+			protected function test() : void
+			{
+				trace("object is added to stage");
+				
+				if (!this._test)
+				{
+					this._test = true;
+					ForticomAPI.addEventListener(ForticomAPI.CONNECTED, this.handleConnect);
+					ForticomAPI.connection = this.stage.loaderInfo.parameters['apiconnection'];
+				}
+			}
+			
+			protected function handleConnect(event : Event) : void
+			{
+				trace("connection established");
+			}
+			
+			protected function doTest() : void
+			{
+				ExternalInterface.call("__FAPI__ShowInvite");
+			}
+			
+			protected function doTestTwo() : void
+			{
+				navigateToURL(new URLRequest("javascript:alert('123');"), "_top");
+			}
+			
+			protected function doTestThree() : void
+			{
+				navigateToURL(new URLRequest("http://www.google.com/"), "_top");
+			}
+			
+			protected function doSetWindowSize() : void 
+			{
+				ForticomAPI.setWindowSize(parseInt(this.edWidth.text), parseInt(this.edHeight.text));
+			}
+		]]>
+	</mx:Script>
+	
+	<mx:Button label="ShowPemrissions();" click="ForticomAPI.showPermissions('PUBLISH TO STREAM', 'PHOTO CONTENT','MESSAGING','SET STATUS');" />
+	<mx:Button label="ShowInvite();" click="ForticomAPI.showInvite('Default invitation text', 'a=1&amp;b=значение по русски');" />
+	<mx:Button label="ShowNotification();" click="{ForticomAPI.showNotification('Suggested text', 'a=1&amp;b=значение по русски')}" />
+	<mx:Button label="ShowPayment();" click="ForticomAPI.showPayment('Product Name', 'Product Desctiption', 'IDDQD', 5);" />
+	<mx:Button label="ShowPayment(); + cur and cb" click="ForticomAPI.showPayment('Product Name', 'Product Desctiption', 'IDDQD', 5, null, null, 'ok', 'true');" />
+	<mx:Button label="ShowConfirmation();" click="ForticomAPI.showConfirmation('test.test', 'user text', SignUtil.secretKey);" />
+	<mx:HBox>
+	<mx:FormItem label="Width:">
+		<mx:TextInput id="edWidth" text="700" />
+	</mx:FormItem>
+	<mx:FormItem label="Height:">
+		<mx:TextInput id="edHeight" text="700" />
+	</mx:FormItem>
+	<mx:Button label="SetWindowSize();" click="this.doSetWindowSize();" />
+	</mx:HBox>
+	<mx:Spacer height="50"/>
+	<mx:Button label="try direct navigateToURL with JS" click="doTestTwo();" />
+	<mx:Button label="try direct navigateToURL" click="doTestThree();" />
+	<mx:Button label="try direct call (show payment())" click="doTest();" />
+</mx:VBox>

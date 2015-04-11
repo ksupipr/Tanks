@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:VBox xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100%" label="Params" addedToStage="this.init();">
+	<mx:Script>
+		<![CDATA[
+			
+			[Bindable]
+			protected var _text : String = "";
+			
+			protected function init() : void
+			{
+				var params : Object = this.stage.loaderInfo.parameters;
+				
+				for (var key : String in params)
+				{
+					this._text += "-> " + key + ": " + params[key] + "\n";
+				}
+			}
+			
+		]]>
+	</mx:Script>
+	<mx:TextArea text="{this._text}" width="100%" height="100%" />
+</mx:VBox>

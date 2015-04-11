@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<mx:VBox
+	xmlns:mx="http://www.adobe.com/2006/mxml"
+	label="Events"
+	width="100%"
+	height="100%"
+	creationComplete="this.toggleTimer();">
+		
+	<mx:Script>
+		<![CDATA[
+			import com.api.forticom.SignUtil;
+			import flash.events.Event;
+			import flash.events.TimerEvent;
+			import flash.utils.Timer;
+			protected var timer : Timer = new Timer(10000);
+			
+			protected function toggleTimer() : void
+			{
+				if (!timer.hasEventListener(TimerEvent.TIMER))
+				{
+					timer.addEventListener(TimerEvent.TIMER, this.handleTimer);
+				}
+				
+				if (this.auto.selected)
+				{
+					this.timer.start();
+					this.handleTimer();
+				}
+				else
+					this.timer.stop();
+			}
+			
+			protected function handleTimer(event : Event = null) : void
+			{
+				getEvents.send(SignUtil.signRequest({method:'events.get'}));
+			}
+		]]>
+	</mx:Script>
+	
+	<mx:VBox width="100%" height="100%">
+		<mx:CheckBox id="auto" label="automatically refresh server events every 10 seconds" selected="true" change="this.toggleTimer()" />
+		<mx:TextArea width="100%" height="100%" id="eventLog" />
+	</mx:VBox>
+		
+	<mx:HTTPService
+		id="getEvents"
+		url="{this.parentApplication._dataURL}"
+		method="GET"
+		resultFormat="e4x"
+		result="{eventLog.text = getEvents.lastResult.children() + '\n';}"
+	/>
+	
+</mx:VBox>

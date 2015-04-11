@@ -1,0 +1,683 @@
+
+=PROGRESS REPORT==== 3-Jun-2013::15:10:53 ===
+          supervisor: {local,sasl_safe_sup}
+             started: [{pid,<0.64.0>},
+                       {name,alarm_handler},
+                       {mfargs,{alarm_handler,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 3-Jun-2013::15:10:53 ===
+          supervisor: {local,sasl_safe_sup}
+             started: [{pid,<0.65.0>},
+                       {name,overload},
+                       {mfargs,{overload,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 3-Jun-2013::15:10:53 ===
+          supervisor: {local,sasl_sup}
+             started: [{pid,<0.63.0>},
+                       {name,sasl_safe_sup},
+                       {mfargs,
+                           {supervisor,start_link,
+                               [{local,sasl_safe_sup},sasl,safe]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+=PROGRESS REPORT==== 3-Jun-2013::15:10:53 ===
+          supervisor: {local,sasl_sup}
+             started: [{pid,<0.66.0>},
+                       {name,release_handler},
+                       {mfargs,{release_handler,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 3-Jun-2013::15:10:53 ===
+         application: sasl
+          started_at: etanksnode@localhost
+
+=PROGRESS REPORT==== 3-Jun-2013::15:10:53 ===
+          supervisor: {local,efcgi_sup}
+             started: [{pid,<0.73.0>},
+                       {name,efcgi_request_proxy},
+                       {mfargs,{efcgi_request_proxy,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 3-Jun-2013::15:10:53 ===
+          supervisor: {local,efcgi_sup}
+             started: [{pid,<0.74.0>},
+                       {name,efcgi_request_sup},
+                       {mfargs,{efcgi_request_sup,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,supervisor}]
+
+=PROGRESS REPORT==== 3-Jun-2013::15:10:53 ===
+          supervisor: {local,efcgi_sup}
+             started: [{pid,<0.75.0>},
+                       {name,efcgi_server_sup},
+                       {mfargs,{efcgi_server_sup,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,supervisor}]
+
+=PROGRESS REPORT==== 3-Jun-2013::15:10:53 ===
+          supervisor: {local,efcgi_client_sup}
+             started: [{pid,<0.72.0>},
+                       {name,efcgi_sup},
+                       {mfargs,{efcgi_sup,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+=PROGRESS REPORT==== 3-Jun-2013::15:10:53 ===
+          supervisor: {local,efcgi_client_sup}
+             started: [{pid,<0.76.0>},
+                       {name,efcgi_client_fcgi},
+                       {mfargs,{efcgi_client_fcgi,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 3-Jun-2013::15:10:53 ===
+         application: efcgi_client
+          started_at: etanksnode@localhost
+
+=PROGRESS REPORT==== 3-Jun-2013::15:10:53 ===
+         application: define_param
+          started_at: etanksnode@localhost
+
+=PROGRESS REPORT==== 3-Jun-2013::15:10:53 ===
+         application: epgsql
+          started_at: etanksnode@localhost
+
+=PROGRESS REPORT==== 3-Jun-2013::15:10:53 ===
+          supervisor: {local,inet_gethost_native_sup}
+             started: [{pid,<0.92.0>},{mfa,{inet_gethost_native,init,[[]]}}]
+
+=PROGRESS REPORT==== 3-Jun-2013::15:10:53 ===
+          supervisor: {local,kernel_safe_sup}
+             started: [{pid,<0.91.0>},
+                       {name,inet_gethost_native_sup},
+                       {mfargs,{inet_gethost_native,start_link,[]}},
+                       {restart_type,temporary},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 3-Jun-2013::15:10:53 ===
+          supervisor: {local,xlab_db_sup}
+             started: [{pid,<0.88.0>},
+                       {name,[120,108,97,98,95,100,98,0]},
+                       {mfargs,
+                           {xlab_db,start_link,
+                               [{0,
+                                 {"192.168.45.66","reitars-web-interface",
+                                  "rwiuser_pass",
+                                  [{database,"tanks2"},{port,6432}]}}]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 3-Jun-2013::15:10:53 ===
+          supervisor: {local,xlab_db_sup}
+             started: [{pid,<0.93.0>},
+                       {name,[120,108,97,98,95,100,98,1]},
+                       {mfargs,
+                           {xlab_db,start_link,
+                               [{1,
+                                 {"192.168.45.66","reitars-web-interface",
+                                  "rwiuser_pass",
+                                  [{database,"Tanks"},{port,6432}]}}]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 3-Jun-2013::15:10:53 ===
+          supervisor: {local,xlab_db_sup}
+             started: [{pid,<0.96.0>},
+                       {name,[120,108,97,98,95,100,98,2]},
+                       {mfargs,
+                           {xlab_db,start_link,
+                               [{2,
+                                 {"192.168.45.66","reitars-web-interface",
+                                  "rwiuser_pass",
+                                  [{database,"tanks2"},{port,6432}]}}]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 3-Jun-2013::15:10:53 ===
+          supervisor: {local,xlab_db_sup}
+             started: [{pid,<0.99.0>},
+                       {name,[120,108,97,98,95,100,98,3]},
+                       {mfargs,
+                           {xlab_db,start_link,
+                               [{3,
+                                 {"192.168.45.66","reitars-web-interface",
+                                  "rwiuser_pass",
+                                  [{database,"tanks3"},{port,6432}]}}]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 3-Jun-2013::15:10:53 ===
+          supervisor: {local,xlab_db_sup}
+             started: [{pid,<0.102.0>},
+                       {name,[120,108,97,98,95,100,98,4]},
+                       {mfargs,
+                           {xlab_db,start_link,
+                               [{4,
+                                 {"192.168.45.66","reitars-web-interface",
+                                  "rwiuser_pass",
+                                  [{database,"tanks4"},{port,6432}]}}]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 3-Jun-2013::15:10:53 ===
+          supervisor: {local,xlab_db_sup}
+             started: [{pid,<0.105.0>},
+                       {name,[120,108,97,98,95,100,98,5]},
+                       {mfargs,
+                           {xlab_db,start_link,
+                               [{5,
+                                 {"192.168.45.66","reitars-web-interface",
+                                  "rwiuser_pass",
+                                  [{database,"tanks4"},{port,6432}]}}]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 3-Jun-2013::15:10:53 ===
+         application: xlab_db
+          started_at: etanksnode@localhost
+
+=PROGRESS REPORT==== 3-Jun-2013::15:10:53 ===
+          supervisor: {local,etanks_sup}
+             started: [{pid,<0.112.0>},
+                       {name,etanks_auth},
+                       {mfargs,{etanks_auth,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 3-Jun-2013::15:10:53 ===
+          supervisor: {local,etanks_sup}
+             started: [{pid,<0.113.0>},
+                       {name,etanks_subscriber},
+                       {mfargs,{etanks_subscriber,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 3-Jun-2013::15:10:53 ===
+          supervisor: {local,etanks_sup}
+             started: [{pid,<0.115.0>},
+                       {name,etanks_mods_info},
+                       {mfargs,{etanks_mods_info,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 3-Jun-2013::15:10:53 ===
+         application: etanks
+          started_at: etanksnode@localhost
+
+=PROGRESS REPORT==== 3-Jun-2013::15:10:53 ===
+          supervisor: {local,xlab_perit_sup}
+             started: [{pid,<0.120.0>},
+                       {name,perit_worker},
+                       {mfargs,{perit_worker,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 3-Jun-2013::15:10:53 ===
+         application: xlab_perit
+          started_at: etanksnode@localhost
+
+=PROGRESS REPORT==== 3-Jun-2013::15:10:54 ===
+          supervisor: {local,user_data_sup}
+             started: [{pid,<0.137.0>},
+                       {name,ud_get_data},
+                       {mfargs,{ud_get_data,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 3-Jun-2013::15:10:54 ===
+         application: user_data
+          started_at: etanksnode@localhost
+
+=PROGRESS REPORT==== 3-Jun-2013::15:10:54 ===
+          supervisor: {local,xlab_res_loc_sup}
+             started: [{pid,<0.144.0>},
+                       {name,xrl_check_snid_pserv},
+                       {mfargs,{xrl_check_snid,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 3-Jun-2013::15:10:54 ===
+          supervisor: {local,xlab_res_loc_sup}
+             started: [{pid,<0.145.0>},
+                       {name,xrl_check_world_pserv},
+                       {mfargs,{xrl_check_world,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 3-Jun-2013::15:10:54 ===
+          supervisor: {local,xlab_res_loc_sup}
+             started: [{pid,<0.148.0>},
+                       {name,xrl_res_list_pserv},
+                       {mfargs,{xrl_res_list,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 3-Jun-2013::15:10:54 ===
+          supervisor: {local,xlab_res_loc_sup}
+             started: [{pid,<0.150.0>},
+                       {name,xrl_output_pserv},
+                       {mfargs,{xrl_output,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 3-Jun-2013::15:10:54 ===
+         application: xlab_res_loc
+          started_at: etanksnode@localhost
+
+=PROGRESS REPORT==== 3-Jun-2013::15:10:54 ===
+         application: eredis
+          started_at: etanksnode@localhost
+
+=PROGRESS REPORT==== 3-Jun-2013::15:10:54 ===
+         application: redis_wrapper
+          started_at: etanksnode@localhost
+
+=PROGRESS REPORT==== 3-Jun-2013::15:10:54 ===
+         application: xlab_fun_share
+          started_at: etanksnode@localhost
+
+=PROGRESS REPORT==== 3-Jun-2013::15:10:54 ===
+         application: jiffy
+          started_at: etanksnode@localhost
+
+=PROGRESS REPORT==== 3-Jun-2013::15:12:55 ===
+          supervisor: {local,kernel_safe_sup}
+             started: [{pid,<0.168.0>},
+                       {name,pg2},
+                       {mfargs,{pg2,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+=CRASH REPORT==== 3-Jun-2013::15:12:55 ===
+  crasher:
+    initial call: efcgi_socket:init/5
+    pid: <0.78.0>
+    registered_name: []
+    exception exit: {error,closed}
+      in function  efcgi_socket:request/1
+    ancestors: [efcgi_9010,efcgi_server_sup,efcgi_sup,efcgi_client_sup,
+                  <0.70.0>]
+    messages: []
+    links: [<0.77.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 377
+    stack_size: 24
+    reductions: 452
+  neighbours:
+
+=CRASH REPORT==== 3-Jun-2013::15:12:58 ===
+  crasher:
+    initial call: efcgi_socket:init/5
+    pid: <0.163.0>
+    registered_name: []
+    exception exit: {error,closed}
+      in function  efcgi_socket:request/1
+    ancestors: [efcgi_9010,efcgi_server_sup,efcgi_sup,efcgi_client_sup,
+                  <0.70.0>]
+    messages: []
+    links: [<0.77.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 233
+    stack_size: 24
+    reductions: 424
+  neighbours:
+
+=CRASH REPORT==== 3-Jun-2013::15:13:36 ===
+  crasher:
+    initial call: efcgi_socket:init/5
+    pid: <0.170.0>
+    registered_name: []
+    exception exit: {error,closed}
+      in function  efcgi_socket:request/1
+    ancestors: [efcgi_9010,efcgi_server_sup,efcgi_sup,efcgi_client_sup,
+                  <0.70.0>]
+    messages: []
+    links: [<0.77.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 377
+    stack_size: 24
+    reductions: 452
+  neighbours:
+
+=CRASH REPORT==== 3-Jun-2013::15:13:37 ===
+  crasher:
+    initial call: efcgi_socket:init/5
+    pid: <0.172.0>
+    registered_name: []
+    exception exit: {error,closed}
+      in function  efcgi_socket:request/1
+    ancestors: [efcgi_9010,efcgi_server_sup,efcgi_sup,efcgi_client_sup,
+                  <0.70.0>]
+    messages: []
+    links: [<0.77.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 377
+    stack_size: 24
+    reductions: 452
+  neighbours:
+
+=CRASH REPORT==== 3-Jun-2013::15:13:40 ===
+  crasher:
+    initial call: efcgi_socket:init/5
+    pid: <0.174.0>
+    registered_name: []
+    exception exit: {error,closed}
+      in function  efcgi_socket:request/1
+    ancestors: [efcgi_9010,efcgi_server_sup,efcgi_sup,efcgi_client_sup,
+                  <0.70.0>]
+    messages: []
+    links: [<0.77.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 233
+    stack_size: 24
+    reductions: 424
+  neighbours:
+
+=CRASH REPORT==== 3-Jun-2013::15:14:19 ===
+  crasher:
+    initial call: efcgi_socket:init/5
+    pid: <0.176.0>
+    registered_name: []
+    exception exit: {error,closed}
+      in function  efcgi_socket:request/1
+    ancestors: [efcgi_9010,efcgi_server_sup,efcgi_sup,efcgi_client_sup,
+                  <0.70.0>]
+    messages: []
+    links: [<0.77.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 377
+    stack_size: 24
+    reductions: 452
+  neighbours:
+
+=CRASH REPORT==== 3-Jun-2013::15:14:22 ===
+  crasher:
+    initial call: efcgi_socket:init/5
+    pid: <0.178.0>
+    registered_name: []
+    exception exit: {error,closed}
+      in function  efcgi_socket:request/1
+    ancestors: [efcgi_9010,efcgi_server_sup,efcgi_sup,efcgi_client_sup,
+                  <0.70.0>]
+    messages: []
+    links: [<0.77.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 233
+    stack_size: 24
+    reductions: 424
+  neighbours:
+
+=CRASH REPORT==== 3-Jun-2013::15:14:26 ===
+  crasher:
+    initial call: efcgi_socket:init/5
+    pid: <0.180.0>
+    registered_name: []
+    exception exit: {error,closed}
+      in function  efcgi_socket:request/1
+    ancestors: [efcgi_9010,efcgi_server_sup,efcgi_sup,efcgi_client_sup,
+                  <0.70.0>]
+    messages: []
+    links: [<0.77.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 377
+    stack_size: 24
+    reductions: 452
+  neighbours:
+
+=CRASH REPORT==== 3-Jun-2013::15:14:29 ===
+  crasher:
+    initial call: efcgi_socket:init/5
+    pid: <0.182.0>
+    registered_name: []
+    exception exit: {error,closed}
+      in function  efcgi_socket:request/1
+    ancestors: [efcgi_9010,efcgi_server_sup,efcgi_sup,efcgi_client_sup,
+                  <0.70.0>]
+    messages: []
+    links: [<0.77.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 233
+    stack_size: 24
+    reductions: 424
+  neighbours:
+
+=CRASH REPORT==== 3-Jun-2013::15:18:10 ===
+  crasher:
+    initial call: efcgi_socket:init/5
+    pid: <0.184.0>
+    registered_name: []
+    exception exit: {error,closed}
+      in function  efcgi_socket:request/1
+    ancestors: [efcgi_9010,efcgi_server_sup,efcgi_sup,efcgi_client_sup,
+                  <0.70.0>]
+    messages: []
+    links: [<0.77.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 377
+    stack_size: 24
+    reductions: 452
+  neighbours:
+
+=CRASH REPORT==== 3-Jun-2013::15:18:13 ===
+  crasher:
+    initial call: efcgi_socket:init/5
+    pid: <0.186.0>
+    registered_name: []
+    exception exit: {error,closed}
+      in function  efcgi_socket:request/1
+    ancestors: [efcgi_9010,efcgi_server_sup,efcgi_sup,efcgi_client_sup,
+                  <0.70.0>]
+    messages: []
+    links: [<0.77.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 233
+    stack_size: 24
+    reductions: 424
+  neighbours:
+
+=CRASH REPORT==== 3-Jun-2013::15:21:58 ===
+  crasher:
+    initial call: efcgi_socket:init/5
+    pid: <0.188.0>
+    registered_name: []
+    exception exit: {error,closed}
+      in function  efcgi_socket:request/1
+    ancestors: [efcgi_9010,efcgi_server_sup,efcgi_sup,efcgi_client_sup,
+                  <0.70.0>]
+    messages: []
+    links: [<0.77.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 377
+    stack_size: 24
+    reductions: 452
+  neighbours:
+
+=CRASH REPORT==== 3-Jun-2013::15:22:00 ===
+  crasher:
+    initial call: efcgi_socket:init/5
+    pid: <0.190.0>
+    registered_name: []
+    exception exit: {error,closed}
+      in function  efcgi_socket:request/1
+    ancestors: [efcgi_9010,efcgi_server_sup,efcgi_sup,efcgi_client_sup,
+                  <0.70.0>]
+    messages: []
+    links: [<0.77.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 233
+    stack_size: 24
+    reductions: 424
+  neighbours:
+
+=CRASH REPORT==== 3-Jun-2013::15:26:31 ===
+  crasher:
+    initial call: efcgi_socket:init/5
+    pid: <0.192.0>
+    registered_name: []
+    exception exit: {error,closed}
+      in function  efcgi_socket:request/1
+    ancestors: [efcgi_9010,efcgi_server_sup,efcgi_sup,efcgi_client_sup,
+                  <0.70.0>]
+    messages: []
+    links: [<0.77.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 377
+    stack_size: 24
+    reductions: 452
+  neighbours:
+
+=CRASH REPORT==== 3-Jun-2013::15:26:33 ===
+  crasher:
+    initial call: efcgi_socket:init/5
+    pid: <0.194.0>
+    registered_name: []
+    exception exit: {error,closed}
+      in function  efcgi_socket:request/1
+    ancestors: [efcgi_9010,efcgi_server_sup,efcgi_sup,efcgi_client_sup,
+                  <0.70.0>]
+    messages: []
+    links: [<0.77.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 233
+    stack_size: 24
+    reductions: 424
+  neighbours:
+
+=CRASH REPORT==== 3-Jun-2013::15:33:42 ===
+  crasher:
+    initial call: efcgi_socket:init/5
+    pid: <0.196.0>
+    registered_name: []
+    exception exit: {error,closed}
+      in function  efcgi_socket:request/1
+    ancestors: [efcgi_9010,efcgi_server_sup,efcgi_sup,efcgi_client_sup,
+                  <0.70.0>]
+    messages: []
+    links: [<0.77.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 377
+    stack_size: 24
+    reductions: 452
+  neighbours:
+
+=CRASH REPORT==== 3-Jun-2013::15:33:45 ===
+  crasher:
+    initial call: efcgi_socket:init/5
+    pid: <0.198.0>
+    registered_name: []
+    exception exit: {error,closed}
+      in function  efcgi_socket:request/1
+    ancestors: [efcgi_9010,efcgi_server_sup,efcgi_sup,efcgi_client_sup,
+                  <0.70.0>]
+    messages: []
+    links: [<0.77.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 233
+    stack_size: 24
+    reductions: 424
+  neighbours:
+
+=CRASH REPORT==== 3-Jun-2013::15:45:47 ===
+  crasher:
+    initial call: efcgi_socket:init/5
+    pid: <0.200.0>
+    registered_name: []
+    exception exit: {error,closed}
+      in function  efcgi_socket:request/1
+    ancestors: [efcgi_9010,efcgi_server_sup,efcgi_sup,efcgi_client_sup,
+                  <0.70.0>]
+    messages: []
+    links: [<0.77.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 377
+    stack_size: 24
+    reductions: 452
+  neighbours:
+
+=CRASH REPORT==== 3-Jun-2013::15:45:50 ===
+  crasher:
+    initial call: efcgi_socket:init/5
+    pid: <0.202.0>
+    registered_name: []
+    exception exit: {error,closed}
+      in function  efcgi_socket:request/1
+    ancestors: [efcgi_9010,efcgi_server_sup,efcgi_sup,efcgi_client_sup,
+                  <0.70.0>]
+    messages: []
+    links: [<0.77.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 233
+    stack_size: 24
+    reductions: 424
+  neighbours:

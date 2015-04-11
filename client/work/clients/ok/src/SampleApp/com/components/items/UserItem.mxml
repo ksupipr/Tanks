@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<mx:VBox
+	xmlns:mx="http://www.adobe.com/2006/mxml" 
+	borderStyle="solid" 
+	borderColor="#000000"
+	verticalScrollPolicy="off"
+	horizontalScrollPolicy="off" mouseChildren="false" buttonMode="true">
+	<mx:Script>
+		<![CDATA[
+			import com.api.forticom.SignUtil;
+			import mx.controls.Alert;
+			
+			override public function set data(value : Object) : void
+			{
+				super.data = value;
+				
+			}
+		
+		]]>
+	</mx:Script>
+	
+	<mx:HBox mouseChildren="false" buttonMode="true">
+		<mx:VBox>
+			<mx:Label text="Uid: {this.data.uid}" width="178" />
+			<mx:Label text="First Name: {this.data.first_name}" width="178" />
+			<mx:Label text="Last name: {this.data.last_name}" width="178" />
+			<mx:Label text="Name: {this.data.name}" width="178" />
+			<mx:Label text="Gender: {this.data.gender}" width="178" />
+			<mx:Label text="Birthday: {this.data.birthday}" width="178" />
+			<mx:Label text="Locale: {this.data.locale}" width="178" />
+			<mx:Label text="Location: {this.data.location.toXMLString}" width="178" />
+			<mx:Label text="C. location: {this.data.current_location.toXMLString}" width="178" />
+		</mx:VBox>
+		<mx:VBox>
+			<mx:Label text="C. status: {this.data.current_status}" width="140" />
+			<mx:Label text="pic_1: {this.data.pic_1}" width="140" />
+			<mx:Label text="pic_2: {this.data.pic_2}" width="140" />
+			<mx:Label text="pic_3: {this.data.pic_3}" width="140" />
+			<mx:Label text="pic_4: {this.data.pic_4}" width="140" />
+			<mx:Label text="Profile: {this.data.url_profile}" width="140" />
+			<mx:Label text="Profile m.: {this.data.url_profile_mobile}" width="140" />
+			<mx:Label text="Chat: {this.data.url_chat}" width="140" />
+			<mx:Label text="Chat m.: {this.data.url_chat_mobile}" width="140" />
+		</mx:VBox>
+	</mx:HBox>
+</mx:VBox>

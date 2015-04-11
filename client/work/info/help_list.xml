@@ -1,0 +1,52 @@
+
+<list>
+  <punkt name='Введение'>
+    <pod_punkt name='Подпункт 1'>
+      Текст подпункта 1,
+      описание подпункта и т.д.
+    </pod_punkt>
+    <pod_punkt name='Подпункт 2'>
+      Текст подпункта 2
+    </pod_punkt>
+    <pod_punkt name='Подпункт 3'>
+      Текст подпункта 3,
+      и т.д.
+    </pod_punkt>
+  </punkt>
+  <punkt name='Пункт 1'>
+    Здесь отсутствуют подпункты,
+    сразу текст.
+  </punkt>
+  <punkt name='Пункт 2'>
+    <pod_punkt name='Подпункт 1'>
+      Текст подпункта 1,
+      
+      
+      описание подпункта и т.д.
+    </pod_punkt>
+    <pod_punkt name='Подпункт 2'>
+      Текст подпункта 2
+    </pod_punkt>
+    <pod_punkt name='Подпункт 3'>
+      Текст подпункта 3,
+      и т.д.
+    </pod_punkt>
+  </punkt>
+  <punkt name='HTML текст'>
+    Цвет шрифта <font color='#ff0000'>меняется</font>
+    Размер шрифта <font size='15'>меняется</font>
+    Шрифт <font size='12' color='#0000ff' face='Arial Black'>меняется</font>
+    Тест <img src='http://cs9369.vkontakte.ru/u68749263/d8abc1ax.gif' width='16' height='16'>встроенного</img>~ изображения
+    
+    ~<b>Полужирный</b>
+    ~<u>Подчёркнутый</u>
+    ~<i>Курсив</i>
+    ~~<li>Раз</li>
+    ~~<li>Два</li>
+    ~~<li>Три</li>
+    ~~<font size='12' color='#00ffff' face='AkademyTT'><a target='_blank' href='http://www.appdata.ru/stats/app/27108'>Ссылка в тексте</a></font>
+    ~<p align='left'>Выравнивание влево
+и т.д.</p>
+    ~<p align='center'>по центру</p>
+  </punkt>
+</list>

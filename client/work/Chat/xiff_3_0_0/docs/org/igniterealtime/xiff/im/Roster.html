@@ -1,0 +1,1068 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../../print.css" type="text/css" media="print">
+<meta content="Roster,org.igniterealtime.xiff.im.Roster,connection,addContact,addContact_result,denySubscription,fetchRoster,fetchRoster_result,getContainingGroups,getGroup,getPresence,grantSubscription,removeContact,requestSubscription,setPresence,unsubscribe_result,updateContactGroups,updateContactName" name="keywords">
+<title>org.igniterealtime.xiff.im.Roster</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'Roster - API Documentation';
+				var baseRef = '../../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">API Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../index-list.html')" href="../../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../../index.html?org/igniterealtime/xiff/im/Roster.html&amp;org/igniterealtime/xiff/im/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;Roster</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#eventSummary">Events</a>&nbsp;| <a href="#constantSummary">Constants</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class Roster"); titleBar_setSubNav(true,true,false,false,true,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">org.igniterealtime.xiff.im</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public class Roster</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">Roster <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../../../images/inherit-arrow.gif"> <a href="../collections/ArrayCollection.html">ArrayCollection</a> <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../../../images/inherit-arrow.gif"> flash.utils.Proxy</td>
+</tr>
+</table>
+<p></p>
+  Manages a user's server-side instant messaging roster (or "buddy list"). By default,
+  this class uses an internal data provider to keep track of roster data locally and
+  provides a "read-only" form of the Data Provider API for external use. Non-read operations
+  are performed using alternative, roster-specific methods.
+  <p></p>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<div class="showHideLinks">
+<div class="hideInheritedProperty" id="hideInheritedProperty">
+<a onclick="javascript:setInheritedVisible(false,'Property');" href="#propertySummary" class="showHideLink"><img src="../../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Properties</a>
+</div>
+<div class="showInheritedProperty" id="showInheritedProperty">
+<a onclick="javascript:setInheritedVisible(true,'Property');" href="#propertySummary" class="showHideLink"><img src="../../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Properties</a>
+</div>
+</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#connection">connection</a> : <a href="../core/XMPPConnection.html">XMPPConnection</a>
+<div class="summaryTableDescription">
+   The instance of the XMPPConnection class to use for the roster to use for
+   sending and receiving data.</div>
+</td><td class="summaryTableOwnerCol">Roster</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../collections/ArrayCollection.html#length">length</a> : int<div class="summaryTableDescription">
+   The number of items in the ArrayCollection.</div>
+</td><td class="summaryTableOwnerCol"><a href="../collections/ArrayCollection.html">ArrayCollection</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../collections/ArrayCollection.html#source">source</a> : Array<div class="summaryTableDescription">
+   The source of data in the ArrayCollection.</div>
+</td><td class="summaryTableOwnerCol"><a href="../collections/ArrayCollection.html">ArrayCollection</a></td>
+</tr>
+</table>
+</div>
+<a name="protectedPropertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Protected Properties</div>
+<div class="showHideLinks">
+<div class="hideInheritedProtectedProperty" id="hideInheritedProtectedProperty">
+<a onclick="javascript:setInheritedVisible(false,'ProtectedProperty');" href="#protectedPropertySummary" class="showHideLink"><img src="../../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Protected Properties</a>
+</div>
+<div class="showInheritedProtectedProperty" id="showInheritedProtectedProperty">
+<a onclick="javascript:setInheritedVisible(true,'ProtectedProperty');" href="#protectedPropertySummary" class="showHideLink"><img src="../../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Protected Properties</a>
+</div>
+</div>
+<table id="summaryTableProtectedProperty" class="summaryTable hideInheritedProtectedProperty" cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="hideInheritedProtectedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../collections/ArrayCollection.html#eventDispatcher">eventDispatcher</a> : EventDispatcher<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../collections/ArrayCollection.html">ArrayCollection</a></td>
+</tr>
+<tr class="hideInheritedProtectedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../collections/ArrayCollection.html#_source">_source</a> : Array<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../collections/ArrayCollection.html">ArrayCollection</a></td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<div class="showHideLinks">
+<div class="hideInheritedMethod" id="hideInheritedMethod">
+<a onclick="javascript:setInheritedVisible(false,'Method');" href="#methodSummary" class="showHideLink"><img src="../../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Methods</a>
+</div>
+<div class="showInheritedMethod" id="showInheritedMethod">
+<a onclick="javascript:setInheritedVisible(true,'Method');" href="#methodSummary" class="showHideLink"><img src="../../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Methods</a>
+</div>
+</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#Roster()">Roster</a>(aConnection:<a href="../core/XMPPConnection.html">XMPPConnection</a> = null)</div>
+<div class="summaryTableDescription">
+      </div>
+</td><td class="summaryTableOwnerCol">Roster</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#addContact()">addContact</a>(id:<a href="../core/UnescapedJID.html">UnescapedJID</a>, displayName:String, groupName:String = null, requestSubscription:Boolean = true):void</div>
+<div class="summaryTableDescription">
+   Adds a contact to the roster.</div>
+</td><td class="summaryTableOwnerCol">Roster</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#addContact_result()">addContact_result</a>(resultIQ:<a href="../data/IQ.html">IQ</a>):void</div>
+<div class="summaryTableDescription">
+      </div>
+</td><td class="summaryTableOwnerCol">Roster</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../collections/ArrayCollection.html#addEventListener()">addEventListener</a>(type:String, listener:Function, useCapture:Boolean = false, priority:int = 0, useWeakReference:Boolean = false):void</div>
+<div class="summaryTableDescription">
+   Registers an event listener object with an EventDispatcher object so that the listener receives notification of an event.</div>
+</td><td class="summaryTableOwnerCol"><a href="../collections/ArrayCollection.html">ArrayCollection</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../collections/ArrayCollection.html#addItem()">addItem</a>(item:*):void</div>
+<div class="summaryTableDescription">
+   Add the specified item to the end of the list.</div>
+</td><td class="summaryTableOwnerCol"><a href="../collections/ArrayCollection.html">ArrayCollection</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../collections/ArrayCollection.html#addItemAt()">addItemAt</a>(item:*, index:int):void</div>
+<div class="summaryTableDescription">
+   Add the specified item at the specified index.</div>
+</td><td class="summaryTableOwnerCol"><a href="../collections/ArrayCollection.html">ArrayCollection</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../collections/ArrayCollection.html#clearSource()">clearSource</a>():void</div>
+<div class="summaryTableDescription">
+   Remove all items from the ArrayCollection without dispatching a RESET event.</div>
+</td><td class="summaryTableOwnerCol"><a href="../collections/ArrayCollection.html">ArrayCollection</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../collections/ArrayCollection.html#contains()">contains</a>(item:*):Boolean</div>
+<div class="summaryTableDescription">
+   Returns whether the ArrayCollection contains the specified item.</div>
+</td><td class="summaryTableOwnerCol"><a href="../collections/ArrayCollection.html">ArrayCollection</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#denySubscription()">denySubscription</a>(tojid:<a href="../core/UnescapedJID.html">UnescapedJID</a>):void</div>
+<div class="summaryTableDescription">
+   Revokes an existing presence subscription or denies a subscription request.</div>
+</td><td class="summaryTableOwnerCol">Roster</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../collections/ArrayCollection.html#dispatchEvent()">dispatchEvent</a>(event:Event):Boolean</div>
+<div class="summaryTableDescription">
+   Dispatches an event into the event flow.</div>
+</td><td class="summaryTableOwnerCol"><a href="../collections/ArrayCollection.html">ArrayCollection</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#fetchRoster()">fetchRoster</a>():void</div>
+<div class="summaryTableDescription">
+   Fetches the roster data from the server.</div>
+</td><td class="summaryTableOwnerCol">Roster</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#fetchRoster_result()">fetchRoster_result</a>(resultIQ:<a href="../data/IQ.html">IQ</a>):void</div>
+<div class="summaryTableDescription">
+      </div>
+</td><td class="summaryTableOwnerCol">Roster</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getContainingGroups()">getContainingGroups</a>(item:<a href="../data/im/RosterItemVO.html">RosterItemVO</a>):Array</div>
+<div class="summaryTableDescription">
+      </div>
+</td><td class="summaryTableOwnerCol">Roster</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getGroup()">getGroup</a>(name:String):<a href="../data/im/RosterGroup.html">RosterGroup</a>
+</div>
+<div class="summaryTableDescription">
+   Get a group by given name
+   </div>
+</td><td class="summaryTableOwnerCol">Roster</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../collections/ArrayCollection.html#getItemAt()">getItemAt</a>(index:int):*</div>
+<div class="summaryTableDescription">
+   Get the item at the specified index.</div>
+</td><td class="summaryTableOwnerCol"><a href="../collections/ArrayCollection.html">ArrayCollection</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../collections/ArrayCollection.html#getItemIndex()">getItemIndex</a>(item:*):int</div>
+<div class="summaryTableDescription">
+   Get the index of the item if it is in the ArrayCollection such that getItemAt( index ) == item.</div>
+</td><td class="summaryTableOwnerCol"><a href="../collections/ArrayCollection.html">ArrayCollection</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getPresence()">getPresence</a>(jid:<a href="../core/UnescapedJID.html">UnescapedJID</a>):<a href="../data/Presence.html">Presence</a>
+</div>
+<div class="summaryTableDescription">
+   Get the Presence of the given user if any.</div>
+</td><td class="summaryTableOwnerCol">Roster</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#grantSubscription()">grantSubscription</a>(tojid:<a href="../core/UnescapedJID.html">UnescapedJID</a>, requestAfterGrant:Boolean = true):void</div>
+<div class="summaryTableDescription">
+   Grants a user or service authorization for subscribing to your presence.</div>
+</td><td class="summaryTableOwnerCol">Roster</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../collections/ArrayCollection.html#hasEventListener()">hasEventListener</a>(type:String):Boolean</div>
+<div class="summaryTableDescription">
+   Checks whether the EventDispatcher object has any listeners registered for a specific type of event.</div>
+</td><td class="summaryTableOwnerCol"><a href="../collections/ArrayCollection.html">ArrayCollection</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../collections/ArrayCollection.html#itemUpdated()">itemUpdated</a>(item:*):void</div>
+<div class="summaryTableDescription">
+   Notifies the view that an item has been updated.</div>
+</td><td class="summaryTableOwnerCol"><a href="../collections/ArrayCollection.html">ArrayCollection</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../collections/ArrayCollection.html#removeAll()">removeAll</a>():void</div>
+<div class="summaryTableDescription">
+   Remove all items from the ArrayCollection.</div>
+</td><td class="summaryTableOwnerCol"><a href="../collections/ArrayCollection.html">ArrayCollection</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#removeContact()">removeContact</a>(rosterItem:<a href="../data/im/RosterItemVO.html">RosterItemVO</a>):void</div>
+<div class="summaryTableDescription">
+   Removes a contact from the roster and revokes all presence subscriptions for that contact.</div>
+</td><td class="summaryTableOwnerCol">Roster</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../collections/ArrayCollection.html#removeEventListener()">removeEventListener</a>(type:String, listener:Function, useCapture:Boolean = false):void</div>
+<div class="summaryTableDescription">
+   Removes a listener from the EventDispatcher object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../collections/ArrayCollection.html">ArrayCollection</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../collections/ArrayCollection.html#removeItem()">removeItem</a>(item:*):Boolean</div>
+<div class="summaryTableDescription">
+   Remove the specified item from this list, should it exist.</div>
+</td><td class="summaryTableOwnerCol"><a href="../collections/ArrayCollection.html">ArrayCollection</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../collections/ArrayCollection.html#removeItemAt()">removeItemAt</a>(index:int):*</div>
+<div class="summaryTableDescription">
+   Removes the item at the specified index and returns it.</div>
+</td><td class="summaryTableOwnerCol"><a href="../collections/ArrayCollection.html">ArrayCollection</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#requestSubscription()">requestSubscription</a>(id:<a href="../core/UnescapedJID.html">UnescapedJID</a>, isResponse:Boolean = false):void</div>
+<div class="summaryTableDescription">
+   Requests subscription authorization with a user or service.</div>
+</td><td class="summaryTableOwnerCol">Roster</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../collections/ArrayCollection.html#setItemAt()">setItemAt</a>(item:*, index:int):*</div>
+<div class="summaryTableDescription">
+   Places the item at the specified index.</div>
+</td><td class="summaryTableOwnerCol"><a href="../collections/ArrayCollection.html">ArrayCollection</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setPresence()">setPresence</a>(show:String, status:String, priority:int):void</div>
+<div class="summaryTableDescription">
+   Sets your current presence status.</div>
+</td><td class="summaryTableOwnerCol">Roster</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../collections/ArrayCollection.html#toArray()">toArray</a>():Array</div>
+<div class="summaryTableDescription">
+   Return an Array that is populated in the same order as the ArrayCollection.</div>
+</td><td class="summaryTableOwnerCol"><a href="../collections/ArrayCollection.html">ArrayCollection</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../collections/ArrayCollection.html#toString()">toString</a>():String</div>
+<div class="summaryTableDescription">
+   Pretty prints the contents of the ArrayCollection to a string and returns it.</div>
+</td><td class="summaryTableOwnerCol"><a href="../collections/ArrayCollection.html">ArrayCollection</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#unsubscribe_result()">unsubscribe_result</a>(resultIQ:<a href="../data/IQ.html">IQ</a>):void</div>
+<div class="summaryTableDescription">
+      </div>
+</td><td class="summaryTableOwnerCol">Roster</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#updateContactGroups()">updateContactGroups</a>(rosterItem:<a href="../data/im/RosterItemVO.html">RosterItemVO</a>, newGroupNames:Array):void</div>
+<div class="summaryTableDescription">
+   Updates the groups associated with an existing contact.</div>
+</td><td class="summaryTableOwnerCol">Roster</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#updateContactName()">updateContactName</a>(rosterItem:<a href="../data/im/RosterItemVO.html">RosterItemVO</a>, newName:String):void</div>
+<div class="summaryTableDescription">
+   Updates the display name for an existing contact.</div>
+</td><td class="summaryTableOwnerCol">Roster</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../collections/ArrayCollection.html#willTrigger()">willTrigger</a>(type:String):Boolean</div>
+<div class="summaryTableDescription">
+   Checks whether an event listener is registered with this EventDispatcher object or any of its ancestors for the specified event type.</div>
+</td><td class="summaryTableOwnerCol"><a href="../collections/ArrayCollection.html">ArrayCollection</a></td>
+</tr>
+</table>
+</div>
+<a name="protectedMethodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Protected Methods</div>
+<div class="showHideLinks">
+<div class="hideInheritedProtectedMethod" id="hideInheritedProtectedMethod">
+<a onclick="javascript:setInheritedVisible(false,'ProtectedMethod');" href="#protectedMethodSummary" class="showHideLink"><img src="../../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Protected Methods</a>
+</div>
+<div class="showInheritedProtectedMethod" id="showInheritedProtectedMethod">
+<a onclick="javascript:setInheritedVisible(true,'ProtectedMethod');" href="#protectedMethodSummary" class="showHideLink"><img src="../../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Protected Methods</a>
+</div>
+</div>
+<table id="summaryTableProtectedMethod" class="summaryTable hideInheritedProtectedMethod" cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../collections/ArrayCollection.html#internalDispatchEvent()">internalDispatchEvent</a>(kind:String, item:int = null, location:* = -1):void</div>
+<div class="summaryTableDescription">
+   Dispatches a collection event with the specified information.</div>
+</td><td class="summaryTableOwnerCol"><a href="../collections/ArrayCollection.html">ArrayCollection</a></td>
+</tr>
+</table>
+</div>
+<a name="eventSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Events</div>
+<table id="summaryTableEvent" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Event</th><th>Summary</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:rosterLoaded">rosterLoaded</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">&nbsp;</td><td class="summaryTableOwnerCol">Roster</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:subscriptionDenial">subscriptionDenial</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Broadcast whenever a subscription request that you make (via the <code>addContact()</code>
+  or <code>requestSubscription()</code> methods) is denied.</td><td class="summaryTableOwnerCol">Roster</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:subscriptionRequest">subscriptionRequest</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Broadcast whenever someone requests to subscribe to your presence.</td><td class="summaryTableOwnerCol">Roster</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:subscriptionRevocation">subscriptionRevocation</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Broadcast whenever someone revokes your presence subscription.</td><td class="summaryTableOwnerCol">Roster</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:userAvailable">userAvailable</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Broadcast whenever a contact in the roster becomes available.</td><td class="summaryTableOwnerCol">Roster</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:userAvailable">userAvailable</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Broadcast whenever a contact in the roster becomes unavailable.</td><td class="summaryTableOwnerCol">Roster</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:userPresenceUpdated">userPresenceUpdated</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">&nbsp;</td><td class="summaryTableOwnerCol">Roster</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:userRemoved">userRemoved</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">&nbsp;</td><td class="summaryTableOwnerCol">Roster</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:userSubscriptionUpdated">userSubscriptionUpdated</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">&nbsp;</td><td class="summaryTableOwnerCol">Roster</td>
+</tr>
+</table>
+</div>
+<a name="constantSummary"></a><a name="protectedConstantSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Protected Constants</div>
+<div class="showHideLinks">
+<div class="hideInheritedProtectedConstant" id="hideInheritedProtectedConstant">
+<a onclick="javascript:setInheritedVisible(false,'ProtectedConstant');" href="#protectedConstantSummary" class="showHideLink"><img src="../../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Protected Constants</a>
+</div>
+<div class="showInheritedProtectedConstant" id="showInheritedProtectedConstant">
+<a onclick="javascript:setInheritedVisible(true,'ProtectedConstant');" href="#protectedConstantSummary" class="showHideLink"><img src="../../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Protected Constants</a>
+</div>
+</div>
+<table id="summaryTableProtectedConstant" class="summaryTable hideInheritedProtectedConstant" cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Constant</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="hideInheritedProtectedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../collections/ArrayCollection.html#OUT_OF_BOUNDS_MESSAGE">OUT_OF_BOUNDS_MESSAGE</a> : String = "The supplied index is out of bounds."<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../collections/ArrayCollection.html">ArrayCollection</a></td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="propertyDetail"></a>
+<div class="detailSectionHeader">Property detail</div>
+<a name="connection"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">connection</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>connection:<a href="../core/XMPPConnection.html">XMPPConnection</a></code>&nbsp;&nbsp;[read-write]<p>
+   The instance of the XMPPConnection class to use for the roster to use for
+   sending and receiving data.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get connection():<a href="../core/XMPPConnection.html">XMPPConnection</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set connection(value:<a href="../core/XMPPConnection.html">XMPPConnection</a>):void</code>
+<br>
+</div>
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor detail</div>
+<a name="Roster()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">Roster</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function Roster(aConnection:<a href="../core/XMPPConnection.html">XMPPConnection</a> = null)</code><p>
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">aConnection</span>:<a href="../core/XMPPConnection.html">XMPPConnection</a></code> (default = <code>null</code>)<code></code> &mdash; A reference to an XMPPConnection class instance
+   </td>
+</tr>
+</table>
+</div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="addContact()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">addContact</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function addContact(id:<a href="../core/UnescapedJID.html">UnescapedJID</a>, displayName:String, groupName:String = null, requestSubscription:Boolean = true):void</code><p>
+   Adds a contact to the roster. Remember: All roster data is managed on the server-side,
+   so this contact is added to the server-side roster first, and upon successful addition,
+   reflected in the local client-side copy of the roster.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">id</span>:<a href="../core/UnescapedJID.html">UnescapedJID</a></code> &mdash; The JID of the contact to add
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">displayName</span>:String</code> &mdash; A friendly name for use when displaying this contact in the roster
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">groupName</span>:String</code> (default = <code>null</code>)<code></code> &mdash; (Optional) The name of the group that this contact should be added to. (Used for
+   organization in the roster listing.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">requestSubscription</span>:Boolean</code> (default = <code>true</code>)<code></code> &mdash; (Optional) Determines whether a subscription request should be sent
+   to this user. Most of the time you will want this parameter to be true.
+   You will be unable to view the contacts presence status until a subscription request is granted.
+   </td>
+</tr>
+</table>
+<br>
+<span class="label">Example</span>
+<br>This example adds a contact to the roster and simultaneously requests a presence subscription
+   with the new contact.
+   <pre>myRoster.addContact( "homer<p></p>
+</div>
+<a name="addContact_result()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">addContact_result</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function addContact_result(resultIQ:<a href="../data/IQ.html">IQ</a>):void</code><p>
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">resultIQ</span>:<a href="../data/IQ.html">IQ</a></code></td>
+</tr>
+</table>
+</div>
+<a name="denySubscription()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">denySubscription</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function denySubscription(tojid:<a href="../core/UnescapedJID.html">UnescapedJID</a>):void</code><p>
+   Revokes an existing presence subscription or denies a subscription request. If a user
+   has sent you a subscription request you can use this method to deny that request. Otherwise,
+   if a user already has a granted presence subscription, you can use this method to revoke that
+   subscription.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">tojid</span>:<a href="../core/UnescapedJID.html">UnescapedJID</a></code> &mdash; The JID of the user or service that you are denying subscription
+   </td>
+</tr>
+</table>
+</div>
+<a name="fetchRoster()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">fetchRoster</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function fetchRoster():void</code><p>
+   Fetches the roster data from the server. Once the data has been fetched, the Roster's data
+   provider is populated appropriately. If the Roster-XMPPConnection class dependency has been
+   set up before logging in, then this method will be called automatically because the Roster
+   listens for "login" events from the XMPPConnection.
+   </p></div>
+<a name="fetchRoster_result()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">fetchRoster_result</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function fetchRoster_result(resultIQ:<a href="../data/IQ.html">IQ</a>):void</code><p>
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">resultIQ</span>:<a href="../data/IQ.html">IQ</a></code></td>
+</tr>
+</table>
+</div>
+<a name="getContainingGroups()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getContainingGroups</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getContainingGroups(item:<a href="../data/im/RosterItemVO.html">RosterItemVO</a>):Array</code><p>
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">item</span>:<a href="../data/im/RosterItemVO.html">RosterItemVO</a></code></td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Array</code></td>
+</tr>
+</table>
+</div>
+<a name="getGroup()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getGroup</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getGroup(name:String):<a href="../data/im/RosterGroup.html">RosterGroup</a></code><p>
+   Get a group by given name
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">name</span>:String</code></td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../data/im/RosterGroup.html">RosterGroup</a></code></td>
+</tr>
+</table>
+</div>
+<a name="getPresence()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getPresence</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getPresence(jid:<a href="../core/UnescapedJID.html">UnescapedJID</a>):<a href="../data/Presence.html">Presence</a></code><p>
+   Get the Presence of the given user if any.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">jid</span>:<a href="../core/UnescapedJID.html">UnescapedJID</a></code></td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../data/Presence.html">Presence</a></code></td>
+</tr>
+</table>
+</div>
+<a name="grantSubscription()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">grantSubscription</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function grantSubscription(tojid:<a href="../core/UnescapedJID.html">UnescapedJID</a>, requestAfterGrant:Boolean = true):void</code><p>
+   Grants a user or service authorization for subscribing to your presence. Once authorization
+   is granted, the user can see whether you are offline, online, away, etc. Subscriptions can
+   be revoked at any time using the <code>denySubscription()</code> method.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">tojid</span>:<a href="../core/UnescapedJID.html">UnescapedJID</a></code> &mdash; The JID of the user or service to grant subscription to
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">requestAfterGrant</span>:Boolean</code> (default = <code>true</code>)<code></code> &mdash; Whether or not a reciprocal subscription request should be sent
+   to the grantee, so that you may, in turn, subscribe to his/her/its presence.
+   </td>
+</tr>
+</table>
+</div>
+<a name="removeContact()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">removeContact</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function removeContact(rosterItem:<a href="../data/im/RosterItemVO.html">RosterItemVO</a>):void</code><p>
+   Removes a contact from the roster and revokes all presence subscriptions for that contact.
+   This method will only attempt action if the contact you are trying to remove is currently on the
+   roster in the first place.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">rosterItem</span>:<a href="../data/im/RosterItemVO.html">RosterItemVO</a></code> &mdash; The value object which is to be removed
+   </td>
+</tr>
+</table>
+</div>
+<a name="requestSubscription()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">requestSubscription</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function requestSubscription(id:<a href="../core/UnescapedJID.html">UnescapedJID</a>, isResponse:Boolean = false):void</code><p>
+   Requests subscription authorization with a user or service. In the XMPP-world, you cannot receive
+   notifications on changes to a contact's presence until that contact has authorized you to subscribe
+   to his/her/its presence.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">id</span>:<a href="../core/UnescapedJID.html">UnescapedJID</a></code> &mdash; The JID of the user or service that you wish to subscribe to
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">isResponse</span>:Boolean</code> (default = <code>false</code>)<code></code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../im/Roster.html#subscriptionDenial" target="">subscriptionDenial</a>
+</div>
+</div>
+<a name="setPresence()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setPresence</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function setPresence(show:String, status:String, priority:int):void</code><p>
+   Sets your current presence status. Calling this method notifies others who
+   are subscribed to your presence of a presence change. You should use this to
+   change your status to away, extended-away, etc. There are static variables that
+   you can use defined in the presence class for the <code>show</code> parameter:
+   <ul>
+   <li><code>Presence.SHOW_AWAY</code></li>
+   <li><code>Presence.SHOW_CHAT</code></li>
+   <li><code>Presence.SHOW_DND</code></li>
+   <li><code>Presence.SHOW_NORMAL</code></li>
+   <li><code>Presence.SHOW_XA</code></li>
+   </ul>
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">show</span>:String</code> &mdash; The show type for your presence. This represents what others should see - whether
+   you are offline, online, away, etc.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">status</span>:String</code> &mdash; The status message associated with the show value
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">priority</span>:int</code> &mdash; (Optional) A priority integer for the presence
+   </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../data/Presence.html" target="">org.igniterealtime.xiff.data.Presence</a>
+</div>
+</div>
+<a name="unsubscribe_result()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">unsubscribe_result</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function unsubscribe_result(resultIQ:<a href="../data/IQ.html">IQ</a>):void</code><p>
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">resultIQ</span>:<a href="../data/IQ.html">IQ</a></code></td>
+</tr>
+</table>
+</div>
+<a name="updateContactGroups()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">updateContactGroups</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function updateContactGroups(rosterItem:<a href="../data/im/RosterItemVO.html">RosterItemVO</a>, newGroupNames:Array):void</code><p>
+   Updates the groups associated with an existing contact.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">rosterItem</span>:<a href="../data/im/RosterItemVO.html">RosterItemVO</a></code> &mdash; The value object of the contact to update
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">newGroupNames</span>:Array</code> &mdash; The new groups to associate the contact with
+   </td>
+</tr>
+</table>
+</div>
+<a name="updateContactName()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">updateContactName</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function updateContactName(rosterItem:<a href="../data/im/RosterItemVO.html">RosterItemVO</a>, newName:String):void</code><p>
+   Updates the display name for an existing contact.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">rosterItem</span>:<a href="../data/im/RosterItemVO.html">RosterItemVO</a></code> &mdash; The value object of the contact to update
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">newName</span>:String</code> &mdash; The new display name for this contact
+   </td>
+</tr>
+</table>
+</div>
+<div class="detailSectionHeader">Event detail</div>
+<a name="event:rosterLoaded"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">rosterLoaded</td><td class="detailHeaderType">event&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/RosterEvent.html"><code>org.igniterealtime.xiff.events.RosterEvent</code></a>
+<br>
+<p></p>
+</div>
+<a name="event:subscriptionDenial"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">subscriptionDenial</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/RosterEvent.html"><code>org.igniterealtime.xiff.events.RosterEvent</code></a>
+<br>
+<p></p><p>
+  Broadcast whenever a subscription request that you make (via the <code>addContact()</code>
+  or <code>requestSubscription()</code> methods) is denied.
+    The event object contains an attribute <code>jid</code> with the JID of the user who
+  denied the request.
+  </p></div>
+<a name="event:subscriptionRequest"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">subscriptionRequest</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/RosterEvent.html"><code>org.igniterealtime.xiff.events.RosterEvent</code></a>
+<br>
+<p></p><p>
+  Broadcast whenever someone requests to subscribe to your presence. The event object
+  contains an attribute <code>jid</code> with the JID of the user who is requesting
+  a presence subscription.
+  </p></div>
+<a name="event:subscriptionRevocation"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">subscriptionRevocation</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/RosterEvent.html"><code>org.igniterealtime.xiff.events.RosterEvent</code></a>
+<br>
+<p></p><p>
+  Broadcast whenever someone revokes your presence subscription. This is not
+  an event that is fired when you revoke a subscription, but rather when one of your
+  contacts decides that he/she/it no longer wants you to know about their presence
+  status.
+    The event object contains an attribute <code>jid</code> with the JID of
+  the user who revoked your subscription.
+  </p></div>
+<a name="event:userAvailable"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">userAvailable</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/RosterEvent.html"><code>org.igniterealtime.xiff.events.RosterEvent</code></a>
+<br>
+<p></p><p>
+  Broadcast whenever a contact in the roster becomes available. (Goes from offline to online.)
+  The event object contains an attribute <code>jid</code> with the JID of the user who
+  became available.
+  </p></div>
+<a name="event:userAvailable"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">userAvailable</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/RosterEvent.html"><code>org.igniterealtime.xiff.events.RosterEvent</code></a>
+<br>
+<p></p><p>
+  Broadcast whenever a contact in the roster becomes unavailable. (Goes from online to offline.)
+  The event object contains an attribute <code>jid</code> with the JID of the user who
+  became unavailable.
+  </p></div>
+<a name="event:userPresenceUpdated"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">userPresenceUpdated</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/RosterEvent.html"><code>org.igniterealtime.xiff.events.RosterEvent</code></a>
+<br>
+<p></p>
+</div>
+<a name="event:userRemoved"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">userRemoved</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/RosterEvent.html"><code>org.igniterealtime.xiff.events.RosterEvent</code></a>
+<br>
+<p></p>
+</div>
+<a name="event:userSubscriptionUpdated"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">userSubscriptionUpdated</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/RosterEvent.html"><code>org.igniterealtime.xiff.events.RosterEvent</code></a>
+<br>
+<p></p>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> 
+</center>
+</div>
+</body>
+</html>
+<!-- -->

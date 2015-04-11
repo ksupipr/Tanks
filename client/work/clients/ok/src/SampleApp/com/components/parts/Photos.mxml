@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<mx:HBox
+	xmlns:mx="http://www.adobe.com/2006/mxml"
+	label="Photos"
+	width="100%"
+	height="100%"
+	addedToStage="this.init();">
+	
+	<mx:Script>
+		<![CDATA[
+			import com.adobe.images.JPGEncoder;
+			import com.api.forticom.SignUtil;
+			import com.serialization.json.JSON;
+			
+			import flash.display.BitmapData;
+			import flash.events.DataEvent;
+			import flash.events.Event;
+			import flash.net.FileReference;
+			import flash.net.URLRequest;
+			
+			import mx.controls.Alert;
+			
+			import ru.inspirit.net.MultipartURLLoader;
+			
+			protected var sendUrl : String;
+			protected var fileRef : FileReference = new FileReference;
+			[Bindable]
+			public var saveEnabled : Boolean = false;
+			
+			protected function init() : void
+			{
+				fileRef.addEventListener(Event.SELECT, selectHandler);
+				fileRef.addEventListener(DataEvent.UPLOAD_COMPLETE_DATA, uploadCompleteDataHandler);
+
+
+				this.photosUrl.send(SignUtil.signRequest({method:'photos.getUploadUrl'}));
+				this.getAlbums();
+			}
+			
+			private function uploadCompleteDataHandler(event:DataEvent):void {
+				var data : XML = new XML(event.data);
+				if (data.pid[0])
+				{
+					Alert.show("Save succesfull", "Save status");
+				}
+				else
+				{
+					Alert.show("Save failed: " + event.data, "Save status");
+				}
+			}
+			
+			protected function selectHandler(event : Event) : void
+			{
+				saveEnabled = true;
+			}
+			
+			protected function handleUploadUrl(data : XML) : void
+			{
+				if (!data)
+				{
+					this.sendUrl = this.parentApplication._dataURL;
+				}
+				else
+				{
+					this.sendUrl = data.toString()+"fb.do?";
+				}
+			}
+			
+			protected function doSave() : void
+			{
+				var item : Object = { };
+				if(this.aid.text != "")
+					item["aid"] = this.aid.text;
+				
+				var photos : Object = { };
+				
+				if (this.caption.text != "")
+					photos["caption"] = this.caption.text;
+				
+				if (this.lattitude.text != "" || this.altitude.text != "" || this.cellid.text != "" || this.ip.text != "" || this.country.text != "" || this.city.text != "" || this.longitude.text != "")
+				{
+					photos["location"] = { };
+					if (this.lattitude.text != "")
+						photos["location"]["latitude"] = parseFloat(this.lattitude.text);
+					if (this.altitude.text != "")
+						photos["location"]["altitude"] = parseFloat(this.altitude.text);
+					if (this.longitude.text != "")
+						photos["location"]["longitude"] = parseFloat(this.longitude.text);
+					if (this.cellid.text != "")
+						photos["location"]["cellId"] = parseInt(this.cellid.text);			
+					if (this.ip.text != "")
+						photos["location"]["ipAddress"] = this.ip.text;
+					if (this.country.text != "")
+						photos["location"]["country"] = this.country.text;
+					if (this.city.text != "")
+						photos["location"]["city"] = this.city.text;
+				}
+				
+				item["photos"] = "[" + JSON.serialize(photos) + "]";
+				
+				item["Filename"] = fileRef.name;
+				trace(fileRef.name);
+				item["Upload"] = "Submit Query"
+				item["method"] = "photos.upload";
+				item = SignUtil.signRequest(item);
+				
+				delete item["Upload"];
+				delete item["Filename"]
+				
+				var request : URLRequest = new URLRequest(this.sendUrl + this.getRequestString(item));
+				trace("Trying to upload file to: " + this.sendUrl + this.getRequestString(item));
+				this.fileRef.upload(request, "file_1");
+			}
+			
+			protected function getRequestString(data : Object) : String
+			{
+				var key : String, ret : String = '';
+				
+				for (key in data)
+				{
+					ret += key + "=" + data[key] + "&";
+				}
+				return ret;
+			}
+			
+			protected function getAlbums() : void
+			{
+				this.photosAlbums.send(SignUtil.signRequest({method : "photos.getAlbums"}));
+			}
+			
+			protected function createAlbum() : void
+			{
+				var data : Object = {};
+					data["method"] = "photos.createAlbum";
+					data["title"] = this.albumTitle.text;
+					data["type"] = this.albumType.selectedItem;
+				
+				if (this.albumDesc.text != "")
+					data["description"] = this.albumDesc.text;
+				
+				this.photosAlbumCreate.send(SignUtil.signRequest(data));
+			}
+			
+			protected function saveScreen() : void
+			{
+				var bmd : BitmapData = new BitmapData(this.stage.stageWidth, this.stage.stageHeight);
+					bmd.draw(this.stage);
+				
+				var encoder : JPGEncoder = new JPGEncoder(80);
+				var data : ByteArray = encoder.encode(bmd);
+				
+				var loader : MultipartURLLoader = new MultipartURLLoader;
+					loader.addEventListener(Event.COMPLETE, this.onImageUploadComplete);
+					loader.addFile(data, 'FileName.jpg','file_1');
+				
+				var photo : Object = { };
+				
+				photo["caption"] = "Screenshot";
+				
+				var item : Object = {};
+					item["photos"] = "[" + JSON.serialize({}) + "]";
+					item["Filename"] = 'FileName.jpg';
+					item["Upload"] = "Submit Query";
+					item["method"] = "photos.upload";
+				
+				
+					item = SignUtil.signRequest(item);
+				
+					loader.addVariable("photos", item["photos"]);
+					loader.addVariable("sig", item["sig"]);
+					loader.addVariable("format", item["format"]);
+					loader.addVariable("session_key", item["session_key"]);
+					loader.addVariable("application_key", item["application_key"]);
+				
+				
+				
+					var params : Object = { };
+					params["method"] = item["method"];
+				
+					
+					loader.load(this.sendUrl + this.getRequestString(item));
+			}
+			
+			protected function onImageUploadComplete(event : Event) : void
+			{
+				trace((event.target as MultipartURLLoader).loader.data);
+			}
+			
+		]]>
+	</mx:Script>
+	
+	<mx:VBox height="100%">
+		<mx:DataGrid id="albumDG" dataProvider="{this.photosAlbums.lastResult.album}">
+			<mx:columns>
+				<mx:DataGridColumn dataField="aid" headerText="Album ID" />
+				<mx:DataGridColumn dataField="title" headerText="Title" />
+				<mx:DataGridColumn dataField="created" headerText="Created" />
+				<mx:DataGridColumn dataField="type" headerText="Type" />
+			</mx:columns>
+		</mx:DataGrid>
+		<mx:Form>
+			<mx:FormHeading label="Create new Album" />
+			<mx:FormItem label="Title:">
+				<mx:TextInput id="albumTitle" text="New album" />
+			</mx:FormItem>
+			<mx:FormItem label="Description:">
+				<mx:TextInput id="albumDesc" text="" />
+			</mx:FormItem>
+			<mx:FormItem label="Type:">
+				<mx:ComboBox id="albumType">
+					<mx:ArrayCollection>
+						<mx:String>friends</mx:String>
+						<mx:String>public</mx:String>
+					</mx:ArrayCollection>
+				</mx:ComboBox>
+			</mx:FormItem>
+		</mx:Form>
+		<mx:Button label="create"  click="{this.createAlbum()}" />
+	</mx:VBox>
+	
+	<mx:Form>
+		<mx:FormItem label="Album ID:">
+			<mx:TextInput id="aid" text="{this.albumDG.selectedItem.aid}" />
+		</mx:FormItem>
+		<mx:FormItem label="Picture:">
+			<mx:Button label="browse..." click="{this.fileRef.browse([new FileFilter('Images (*.jpg, *.jpeg, *.gif, *.png)', '*.jpg;*.jpeg;*.gif;*.png')])}" />
+		</mx:FormItem>
+		<mx:FormItem label="Caption:">
+			<mx:Label text="Wont be send if empty!" />
+			<mx:TextInput id="caption" />
+		</mx:FormItem>
+		<mx:FormItem label="Lattitude:">
+			<mx:TextInput id="lattitude" text="0" />
+		</mx:FormItem>
+		<mx:FormItem label="Longitude:">
+			<mx:TextInput id="longitude" text="0" />
+		</mx:FormItem>
+		<mx:FormItem label="Altitude:">
+			<mx:TextInput id="altitude" text="0" />
+		</mx:FormItem>
+		<mx:FormItem label="Cell ID:">
+			<mx:TextInput id="cellid" text="0" />
+		</mx:FormItem>
+		<mx:FormItem label="IP Address:">
+			<mx:TextInput id="ip" text="127.0.0.1" />
+		</mx:FormItem>
+		<mx:FormItem label="Country:">
+			<mx:TextInput id="country" text="LV" />
+		</mx:FormItem>
+		<mx:FormItem label="City:">
+			<mx:TextInput id="city" text="Riga" />
+		</mx:FormItem>
+		<mx:FormItem>
+			<mx:Button id="SaveBtn" label="Save" enabled="{saveEnabled}" click="this.doSave();" />
+			<mx:Button label="Save screenshot" click="this.saveScreen();" />
+		</mx:FormItem>
+
+	</mx:Form>
+	
+	
+	
+	<mx:HTTPService
+		id="photosUrl"
+		url="{this.parentApplication._dataURL}"
+		method="GET"
+		resultFormat="e4x"
+		result="this.handleUploadUrl(photosUrl.lastResult as XML);"
+	/>
+	
+	<mx:HTTPService
+		id="photosAlbums"
+		url="{this.parentApplication._dataURL}"
+		method="GET"
+		resultFormat="e4x"
+	/>
+	
+	<mx:HTTPService
+		id="photosAlbumCreate"
+		url="{this.parentApplication._dataURL}"
+		method="GET"
+		resultFormat="e4x"
+		result="Alert.show((photosAlbumCreate.lastResult as XML).toXMLString(), 'Create status:');this.getAlbums();"
+	/>
+	
+</mx:HBox>

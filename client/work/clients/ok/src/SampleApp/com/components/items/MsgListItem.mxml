@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:VBox xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" borderStyle="solid" mouseChildren="false" buttonMode="true" borderColor="#000000" paddingBottom="4" paddingLeft="4" paddingRight="4" paddingTop="4">
+	<mx:Form paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0">
+		<mx:FormItem label="Msg ID:">
+			<mx:Label text="{this.data.msg_id}"/>
+		</mx:FormItem>
+		<mx:FormItem label="Friend UID:">
+			<mx:Label text="{this.data.friend_uid}"/>
+		</mx:FormItem>
+		<mx:FormItem label="Direction:">
+			<mx:Label text="{this.data.direction}"/>
+		</mx:FormItem>
+		<mx:FormItem label="Time:">
+			<mx:Label text="{this.data.time}" />
+		</mx:FormItem>
+		<mx:FormItem label="Text:">
+			<mx:Label text="{this.data.text}" />
+		</mx:FormItem>
+	</mx:Form>
+</mx:VBox>

@@ -1,0 +1,22 @@
+{application, xlab_db,
+ [
+  {description, "Elrlang DB client"},
+  {vsn, ""},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib,
+                  sasl,
+                  gproc,
+                  epgsql,
+                  define_param
+                 ]},
+
+  
+  {modules, [ exlab_db_app
+            , xlab_db
+
+  ]},
+  {mod, {xlab_db_app,[]}},
+  {env, []}
+ ]}.

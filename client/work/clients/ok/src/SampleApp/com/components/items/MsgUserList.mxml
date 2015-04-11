@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:VBox xmlns:mx="http://www.adobe.com/2006/mxml" width="260" height="100%" paddingBottom="4" paddingLeft="4" paddingRight="4" paddingTop="4" xmlns:items="com.components.items.*" horizontalScrollPolicy="off">
+	<mx:Metadata>
+		[Event(name="select", type="flash.events.DataEvent")]
+	</mx:Metadata>
+	<mx:Metadata>
+		[Event(name="snd", type="flash.events.DataEvent")]
+	</mx:Metadata>
+	
+	<mx:Script>
+		<![CDATA[
+			
+			protected function handleClick(obj : Object) : void
+			{
+				this.dispatchEvent(new DataEvent("select", false, false, obj.data.friend_uid));
+			}
+
+		]]>
+	</mx:Script>
+	
+	<mx:Repeater id="rep" dataProvider="{this.data}">
+		<items:MsgUserListItem data="{rep.currentItem}" width="100%" select="this.handleClick(event.target);"/>
+	</mx:Repeater>
+</mx:VBox>

@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<mx:Application
+	xmlns:mx="http://www.adobe.com/2006/mxml"
+	xmlns:comp="com.components.parts.*"
+	layout="vertical"
+	paddingBottom="5" paddingLeft="5" paddingRight="5" paddingTop="5" addedToStage="this.initVars();">
+	
+	<mx:Script>
+		<![CDATA[
+			import com.api.forticom.ApiCallbackEvent;
+			import com.api.forticom.ForticomAPI;
+			import com.api.forticom.SignUtil;
+			import com.components.preloader.Preloader;
+			
+			import flash.display.DisplayObject;
+			
+			import mx.controls.Alert;
+			import mx.core.IFlexDisplayObject;
+			import mx.managers.PopUpManager;
+			
+			protected var _loadingSymbol : IFlexDisplayObject;
+			protected var _loadingInfoCount : uint = 0;
+			[Bindable]
+			public var _userId : String;
+			[Bindable]
+			public var _appKey : String;
+			[Bindable]
+			public var _dataURL : String;
+			[Bindable]
+			public var _secretKey : String;
+			[Bindable]
+			public var _sessionKey : String;
+			
+			[Bindable]
+			public var _referer : String;
+			
+			[Bindable]
+			public var _refPlace : String;
+			
+			protected function initVars() : void
+			{
+				this._userId = this.stage.loaderInfo.parameters["logged_user_id"];
+				
+				this._dataURL = this.stage.loaderInfo.parameters["api_server"] ? this.stage.loaderInfo.parameters["api_server"]+'fb.do' : '/fb.do?';
+				this._dataURL = this.checkURL(this._dataURL);
+				
+				SignUtil.applicationKey = this._appKey = this.stage.loaderInfo.parameters["application_key"];
+				SignUtil.secretSessionKey = this.stage.loaderInfo.parameters["session_secret_key"];
+				SignUtil.secretKey = this._secretKey = "D4581542797FF935E98B20F4";
+				SignUtil.sessionKey = this._sessionKey = this.stage.loaderInfo.parameters["session_key"];
+				this._referer = this.stage.loaderInfo.parameters["referer"];
+				this._refPlace = this.stage.loaderInfo.parameters["refplace"];
+				
+				ForticomAPI.addEventListener(ApiCallbackEvent.CALL_BACK, this.handleCallback);
+			}
+			
+			protected function handleCallback(event : ApiCallbackEvent) : void
+			{
+				Alert.show(event.method + "\n" + event.result+ "\n" + event.data, "Callback");
+			}
+			
+			protected function checkURL(value : String) : String
+			{
+				if (value.search(/\?/) > 0)
+				{
+					if (value.search(/&$/) < 0)
+					{
+						value += "&";
+					}
+				}
+				else
+				{
+					value += "?";
+				}
+				
+				
+				return value;
+			}
+			
+			protected function showLoading() : void
+			{
+				if (!this._loadingInfoCount)
+				{
+					this._loadingSymbol = new Preloader;
+					PopUpManager.addPopUp(this._loadingSymbol, this.document as DisplayObject, true);
+					PopUpManager.centerPopUp(this._loadingSymbol);
+				}
+				this._loadingInfoCount++;
+			}
+			
+			protected function hideLoading() : void
+			{
+				if (!--this._loadingInfoCount)
+				{
+					PopUpManager.removePopUp(this._loadingSymbol);
+					this._loadingSymbol = null;
+				}
+			}
+			
+			protected function authorize() : void
+			{
+				this.showLoading();
+			}
+		]]>
+	</mx:Script>
+	<mx:HBox
+		width="100%">
+		<mx:Label text="{'AppKey: ' + this._appKey}" />
+		<mx:Label text="{'SessionKey: ' + this._sessionKey}" />
+		<mx:Label text="{'SecretKey: ' + this._secretKey}" />
+	</mx:HBox>
+	<mx:HBox width="100%">
+		<mx:Label text="{'UID: ' + this._userId}"/>
+		<mx:Label text="{'Ref. place: ' + this._refPlace}" />
+		<mx:Label text="{'Referer: ' + this._referer}" />
+		<mx:Label text="{'Server: ' + this._dataURL}" />
+	</mx:HBox>
+	<mx:TabNavigator width="100%" height="100%" paddingBottom="5" paddingLeft="5" paddingRight="5" paddingTop="5">
+		<comp:Users />
+		<comp:Messages  width="100%" height="100%" top="0" bottom="0"/>
+		<comp:Stream />
+		<comp:Notifications />
+		<comp:Photos />
+		<comp:Events />
+		<comp:api />
+		<comp:Voting />
+		<comp:parameters />
+	</mx:TabNavigator>	
+	
+</mx:Application>

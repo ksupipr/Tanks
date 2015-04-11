@@ -1,0 +1,12 @@
+{application, user_data,
+ [
+  {description, ""},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, { user_data_app, []}},
+  {env, []}
+ ]}.

@@ -1,0 +1,2166 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../../print.css" type="text/css" media="print">
+<meta content="Room,org.igniterealtime.xiff.conference.Room,AFFILIATION_ADMIN,AFFILIATION_MEMBER,AFFILIATION_NONE,AFFILIATION_OUTCAST,AFFILIATION_OWNER,ROLE_MODERATOR,ROLE_NONE,ROLE_PARTICIPANT,ROLE_VISITOR,affiliation,anonymous,conferenceServer,connection,isActive,nickname,password,role,roomJID,roomName,subject,userJID,allow,ban,cancelConfiguration,changeSubject,configure,decline,destroy,getMessage,getOccupantNamed,grant,invite,isThisRoom,isThisUser,join,joinWithExplicitMUCExtension,kickOccupant,leave,requestAffiliations,requestConfiguration,revoke,sendMessage,sendMessageWithExtension,sendPrivateMessage,setOccupantVoice" name="keywords">
+<title>org.igniterealtime.xiff.conference.Room</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'Room - API Documentation';
+				var baseRef = '../../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">API Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../index-list.html')" href="../../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../../index.html?org/igniterealtime/xiff/conference/Room.html&amp;org/igniterealtime/xiff/conference/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;Room</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#eventSummary">Events</a>&nbsp;| <a href="#constantSummary">Constants</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class Room"); titleBar_setSubNav(true,true,false,false,true,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">org.igniterealtime.xiff.conference</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public class Room</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">Room <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../../../images/inherit-arrow.gif"> <a href="../collections/ArrayCollection.html">ArrayCollection</a> <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../../../images/inherit-arrow.gif"> flash.utils.Proxy</td>
+</tr>
+</table>
+<p></p>
+  Manages incoming and outgoing data from a conference room as part of multi-user conferencing (XEP-0045).
+  You will need an instance of this class for each room that the user joins.
+  <p></p>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<div class="showHideLinks">
+<div class="hideInheritedProperty" id="hideInheritedProperty">
+<a onclick="javascript:setInheritedVisible(false,'Property');" href="#propertySummary" class="showHideLink"><img src="../../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Properties</a>
+</div>
+<div class="showInheritedProperty" id="showInheritedProperty">
+<a onclick="javascript:setInheritedVisible(true,'Property');" href="#propertySummary" class="showHideLink"><img src="../../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Properties</a>
+</div>
+</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#affiliation">affiliation</a> : String<div class="summaryTableDescription">[read-only]
+   Gets the user's affiliation for this room.</div>
+</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#anonymous">anonymous</a> : Boolean<div class="summaryTableDescription">[read-only]
+   Whether the room shows full JIDs or not.</div>
+</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#conferenceServer">conferenceServer</a> : String<div class="summaryTableDescription">
+   The conference server to use for this room.</div>
+</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#connection">connection</a> : <a href="../core/XMPPConnection.html">XMPPConnection</a>
+<div class="summaryTableDescription">
+   A reference to the XMPPConnection being used for incoming/outgoing XMPP data.</div>
+</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#isActive">isActive</a> : Boolean<div class="summaryTableDescription">[read-only]
+   Determines whether the connection to the room is active - that is, the user
+   is connected and has joined the room.</div>
+</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../collections/ArrayCollection.html#length">length</a> : int<div class="summaryTableDescription">
+   The number of items in the ArrayCollection.</div>
+</td><td class="summaryTableOwnerCol"><a href="../collections/ArrayCollection.html">ArrayCollection</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#nickname">nickname</a> : String<div class="summaryTableDescription">
+   The nickname to use when joining.</div>
+</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#password">password</a> : String<div class="summaryTableDescription">
+   The password.</div>
+</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#role">role</a> : String<div class="summaryTableDescription">[read-only]
+   Gets the user's role in the conference room.</div>
+</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#roomJID">roomJID</a> : <a href="../core/UnescapedJID.html">UnescapedJID</a>
+<div class="summaryTableDescription">
+   The unescaped JID of the room.</div>
+</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#roomName">roomName</a> : String<div class="summaryTableDescription">
+   The room name that should be used when joining.</div>
+</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../collections/ArrayCollection.html#source">source</a> : Array<div class="summaryTableDescription">
+   The source of data in the ArrayCollection.</div>
+</td><td class="summaryTableOwnerCol"><a href="../collections/ArrayCollection.html">ArrayCollection</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#subject">subject</a> : String<div class="summaryTableDescription">[read-only]
+   The subject.</div>
+</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#userJID">userJID</a> : <a href="../core/UnescapedJID.html">UnescapedJID</a>
+<div class="summaryTableDescription">[read-only]
+   Get the JID of the conference room user.</div>
+</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+</table>
+</div>
+<a name="protectedPropertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Protected Properties</div>
+<div class="showHideLinks">
+<div class="hideInheritedProtectedProperty" id="hideInheritedProtectedProperty">
+<a onclick="javascript:setInheritedVisible(false,'ProtectedProperty');" href="#protectedPropertySummary" class="showHideLink"><img src="../../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Protected Properties</a>
+</div>
+<div class="showInheritedProtectedProperty" id="showInheritedProtectedProperty">
+<a onclick="javascript:setInheritedVisible(true,'ProtectedProperty');" href="#protectedPropertySummary" class="showHideLink"><img src="../../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Protected Properties</a>
+</div>
+</div>
+<table id="summaryTableProtectedProperty" class="summaryTable hideInheritedProtectedProperty" cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="hideInheritedProtectedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../collections/ArrayCollection.html#eventDispatcher">eventDispatcher</a> : EventDispatcher<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../collections/ArrayCollection.html">ArrayCollection</a></td>
+</tr>
+<tr class="hideInheritedProtectedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../collections/ArrayCollection.html#_source">_source</a> : Array<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../collections/ArrayCollection.html">ArrayCollection</a></td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<div class="showHideLinks">
+<div class="hideInheritedMethod" id="hideInheritedMethod">
+<a onclick="javascript:setInheritedVisible(false,'Method');" href="#methodSummary" class="showHideLink"><img src="../../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Methods</a>
+</div>
+<div class="showInheritedMethod" id="showInheritedMethod">
+<a onclick="javascript:setInheritedVisible(true,'Method');" href="#methodSummary" class="showHideLink"><img src="../../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Methods</a>
+</div>
+</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#Room()">Room</a>(aConnection:<a href="../core/XMPPConnection.html">XMPPConnection</a> = null)</div>
+<div class="summaryTableDescription">
+      </div>
+</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../collections/ArrayCollection.html#addEventListener()">addEventListener</a>(type:String, listener:Function, useCapture:Boolean = false, priority:int = 0, useWeakReference:Boolean = false):void</div>
+<div class="summaryTableDescription">
+   Registers an event listener object with an EventDispatcher object so that the listener receives notification of an event.</div>
+</td><td class="summaryTableOwnerCol"><a href="../collections/ArrayCollection.html">ArrayCollection</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../collections/ArrayCollection.html#addItem()">addItem</a>(item:*):void</div>
+<div class="summaryTableDescription">
+   Add the specified item to the end of the list.</div>
+</td><td class="summaryTableOwnerCol"><a href="../collections/ArrayCollection.html">ArrayCollection</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../collections/ArrayCollection.html#addItemAt()">addItemAt</a>(item:*, index:int):void</div>
+<div class="summaryTableDescription">
+   Add the specified item at the specified index.</div>
+</td><td class="summaryTableOwnerCol"><a href="../collections/ArrayCollection.html">ArrayCollection</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#allow()">allow</a>(jids:Array):void</div>
+<div class="summaryTableDescription">
+   Allow a previously banned JIDs to enter this room.</div>
+</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#ban()">ban</a>(jids:Array):void</div>
+<div class="summaryTableDescription">
+   Bans an array of JIDs from entering the room.</div>
+</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#cancelConfiguration()">cancelConfiguration</a>():void</div>
+<div class="summaryTableDescription">
+   Cancels the configuration process.</div>
+</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#changeSubject()">changeSubject</a>(newSubject:String):void</div>
+<div class="summaryTableDescription">
+   Changes the subject in the conference room.</div>
+</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../collections/ArrayCollection.html#clearSource()">clearSource</a>():void</div>
+<div class="summaryTableDescription">
+   Remove all items from the ArrayCollection without dispatching a RESET event.</div>
+</td><td class="summaryTableOwnerCol"><a href="../collections/ArrayCollection.html">ArrayCollection</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#configure()">configure</a>(fieldmap:Object):void</div>
+<div class="summaryTableDescription">
+   Sends a configuration form to the room.</div>
+</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../collections/ArrayCollection.html#contains()">contains</a>(item:*):Boolean</div>
+<div class="summaryTableDescription">
+   Returns whether the ArrayCollection contains the specified item.</div>
+</td><td class="summaryTableOwnerCol"><a href="../collections/ArrayCollection.html">ArrayCollection</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#decline()">decline</a>(jid:<a href="../core/UnescapedJID.html">UnescapedJID</a>, reason:String):void</div>
+<div class="summaryTableDescription">
+   Actively decline an invitation.</div>
+</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#destroy()">destroy</a>(reason:String, alternateJID:<a href="../core/UnescapedJID.html">UnescapedJID</a> = null, callback:Function = null):void</div>
+<div class="summaryTableDescription">
+   Destroys a reserved room.</div>
+</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../collections/ArrayCollection.html#dispatchEvent()">dispatchEvent</a>(event:Event):Boolean</div>
+<div class="summaryTableDescription">
+   Dispatches an event into the event flow.</div>
+</td><td class="summaryTableOwnerCol"><a href="../collections/ArrayCollection.html">ArrayCollection</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../collections/ArrayCollection.html#getItemAt()">getItemAt</a>(index:int):*</div>
+<div class="summaryTableDescription">
+   Get the item at the specified index.</div>
+</td><td class="summaryTableOwnerCol"><a href="../collections/ArrayCollection.html">ArrayCollection</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../collections/ArrayCollection.html#getItemIndex()">getItemIndex</a>(item:*):int</div>
+<div class="summaryTableDescription">
+   Get the index of the item if it is in the ArrayCollection such that getItemAt( index ) == item.</div>
+</td><td class="summaryTableOwnerCol"><a href="../collections/ArrayCollection.html">ArrayCollection</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getMessage()">getMessage</a>(body:String = null, htmlBody:String = null):<a href="../data/Message.html">Message</a>
+</div>
+<div class="summaryTableDescription">
+   Gets an instance of the <code>Message</code> class that has been pre-configured to be
+   sent from this room.</div>
+</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getOccupantNamed()">getOccupantNamed</a>(name:String):<a href="../conference/RoomOccupant.html">RoomOccupant</a>
+</div>
+<div class="summaryTableDescription">
+   Gets the <code>RoomOccupant</code> whose displayName matches the name passed in.</div>
+</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#grant()">grant</a>(affiliation:String, jids:Array):void</div>
+<div class="summaryTableDescription">
+   Grants permissions on a room to one or more JIDs by setting the
+   affiliation of a user based on their JID.</div>
+</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../collections/ArrayCollection.html#hasEventListener()">hasEventListener</a>(type:String):Boolean</div>
+<div class="summaryTableDescription">
+   Checks whether the EventDispatcher object has any listeners registered for a specific type of event.</div>
+</td><td class="summaryTableOwnerCol"><a href="../collections/ArrayCollection.html">ArrayCollection</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#invite()">invite</a>(jid:<a href="../core/UnescapedJID.html">UnescapedJID</a>, reason:String):void</div>
+<div class="summaryTableDescription">
+   Invites a user that is not currently a member of this room to this room.</div>
+</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#isThisRoom()">isThisRoom</a>(sender:<a href="../core/UnescapedJID.html">UnescapedJID</a>):Boolean</div>
+<div class="summaryTableDescription">
+   Determines if the <code>sender</code> parameter is the same
+   as the room's JID.</div>
+</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#isThisUser()">isThisUser</a>(sender:<a href="../core/UnescapedJID.html">UnescapedJID</a>):Boolean</div>
+<div class="summaryTableDescription">
+   Determines if the <code>sender</code> param is the
+   same as the user's JID.</div>
+</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../collections/ArrayCollection.html#itemUpdated()">itemUpdated</a>(item:*):void</div>
+<div class="summaryTableDescription">
+   Notifies the view that an item has been updated.</div>
+</td><td class="summaryTableOwnerCol"><a href="../collections/ArrayCollection.html">ArrayCollection</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#join()">join</a>(createReserved:Boolean = false, joinPresenceExtensions:Array = null):Boolean</div>
+<div class="summaryTableDescription">
+   Joins a conference room based on the parameters specified by the room
+   properties.</div>
+</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#joinWithExplicitMUCExtension()">joinWithExplicitMUCExtension</a>(createReserved:Boolean, mucExtension:<a href="../data/muc/MUCExtension.html">MUCExtension</a>, joinPresenceExtensions:Array = null):Boolean</div>
+<div class="summaryTableDescription">
+   Joins a conference room based on the parameters specified by the room
+   properties.</div>
+</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#kickOccupant()">kickOccupant</a>(occupantNick:String, reason:String):void</div>
+<div class="summaryTableDescription">
+   Kicks an occupant out of the room, assuming that the user has necessary
+   permissions in order to do so.</div>
+</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#leave()">leave</a>():void</div>
+<div class="summaryTableDescription">
+   Leaves the current conference room, assuming that the user has joined one.</div>
+</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../collections/ArrayCollection.html#removeAll()">removeAll</a>():void</div>
+<div class="summaryTableDescription">
+   Remove all items from the ArrayCollection.</div>
+</td><td class="summaryTableOwnerCol"><a href="../collections/ArrayCollection.html">ArrayCollection</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../collections/ArrayCollection.html#removeEventListener()">removeEventListener</a>(type:String, listener:Function, useCapture:Boolean = false):void</div>
+<div class="summaryTableDescription">
+   Removes a listener from the EventDispatcher object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../collections/ArrayCollection.html">ArrayCollection</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../collections/ArrayCollection.html#removeItem()">removeItem</a>(item:*):Boolean</div>
+<div class="summaryTableDescription">
+   Remove the specified item from this list, should it exist.</div>
+</td><td class="summaryTableOwnerCol"><a href="../collections/ArrayCollection.html">ArrayCollection</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../collections/ArrayCollection.html#removeItemAt()">removeItemAt</a>(index:int):*</div>
+<div class="summaryTableDescription">
+   Removes the item at the specified index and returns it.</div>
+</td><td class="summaryTableOwnerCol"><a href="../collections/ArrayCollection.html">ArrayCollection</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#requestAffiliations()">requestAffiliations</a>(affiliation:String):void</div>
+<div class="summaryTableDescription">
+   Requests an affiliation list for a given affiliation with with room.</div>
+</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#requestConfiguration()">requestConfiguration</a>():void</div>
+<div class="summaryTableDescription">
+   Requests a configuration form from the room.</div>
+</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#revoke()">revoke</a>(jids:Array):void</div>
+<div class="summaryTableDescription">
+   Revokes all affiliations from the JIDs.</div>
+</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#sendMessage()">sendMessage</a>(body:String = null, htmlBody:String = null):void</div>
+<div class="summaryTableDescription">
+   Sends a message to the conference room.</div>
+</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#sendMessageWithExtension()">sendMessageWithExtension</a>(message:<a href="../data/Message.html">Message</a>):void</div>
+<div class="summaryTableDescription">
+   Sends a message to the conference room with an extension attached.</div>
+</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#sendPrivateMessage()">sendPrivateMessage</a>(recipientNickname:String, body:String = null, htmlBody:String = null):void</div>
+<div class="summaryTableDescription">
+   Sends a private message to a specific participant in the conference room.</div>
+</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../collections/ArrayCollection.html#setItemAt()">setItemAt</a>(item:*, index:int):*</div>
+<div class="summaryTableDescription">
+   Places the item at the specified index.</div>
+</td><td class="summaryTableOwnerCol"><a href="../collections/ArrayCollection.html">ArrayCollection</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setOccupantVoice()">setOccupantVoice</a>(occupantNick:String, voice:Boolean):void</div>
+<div class="summaryTableDescription">
+   In a moderated room, sets voice status to a particular occupant, assuming the user
+   has the necessary permissions to do so.</div>
+</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../collections/ArrayCollection.html#toArray()">toArray</a>():Array</div>
+<div class="summaryTableDescription">
+   Return an Array that is populated in the same order as the ArrayCollection.</div>
+</td><td class="summaryTableOwnerCol"><a href="../collections/ArrayCollection.html">ArrayCollection</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../collections/ArrayCollection.html#toString()">toString</a>():String</div>
+<div class="summaryTableDescription">
+   Pretty prints the contents of the ArrayCollection to a string and returns it.</div>
+</td><td class="summaryTableOwnerCol"><a href="../collections/ArrayCollection.html">ArrayCollection</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../collections/ArrayCollection.html#willTrigger()">willTrigger</a>(type:String):Boolean</div>
+<div class="summaryTableDescription">
+   Checks whether an event listener is registered with this EventDispatcher object or any of its ancestors for the specified event type.</div>
+</td><td class="summaryTableOwnerCol"><a href="../collections/ArrayCollection.html">ArrayCollection</a></td>
+</tr>
+</table>
+</div>
+<a name="protectedMethodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Protected Methods</div>
+<div class="showHideLinks">
+<div class="hideInheritedProtectedMethod" id="hideInheritedProtectedMethod">
+<a onclick="javascript:setInheritedVisible(false,'ProtectedMethod');" href="#protectedMethodSummary" class="showHideLink"><img src="../../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Protected Methods</a>
+</div>
+<div class="showInheritedProtectedMethod" id="showInheritedProtectedMethod">
+<a onclick="javascript:setInheritedVisible(true,'ProtectedMethod');" href="#protectedMethodSummary" class="showHideLink"><img src="../../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Protected Methods</a>
+</div>
+</div>
+<table id="summaryTableProtectedMethod" class="summaryTable hideInheritedProtectedMethod" cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../collections/ArrayCollection.html#internalDispatchEvent()">internalDispatchEvent</a>(kind:String, item:int = null, location:* = -1):void</div>
+<div class="summaryTableDescription">
+   Dispatches a collection event with the specified information.</div>
+</td><td class="summaryTableOwnerCol"><a href="../collections/ArrayCollection.html">ArrayCollection</a></td>
+</tr>
+</table>
+</div>
+<a name="eventSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Events</div>
+<table id="summaryTableEvent" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Event</th><th>Summary</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:adminError">adminError</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched when an administration action failed.</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:affiliationChangeComplete">affiliationChangeComplete</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched when an affiliation change has completed.</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:affiliations">affiliations</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched when an affiliation list has been requested.</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:bannedError">bannedError</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched if the user attempted to join the room but was not allowed to do so because
+  they are banned (i.e., has an affiliation of "outcast").</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:change">change</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched when the active, affiliation, or role property changes.</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:configureRoom">configureRoom</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched when a room configuration form is required.</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:configureRoomComplete">configureRoomComplete</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched when a room configuration form is complete.</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:declined">declined</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched when an invite to this room has been declined by the invitee.</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:groupMessage">groupMessage</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched whenever a new message intented for all room occupants is received.</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:lockedError">lockedError</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched if a user attempts to enter a room while it is "locked" (i.e., before the room
+  creator provides an initial configuration and therefore before the room officially exists).</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:maxUsersError">maxUsersError</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched if the room has reached its maximum number of occupants.</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:nickConflict">nickConflict</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched when the user's preferred nickname already exists in the room.</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:passwordError">passwordError</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched when the room requires a password and the user did not supply one (or
+  the password provided is incorrect).</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:privateMessage">privateMessage</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched whenever a new private message is received.</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:registrationReqError">registrationReqError</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched when the room is members-only and the user is not on the member list.</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:roomDestroyed">roomDestroyed</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched when the room is removed.</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:roomJoin">roomJoin</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched when you have entered the room and messages that are sent
+  will be displayed to other users.</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:roomLeave">roomLeave</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched when the server acknoledges that you have the left the room.</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:subjectChange">subjectChange</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched when the room subject changes.</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:userBanned">userBanned</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched when a user is banned from the room.</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:userDeparture">userDeparture</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched whenever an occpant leaves the room.</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:userJoin">userJoin</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched whenever an occupant joins the room.</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:userKicked">userKicked</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched when a user is kicked from the room.</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:userPresenceChange">userPresenceChange</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched when a user's presence changes.</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+</table>
+</div>
+<a name="constantSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Constants</div>
+<table id="summaryTableConstant" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Constant</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#AFFILIATION_ADMIN">AFFILIATION_ADMIN</a> : String = "admin"<div class="summaryTableDescription">[static]</div>
+</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#AFFILIATION_MEMBER">AFFILIATION_MEMBER</a> : String = "member"<div class="summaryTableDescription">[static]</div>
+</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#AFFILIATION_NONE">AFFILIATION_NONE</a> : String = "none"<div class="summaryTableDescription">[static]</div>
+</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#AFFILIATION_OUTCAST">AFFILIATION_OUTCAST</a> : String = "outcast"<div class="summaryTableDescription">[static]</div>
+</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#AFFILIATION_OWNER">AFFILIATION_OWNER</a> : String = "owner"<div class="summaryTableDescription">[static]</div>
+</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#ROLE_MODERATOR">ROLE_MODERATOR</a> : String = "moderator"<div class="summaryTableDescription">[static]</div>
+</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#ROLE_NONE">ROLE_NONE</a> : String = "none"<div class="summaryTableDescription">[static]</div>
+</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#ROLE_PARTICIPANT">ROLE_PARTICIPANT</a> : String = "participant"<div class="summaryTableDescription">[static]</div>
+</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#ROLE_VISITOR">ROLE_VISITOR</a> : String = "visitor"<div class="summaryTableDescription">[static]</div>
+</td><td class="summaryTableOwnerCol">Room</td>
+</tr>
+</table>
+</div>
+<a name="protectedConstantSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Protected Constants</div>
+<div class="showHideLinks">
+<div class="hideInheritedProtectedConstant" id="hideInheritedProtectedConstant">
+<a onclick="javascript:setInheritedVisible(false,'ProtectedConstant');" href="#protectedConstantSummary" class="showHideLink"><img src="../../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Protected Constants</a>
+</div>
+<div class="showInheritedProtectedConstant" id="showInheritedProtectedConstant">
+<a onclick="javascript:setInheritedVisible(true,'ProtectedConstant');" href="#protectedConstantSummary" class="showHideLink"><img src="../../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Protected Constants</a>
+</div>
+</div>
+<table id="summaryTableProtectedConstant" class="summaryTable hideInheritedProtectedConstant" cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Constant</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="hideInheritedProtectedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../collections/ArrayCollection.html#OUT_OF_BOUNDS_MESSAGE">OUT_OF_BOUNDS_MESSAGE</a> : String = "The supplied index is out of bounds."<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../collections/ArrayCollection.html">ArrayCollection</a></td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="propertyDetail"></a>
+<div class="detailSectionHeader">Property detail</div>
+<a name="affiliation"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">affiliation</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>affiliation:String</code>&nbsp;&nbsp;[read-only]<p>
+   Gets the user's affiliation for this room.
+   Possible affiliations are "owner", "admin", "member", and "outcast".
+   It is also possible to have no defined affiliation.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get affiliation():String</code>
+<br>
+</div>
+<a name="anonymous"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">anonymous</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>anonymous:Boolean</code>&nbsp;&nbsp;[read-only]<p>
+   Whether the room shows full JIDs or not.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get anonymous():Boolean</code>
+<br>
+</div>
+<a name="conferenceServer"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">conferenceServer</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>conferenceServer:String</code>&nbsp;&nbsp;[read-write]<p>
+   The conference server to use for this room. Usually, this is a subdomain of
+   the primary XMPP server, like conference.myserver.com.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get conferenceServer():String</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set conferenceServer(value:String):void</code>
+<br>
+</div>
+<a name="connection"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">connection</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>connection:<a href="../core/XMPPConnection.html">XMPPConnection</a></code>&nbsp;&nbsp;[read-write]<p>
+   A reference to the XMPPConnection being used for incoming/outgoing XMPP data.
+      </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get connection():<a href="../core/XMPPConnection.html">XMPPConnection</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set connection(value:<a href="../core/XMPPConnection.html">XMPPConnection</a>):void</code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../core/XMPPConnection.html" target="">org.igniterealtime.xiff.core.XMPPConnection</a>
+</div>
+</div>
+<a name="isActive"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">isActive</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>isActive:Boolean</code>&nbsp;&nbsp;[read-only]<p>
+   Determines whether the connection to the room is active - that is, the user
+   is connected and has joined the room.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get isActive():Boolean</code>
+<br>
+</div>
+<a name="nickname"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">nickname</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>nickname:String</code>&nbsp;&nbsp;[read-write]<p>
+   The nickname to use when joining.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get nickname():String</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set nickname(value:String):void</code>
+<br>
+</div>
+<a name="password"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">password</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>password:String</code>&nbsp;&nbsp;[read-write]<p>
+   The password.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get password():String</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set password(value:String):void</code>
+<br>
+</div>
+<a name="role"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">role</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>role:String</code>&nbsp;&nbsp;[read-only]<p>
+   Gets the user's role in the conference room.
+   Possible roles are "visitor", "participant", "moderator" or no defined role.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get role():String</code>
+<br>
+</div>
+<a name="roomJID"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">roomJID</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>roomJID:<a href="../core/UnescapedJID.html">UnescapedJID</a></code>&nbsp;&nbsp;[read-write]<p>
+   The unescaped JID of the room. <code>room&at;conference.server</code>
+   Set this after initiating a new Room.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get roomJID():<a href="../core/UnescapedJID.html">UnescapedJID</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set roomJID(value:<a href="../core/UnescapedJID.html">UnescapedJID</a>):void</code>
+<br>
+</div>
+<a name="roomName"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">roomName</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>roomName:String</code>&nbsp;&nbsp;[read-write]<p>
+   The room name that should be used when joining.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get roomName():String</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set roomName(value:String):void</code>
+<br>
+</div>
+<a name="subject"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">subject</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>subject:String</code>&nbsp;&nbsp;[read-only]<p>
+   The subject.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get subject():String</code>
+<br>
+</div>
+<a name="userJID"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">userJID</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>userJID:<a href="../core/UnescapedJID.html">UnescapedJID</a></code>&nbsp;&nbsp;[read-only]<p>
+   Get the JID of the conference room user.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get userJID():<a href="../core/UnescapedJID.html">UnescapedJID</a></code>
+<br>
+</div>
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor detail</div>
+<a name="Room()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">Room</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function Room(aConnection:<a href="../core/XMPPConnection.html">XMPPConnection</a> = null)</code><p>
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">aConnection</span>:<a href="../core/XMPPConnection.html">XMPPConnection</a></code> (default = <code>null</code>)<code></code> &mdash;  A XMPPConnection instance that is providing the primary server connection
+   </td>
+</tr>
+</table>
+</div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="allow()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">allow</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function allow(jids:Array):void</code><p>
+   Allow a previously banned JIDs to enter this room. This is the same as:
+   <code>Room.grant(AFFILIATION_NONE, jid)</code>
+      </p><p>If the process could not be completed, the room will dispatch the event
+   <code>RoomEvent.ADMIN_ERROR</code></p>
+      <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">jids</span>:Array</code> &mdash; An array of unescaped JIDs to allow
+   </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../conference/Room.html#grant" target="">grant</a>
+<br>
+<a href="../conference/Room.html#revoke" target="">revoke</a>
+</div>
+</div>
+<a name="ban()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">ban</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function ban(jids:Array):void</code><p>
+   Bans an array of JIDs from entering the room.
+      </p><p>If the process could not be completed, the room will dispatch the event
+   <code>RoomEvent.ADMIN_ERROR</code>.</p>
+      <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">jids</span>:Array</code> &mdash; An arry of unescaped JIDs to ban
+   </td>
+</tr>
+</table>
+</div>
+<a name="cancelConfiguration()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">cancelConfiguration</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function cancelConfiguration():void</code><p>
+   Cancels the configuration process. The room may still be locked if
+   you cancel the configuration process when attempting to join a
+   reserved room.
+      </p><p>You must have joined the room and have the owner affiliation to
+   configure the room.</p>
+      <p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../conference/Room.html#configureRoom" target="">configureRoom</a>
+<br>
+<a href="../conference/Room.html#configure" target="">configure</a>
+<br>
+<a href="../conference/Room.html#join" target="">join</a>
+</div>
+</div>
+<a name="changeSubject()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">changeSubject</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function changeSubject(newSubject:String):void</code><p>
+   Changes the subject in the conference room. You must have already joined the
+   room before you can change the subject.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">newSubject</span>:String</code> &mdash; The new subject
+   </td>
+</tr>
+</table>
+</div>
+<a name="configure()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">configure</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function configure(fieldmap:Object):void</code><p>
+   Sends a configuration form to the room.
+      You must be joined and have owner affiliation to configure the room
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">fieldmap</span>:Object</code> &mdash; FormExtension, or a hash that is an object with keys being the room configuration
+   form variables and the values being arrays. For single value fields, use a single
+   element array.
+   </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../conference/Room.html#configureRoom" target="">configureRoom</a>
+<br>
+<a href="http://xmpp.org/extensions/xep-0045.html#registrar-formtype-owner" target="mm_external">http://xmpp.org/extensions/xep-0045.html#registrar-formtype-owner</a>
+</div>
+</div>
+<a name="decline()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">decline</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function decline(jid:<a href="../core/UnescapedJID.html">UnescapedJID</a>, reason:String):void</code><p>
+   Actively decline an invitation. You can optionally ignore invitations
+   but if you choose to decline an invitation, you call this method on
+   a room instance that represents the room the invite originated from.
+      </p><p>You do not need to have joined this room to decline an invitation</p>
+      <p>Note: mu-conference-0.6 does not allow users to send decline
+   messages without joining first. If using this version of conferencing
+   software, it is best to ignore invites.</p>
+      <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">jid</span>:<a href="../core/UnescapedJID.html">UnescapedJID</a></code> &mdash; An unescaped JID of the user to invite.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">reason</span>:String</code> &mdash; A string describing why the invitiation was declined
+   </td>
+</tr>
+</table>
+</div>
+<a name="destroy()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">destroy</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function destroy(reason:String, alternateJID:<a href="../core/UnescapedJID.html">UnescapedJID</a> = null, callback:Function = null):void</code><p>
+   Destroys a reserved room. If the room has been configured to be persistent,
+   then it is optional that the server will permanently remove the room.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">reason</span>:String</code> &mdash; A short description of why the room is being destroyed
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">alternateJID</span>:<a href="../core/UnescapedJID.html">UnescapedJID</a></code> (default = <code>null</code>)<code></code> &mdash; A JID for current members to use as an alternate room to join
+   after the room has been destroyed. Like a postal forwarding address.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">callback</span>:Function</code> (default = <code>null</code>)<code></code></td>
+</tr>
+</table>
+</div>
+<a name="getMessage()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getMessage</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getMessage(body:String = null, htmlBody:String = null):<a href="../data/Message.html">Message</a></code><p>
+   Gets an instance of the <code>Message</code> class that has been pre-configured to be
+   sent from this room. Use this method to get a <code>Message</code> in order to add extensions
+   to outgoing room messages.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">body</span>:String</code> (default = <code>null</code>)<code></code> &mdash; The message body
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">htmlBody</span>:String</code> (default = <code>null</code>)<code></code> &mdash; The message body with HTML formatting
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../data/Message.html">Message</a></code> &mdash; 
+                        A <code>Message</code> class instance
+   
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<a name="getOccupantNamed()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getOccupantNamed</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getOccupantNamed(name:String):<a href="../conference/RoomOccupant.html">RoomOccupant</a></code><p>
+   Gets the <code>RoomOccupant</code> whose displayName matches the name passed in.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">name</span>:String</code></td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../conference/RoomOccupant.html">RoomOccupant</a></code></td>
+</tr>
+</table>
+</div>
+<a name="grant()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">grant</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function grant(affiliation:String, jids:Array):void</code><p>
+   Grants permissions on a room to one or more JIDs by setting the
+   affiliation of a user based on their JID.
+      </p><p>If the JID currently has an existing affiliation, then the existing
+   affiliation will be replaced with the one passed. If the process could not be
+   completed, the room will dispatch the event <code>RoomEvent.ADMIN_ERROR</code>.</p>
+      <p>XMPP spec states that the #admin schema should be used for affiliation changes.
+   Unfortunately to this date, Openfire does not match spec and requires the #owner schema.
+   Because of this, if granting privileges fails on the first attempt using the #admin schema,
+   we try again using the #owner schema.</p>
+      <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">affiliation</span>:String</code> &mdash; Use one of the
+   following affiliations: <code>Room.AFFILIATION_MEMBER</code>,
+   <code>Room.AFFILIATION_ADMIN</code>,
+   <code>Room.AFFILIATION_OWNER</code>
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">jids</span>:Array</code> &mdash; An array of UnescapedJIDs to grant these permissions to
+   </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../conference/Room.html#revoke" target="">revoke</a>
+<br>
+<a href="../conference/Room.html#allow" target="">allow</a>
+<br>
+<a href="http://xmpp.org/extensions/xep-0045.html#schemas-admin" target="mm_external">http://xmpp.org/extensions/xep-0045.html#schemas-admin</a>
+</div>
+</div>
+<a name="invite()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">invite</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function invite(jid:<a href="../core/UnescapedJID.html">UnescapedJID</a>, reason:String):void</code><p>
+   Invites a user that is not currently a member of this room to this room.
+      </p><p>You must have joined the room and have appropriate permissions to invite
+   other memebers, because the server will format and send the invite message to
+   as if it came from the room rather that you sending the invite directly from you.</p>
+      <p>To listen to invite events, add an event listener on your XMPPConnection to the
+   <code>InviteEvent.INVITED</code> event.</p>
+      <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">jid</span>:<a href="../core/UnescapedJID.html">UnescapedJID</a></code> &mdash; An unescaped JID of the user to invite.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">reason</span>:String</code> &mdash; A string describing why you would like to invite the user.
+   </td>
+</tr>
+</table>
+</div>
+<a name="isThisRoom()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">isThisRoom</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function isThisRoom(sender:<a href="../core/UnescapedJID.html">UnescapedJID</a>):Boolean</code><p>
+   Determines if the <code>sender</code> parameter is the same
+   as the room's JID.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">sender</span>:<a href="../core/UnescapedJID.html">UnescapedJID</a></code> &mdash; room JID to test
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Boolean</code> &mdash; true if the passed JID matches the getRoomJID
+   </td>
+</tr>
+</table>
+</div>
+<a name="isThisUser()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">isThisUser</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function isThisUser(sender:<a href="../core/UnescapedJID.html">UnescapedJID</a>):Boolean</code><p>
+   Determines if the <code>sender</code> param is the
+   same as the user's JID.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">sender</span>:<a href="../core/UnescapedJID.html">UnescapedJID</a></code> &mdash; the room JID to test
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Boolean</code> &mdash; true if the passed JID matches the userJID
+   </td>
+</tr>
+</table>
+</div>
+<a name="join()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">join</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function join(createReserved:Boolean = false, joinPresenceExtensions:Array = null):Boolean</code><p>
+   Joins a conference room based on the parameters specified by the room
+   properties. This call will create an instant room based on a default
+   server configuration if the room doesn't exist.
+      </p><p>To create and begin the configuration process of a reserved room, pass
+   <code>true</code> to this method to begin the configuration process. When
+   The configuration is complete, the room will be unlocked for others to join.
+   Listen for the <code>RoomEvent.CONFIGURE_ROOM</code> event to handle and
+   either return or cancel the configuration of the room.
+      <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">createReserved</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; Set to true if you wish to create and configure a reserved room
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">joinPresenceExtensions</span>:Array</code> (default = <code>null</code>)<code></code> &mdash; An array of additional extensions to send with the initial presence to the room.
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Boolean</code> &mdash; A boolean indicating whether the join attempt was successfully sent.
+   </td>
+</tr>
+</table>
+</div>
+<a name="joinWithExplicitMUCExtension()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">joinWithExplicitMUCExtension</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function joinWithExplicitMUCExtension(createReserved:Boolean, mucExtension:<a href="../data/muc/MUCExtension.html">MUCExtension</a>, joinPresenceExtensions:Array = null):Boolean</code><p>
+   Joins a conference room based on the parameters specified by the room
+   properties. This call will create an instant room based on a default
+   server configuration if the room doesn't exist.
+      </p><p>To create and begin the configuration process of a reserved room, pass
+   <code>true</code> to this method to begin the configuration process. When
+   The configuration is complete, the room will be unlocked for others to join.
+   Listen for the <code>RoomEvent.CONFIGURE_ROOM</code> event to handle and
+   either return or cancel the configuration of the room.
+      This function adds an additional parameter to allow the caller to completely customize the MUC extension that
+   gets sent to the room.  For example, you can add a history element that specifies how much discussion
+   history you want sent when you join the room (http://xmpp.org/extensions/xep-0045.html#enter-managehistory):
+   <code>
+   var muc:MUCExtension = new MUCExtension();
+   muc.history = true;
+   muc.maxchars = 0;
+   _room.joinWithExplicitMUCExtension(false, mucExt);
+   </code>
+      <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">createReserved</span>:Boolean</code> &mdash; Set to true if you wish to create and configure a reserved room
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">mucExtension</span>:<a href="../data/muc/MUCExtension.html">MUCExtension</a></code> &mdash; The customized MUC extension to send with initial presence to the room.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">joinPresenceExtensions</span>:Array</code> (default = <code>null</code>)<code></code> &mdash; An array of additional extensions to send with the initial presence to the room.
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Boolean</code> &mdash; A boolean indicating whether the join attempt was successfully sent.
+   </td>
+</tr>
+</table>
+</div>
+<a name="kickOccupant()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">kickOccupant</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function kickOccupant(occupantNick:String, reason:String):void</code><p>
+   Kicks an occupant out of the room, assuming that the user has necessary
+   permissions in order to do so. If the user does not, the server will return an error.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">occupantNick</span>:String</code> &mdash; The nickname of the room occupant to kick
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">reason</span>:String</code> &mdash; The reason for the kick
+   </td>
+</tr>
+</table>
+</div>
+<a name="leave()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">leave</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function leave():void</code><p>
+   Leaves the current conference room, assuming that the user has joined one.
+   If the user is not currently in a room, this method does nothing.
+   </p></div>
+<a name="requestAffiliations()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">requestAffiliations</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function requestAffiliations(affiliation:String):void</code><p>
+   Requests an affiliation list for a given affiliation with with room.
+   This will either dispatch the event <code>RoomEvent.AFFILIATIONS</code> or
+   <code>RoomEvent.ADMIN_ERROR</code> depending on the result of the request.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">affiliation</span>:String</code> &mdash; Use one of the following affiliations: <code>Room.AFFILIATION_NONE</code>,
+   <code>Room.AFFILIATION_OUTCAST</code>,
+   <code>Room.AFFILIATION_MEMBER</code>,
+   <code>Room.AFFILIATION_ADMIN</code>,
+   <code>Room.AFFILIATION_OWNER</code>
+   </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../conference/Room.html#revoke" target="">revoke</a>
+<br>
+<a href="../conference/Room.html#grant" target="">grant</a>
+<br>
+<a href="../conference/Room.html#affiliations" target="">affiliations</a>
+</div>
+</div>
+<a name="requestConfiguration()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">requestConfiguration</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function requestConfiguration():void</code><p>
+   Requests a configuration form from the room. Listen to <code>configureRoom</code>
+   event to fill out the form then call either <code>configure</code> or
+   <code>cancelConfiguration</code> to complete the configuration process
+      You must be joined to the room and have the owner affiliation to request
+   a configuration form
+      </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../conference/Room.html#configureRoom" target="">configureRoom</a>
+<br>
+<a href="../conference/Room.html#configure" target="">configure</a>
+<br>
+<a href="../conference/Room.html#cancelConfiguration" target="">cancelConfiguration</a>
+</div>
+</div>
+<a name="revoke()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">revoke</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function revoke(jids:Array):void</code><p>
+   Revokes all affiliations from the JIDs. This is the same as:
+   <code>grant( Room.AFFILIATION_NONE, jids )</code>
+      </p><p>If the process could not be completed, the room will dispatch the event
+   <code>RoomEvent.ADMIN_ERROR</code>. Note: if the JID is banned from this room,
+   then this will also revoke the banned status.</p>
+      <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">jids</span>:Array</code> &mdash; An array of UnescapedJIDs to revoke affiliations from
+   </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../conference/Room.html#grant" target="">grant</a>
+<br>
+<a href="../conference/Room.html#allow" target="">allow</a>
+</div>
+</div>
+<a name="sendMessage()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">sendMessage</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function sendMessage(body:String = null, htmlBody:String = null):void</code><p>
+   Sends a message to the conference room.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">body</span>:String</code> (default = <code>null</code>)<code></code> &mdash; The message body
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">htmlBody</span>:String</code> (default = <code>null</code>)<code></code> &mdash; The message body with HTML formatting
+   </td>
+</tr>
+</table>
+</div>
+<a name="sendMessageWithExtension()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">sendMessageWithExtension</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function sendMessageWithExtension(message:<a href="../data/Message.html">Message</a>):void</code><p>
+   Sends a message to the conference room with an extension attached.
+   Use this method in conjunction with the <code>getMessage</code> method.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">message</span>:<a href="../data/Message.html">Message</a></code> &mdash; The message to send
+   </td>
+</tr>
+</table>
+</div>
+<a name="sendPrivateMessage()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">sendPrivateMessage</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function sendPrivateMessage(recipientNickname:String, body:String = null, htmlBody:String = null):void</code><p>
+   Sends a private message to a specific participant in the conference room.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">recipientNickname</span>:String</code> &mdash; The conference room nickname of the recipient who should
+   receive the private message
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">body</span>:String</code> (default = <code>null</code>)<code></code> &mdash; The message body
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">htmlBody</span>:String</code> (default = <code>null</code>)<code></code> &mdash; The message body with HTML formatting
+   </td>
+</tr>
+</table>
+</div>
+<a name="setOccupantVoice()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setOccupantVoice</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function setOccupantVoice(occupantNick:String, voice:Boolean):void</code><p>
+   In a moderated room, sets voice status to a particular occupant, assuming the user
+   has the necessary permissions to do so.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">occupantNick</span>:String</code> &mdash; The nickname of the occupant to give voice
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">voice</span>:Boolean</code> &mdash; Whether to add voice (true) or remove voice (false). Having voice means
+   that the user is actually able to talk. Without voice the user is effectively muted.
+   </td>
+</tr>
+</table>
+</div>
+<div class="detailSectionHeader">Event detail</div>
+<a name="event:adminError"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">adminError</td><td class="detailHeaderType">event&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/RoomEvent.html"><code>org.igniterealtime.xiff.events.RoomEvent</code></a>
+<br>
+<p></p><p>
+  Dispatched when an administration action failed.
+    </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">org.igniterealtime.xiff.core.XMPPConnection.error</div>
+</div>
+<a name="event:affiliationChangeComplete"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">affiliationChangeComplete</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/RoomEvent.html"><code>org.igniterealtime.xiff.events.RoomEvent</code></a>
+<br>
+<p></p><p>
+  Dispatched when an affiliation change has completed.
+    </p></div>
+<a name="event:affiliations"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">affiliations</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/RoomEvent.html"><code>org.igniterealtime.xiff.events.RoomEvent</code></a>
+<br>
+<p></p><p>
+  Dispatched when an affiliation list has been requested. The event object contains an
+  array of <code>MUCItems</code> containing the JID and affiliation properties.
+    </p><p>To grant or revoke permissions based on this list, only send the changes you wish to
+  make, calling grant/revoke with the new affiliation and existing JID.</p>
+    </div>
+<a name="event:bannedError"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">bannedError</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/RoomEvent.html"><code>org.igniterealtime.xiff.events.RoomEvent</code></a>
+<br>
+<p></p><p>
+  Dispatched if the user attempted to join the room but was not allowed to do so because
+  they are banned (i.e., has an affiliation of "outcast").
+    </p></div>
+<a name="event:change"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">change</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/PropertyChangeEvent.html"><code>org.igniterealtime.xiff.events.PropertyChangeEvent</code></a>
+<br>
+<p></p><p>
+  Dispatched when the active, affiliation, or role property changes.
+    </p></div>
+<a name="event:configureRoom"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">configureRoom</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/RoomEvent.html"><code>org.igniterealtime.xiff.events.RoomEvent</code></a>
+<br>
+<p></p><p>
+  Dispatched when a room configuration form is required. This can occur during the
+  creation of a room, or if a room configuration is requested. The <code>RoomEvent</code>
+  instance will contain an attribute <code>data</code> that is an instance of an object
+  with the following attributes:
+    </p><p><code>instructions</code>: Instructions for the use of form<br />
+  <code>title</code>: Title of the configuration form<br />
+  <code>label</code>: A friendly name for the field<br />
+  <code>name</code>: A computer readable identifier for the field used to identify
+  this field in the result passed to <code>configure()</code><br />
+  <code>type</code>: The type of the field to be displayed. Type will be a constant
+  from the <code>FormField</code> class.</p>
+    <p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../data/forms/FormExtension.html" target="">org.igniterealtime.xiff.data.forms.FormExtension</a>
+<br>
+<a href="../data/forms/FormField.html" target="">org.igniterealtime.xiff.data.forms.FormField</a>
+<br>
+<a href="../conference/Room.html#configure" target="">configure</a>
+</div>
+</div>
+<a name="event:configureRoomComplete"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">configureRoomComplete</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/RoomEvent.html"><code>org.igniterealtime.xiff.events.RoomEvent</code></a>
+<br>
+<p></p><p>
+  Dispatched when a room configuration form is complete.
+    </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../conference/Room.html#configure" target="">configure</a>
+</div>
+</div>
+<a name="event:declined"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">declined</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/RoomEvent.html"><code>org.igniterealtime.xiff.events.RoomEvent</code></a>
+<br>
+<p></p><p>
+  Dispatched when an invite to this room has been declined by the invitee. The <code>RoomEvent</code>
+  <code>data</code> property that has the following attributes:
+    </p><p><code>from</code>: The JID of the user initiating the invite<br />
+  <code>reason</code>: A string containing the reason to join the room<br />
+  <code>data</code>: The original message containing the decline</p>
+    </div>
+<a name="event:groupMessage"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">groupMessage</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/RoomEvent.html"><code>org.igniterealtime.xiff.events.RoomEvent</code></a>
+<br>
+<p></p><p>
+  Dispatched whenever a new message intented for all room occupants is received. The
+  <code>RoomEvent</code> class will contain an attribute <code>data</code> with the
+  group message as an instance of the <code>Message</code> class.
+    </p></div>
+<a name="event:lockedError"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">lockedError</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/RoomEvent.html"><code>org.igniterealtime.xiff.events.RoomEvent</code></a>
+<br>
+<p></p><p>
+  Dispatched if a user attempts to enter a room while it is "locked" (i.e., before the room
+  creator provides an initial configuration and therefore before the room officially exists).
+    </p></div>
+<a name="event:maxUsersError"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">maxUsersError</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/RoomEvent.html"><code>org.igniterealtime.xiff.events.RoomEvent</code></a>
+<br>
+<p></p><p>
+  Dispatched if the room has reached its maximum number of occupants.
+    </p></div>
+<a name="event:nickConflict"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">nickConflict</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/RoomEvent.html"><code>org.igniterealtime.xiff.events.RoomEvent</code></a>
+<br>
+<p></p><p>
+  Dispatched when the user's preferred nickname already exists in the room. The
+  <code>RoomEvent</code> will contain an attribute <code>nickname</code> with the nickname
+  already existing in the room.
+    </p></div>
+<a name="event:passwordError"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">passwordError</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/RoomEvent.html"><code>org.igniterealtime.xiff.events.RoomEvent</code></a>
+<br>
+<p></p><p>
+  Dispatched when the room requires a password and the user did not supply one (or
+  the password provided is incorrect).
+    </p></div>
+<a name="event:privateMessage"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">privateMessage</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/RoomEvent.html"><code>org.igniterealtime.xiff.events.RoomEvent</code></a>
+<br>
+<p></p><p>
+  Dispatched whenever a new private message is received. The <code>RoomEvent</code> class
+  contains an attribute <code>data</code> with the private message as an instance of the
+  <code>Message</code> class.
+    </p></div>
+<a name="event:registrationReqError"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">registrationReqError</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/RoomEvent.html"><code>org.igniterealtime.xiff.events.RoomEvent</code></a>
+<br>
+<p></p><p>
+  Dispatched when the room is members-only and the user is not on the member list.
+    </p></div>
+<a name="event:roomDestroyed"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">roomDestroyed</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/RoomEvent.html"><code>org.igniterealtime.xiff.events.RoomEvent</code></a>
+<br>
+<p></p><p>
+  Dispatched when the room is removed.
+    </p></div>
+<a name="event:roomJoin"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">roomJoin</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/RoomEvent.html"><code>org.igniterealtime.xiff.events.RoomEvent</code></a>
+<br>
+<p></p><p>
+  Dispatched when you have entered the room and messages that are sent
+  will be displayed to other users. The room's role and affiliation will
+  be visible from this point forward.
+    </p></div>
+<a name="event:roomLeave"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">roomLeave</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/RoomEvent.html"><code>org.igniterealtime.xiff.events.RoomEvent</code></a>
+<br>
+<p></p><p>
+  Dispatched when the server acknoledges that you have the left the room.
+    </p></div>
+<a name="event:subjectChange"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">subjectChange</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/RoomEvent.html"><code>org.igniterealtime.xiff.events.RoomEvent</code></a>
+<br>
+<p></p><p>
+  Dispatched when the room subject changes.
+    </p></div>
+<a name="event:userBanned"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">userBanned</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/RoomEvent.html"><code>org.igniterealtime.xiff.events.RoomEvent</code></a>
+<br>
+<p></p><p>
+  Dispatched when a user is banned from the room.
+    </p></div>
+<a name="event:userDeparture"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">userDeparture</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/RoomEvent.html"><code>org.igniterealtime.xiff.events.RoomEvent</code></a>
+<br>
+<p></p><p>
+  Dispatched whenever an occpant leaves the room. The <code>RoomEvent</code> instance will
+  contain an attribute <code>nickname</code> with the nickname of the occupant who left.
+    </p></div>
+<a name="event:userJoin"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">userJoin</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/RoomEvent.html"><code>org.igniterealtime.xiff.events.RoomEvent</code></a>
+<br>
+<p></p><p>
+  Dispatched whenever an occupant joins the room. The <code>RoomEvent</code> instance will
+  contain an attribute <code>nickname</code> with the nickname of the occupant who joined.
+    </p></div>
+<a name="event:userKicked"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">userKicked</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/RoomEvent.html"><code>org.igniterealtime.xiff.events.RoomEvent</code></a>
+<br>
+<p></p><p>
+  Dispatched when a user is kicked from the room.
+    </p></div>
+<a name="event:userPresenceChange"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">userPresenceChange</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/RoomEvent.html"><code>org.igniterealtime.xiff.events.RoomEvent</code></a>
+<br>
+<p></p><p>
+  Dispatched when a user's presence changes.
+    </p></div>
+<a name="constantDetail"></a>
+<div class="detailSectionHeader">Constant detail</div>
+<a name="AFFILIATION_ADMIN"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">AFFILIATION_ADMIN</td><td class="detailHeaderType">constant</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const AFFILIATION_ADMIN:String = "admin"</code>
+</div>
+<a name="AFFILIATION_MEMBER"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">AFFILIATION_MEMBER</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const AFFILIATION_MEMBER:String = "member"</code>
+</div>
+<a name="AFFILIATION_NONE"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">AFFILIATION_NONE</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const AFFILIATION_NONE:String = "none"</code>
+</div>
+<a name="AFFILIATION_OUTCAST"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">AFFILIATION_OUTCAST</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const AFFILIATION_OUTCAST:String = "outcast"</code>
+</div>
+<a name="AFFILIATION_OWNER"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">AFFILIATION_OWNER</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const AFFILIATION_OWNER:String = "owner"</code>
+</div>
+<a name="ROLE_MODERATOR"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">ROLE_MODERATOR</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const ROLE_MODERATOR:String = "moderator"</code>
+</div>
+<a name="ROLE_NONE"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">ROLE_NONE</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const ROLE_NONE:String = "none"</code>
+</div>
+<a name="ROLE_PARTICIPANT"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">ROLE_PARTICIPANT</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const ROLE_PARTICIPANT:String = "participant"</code>
+</div>
+<a name="ROLE_VISITOR"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">ROLE_VISITOR</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const ROLE_VISITOR:String = "visitor"</code>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> 
+</center>
+</div>
+</body>
+</html>
+<!-- -->

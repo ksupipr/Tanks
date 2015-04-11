@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:HBox xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100%" label="Stream" creationComplete="this.init();">
+	
+	<mx:Script>
+		<![CDATA[
+			import com.api.forticom.ApiCallbackEvent;
+			import com.api.forticom.ForticomAPI;
+			import com.api.forticom.SignUtil;
+			
+			import mx.controls.Alert;
+			
+			protected var _request : Object = {};
+			
+			protected function init() : void
+			{
+				ForticomAPI.addEventListener(ApiCallbackEvent.CALL_BACK, this.sendConfirmed);
+			}
+			
+			protected function send() : void
+			{
+				this._request = {method : "stream.publish"};
+				
+				if(this.userId.text != "")
+				{
+					this._request["uid"] = this.userId.text;
+				}
+				if(this.msg.text != "")
+				{
+					this._request["message"] = this.msg.text; 
+				}
+				if(this.attTxt.text != "")
+				{
+					this._request["attachment"] = this.attTxt.text;
+				}
+				if(this.actTxt.text != "")
+				{
+					this._request["action_links"] = this.actTxt.text;
+				}
+				this._request = SignUtil.signRequest(this._request, true);
+				
+				ForticomAPI.showConfirmation("stream.publish", this.msg.text, this._request['sig']);
+			}
+			
+			protected function doDel() : void
+			{
+				var request : Object = {};
+					request["method"] = "stream.del";
+					request["fid"] = this.delStreamID.text;
+					
+				if (this.delUserId.text != "")
+				{
+					request["uid"] = this.delUserId.text;
+				}
+				
+				this.delStatus.send(SignUtil.signRequest(request));
+			}
+			
+			protected function sendConfirmed(event : ApiCallbackEvent) : void
+			{
+					
+				if(event.method == "showConfirmation")
+				{
+					switch(event.result)
+					{
+						case "ok":
+							this._request["resig"] = event.data;
+							this.saveStatus.send(this._request);
+							break;
+						case "cancel":
+							Alert.show("user canceled operation", "Status:");
+							break;
+					}
+				}
+			}
+			
+			protected function handleSave(data : XML) : void
+			{
+				Alert.show(data.toXMLString(), "Save status:");
+			}
+			
+			protected function setDefaultValue(type : String) : void
+			{
+				switch(type)
+				{
+					case "att":
+						this.attTxt.text = '{"caption":"Test",\n' +
+							'	"media":[\n' +
+							'		{"href":"http://link","src":"http://image.jpg","type":"image"},\n' +
+							'		{"expanded_width":300,"expanded_height":400,"height":200,"width":100,"swfsrc":"http://test.swf","imgsrc":"http://image.jpg","type":"flash"},\n' +
+							'		{"album":"album","src":"src","title":"title","artist":"artist","type":"mp3"}]\n' +
+							'}';
+						break;
+					case "act":
+						this.actTxt.text = '[\n' +
+							'	{"text":"text1","href":"href1"},\n' +
+							'	{"text":"text2","href":"href2"}\n' +
+							']';
+						break;
+				}
+			}
+			
+		]]>
+	</mx:Script>
+	
+	<mx:Form width="50%" paddingBottom="4" paddingLeft="4" paddingRight="4" verticalGap="1">
+		<mx:FormHeading label="Data:" />
+		<mx:FormItem label="User ID:" width="100%">
+			<mx:TextInput id="userId"  width="100%"/>
+		</mx:FormItem>
+		<mx:FormItem label="Message" width="100%">
+			<mx:TextArea id="msg"  width="100%"/>
+		</mx:FormItem>
+		<mx:FormHeading label="Attachment:"/>
+		<mx:FormItem width="100%" label="JSON:">
+			<mx:TextArea width="100%" height="92" id="attTxt" />
+			<mx:Button label="set default value" click="this.setDefaultValue('att');"/>
+		</mx:FormItem>
+		<mx:FormHeading label="Action links:" />
+		<mx:FormItem width="100%">
+			<mx:TextArea width="100%" height="67" id="actTxt"/>
+			<mx:Button label="set default value" click="this.setDefaultValue('act');"/>
+		</mx:FormItem>
+		<mx:HBox>
+			<mx:Button label="submit" click="this.send();"/>
+		</mx:HBox>
+	</mx:Form>
+	<mx:Form width="50%" paddingBottom="4" paddingLeft="4" paddingRight="4" verticalGap="1">
+		<mx:FormHeading label="Stream Delete:" />
+		<mx:FormItem label="User ID:" width="100%">
+			<mx:TextInput id="delUserId"  width="100%"/>
+		</mx:FormItem>
+		<mx:FormItem label="*Stream ID:" width="100%">
+			<mx:TextArea id="delStreamID"  width="100%"/>
+		</mx:FormItem>
+		<mx:HBox>
+			<mx:Button label="Stream.del();" click="this.doDel();"/>
+		</mx:HBox>
+	</mx:Form>
+	
+	<mx:HTTPService
+		id="saveStatus"
+		url="{this.parentApplication._dataURL}"
+		method="GET"
+		resultFormat="e4x"
+		result="{this.handleSave(this.saveStatus.lastResult as XML)}"	
+	/>
+	
+	<mx:HTTPService
+		id="delStatus"
+		url="{this.parentApplication._dataURL}"
+		method="GET"
+		resultFormat="e4x"
+		result="{this.handleSave(this.delStatus.lastResult as XML)}"	
+		/>
+</mx:HBox>

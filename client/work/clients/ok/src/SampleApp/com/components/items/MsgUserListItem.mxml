@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:VBox xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" verticalScrollPolicy="off" horizontalScrollPolicy="off" borderStyle="solid" borderColor="#000000" paddingBottom="4" paddingLeft="4" paddingRight="4" paddingTop="4">
+	
+	<mx:Metadata>
+		[Event(name="snd", type="flash.events.DataEvent")]
+	</mx:Metadata>
+	<mx:Metadata>
+		[Event(name="select", type="flash.events.Event")]
+	</mx:Metadata>
+	
+	<mx:Script>
+		<![CDATA[
+			import mx.managers.PopUpManager;
+			
+			protected function handleSendMsg() : void
+			{
+				var window : MsgWindow = new MsgWindow();
+					window.addEventListener('snd', this.handleSend);
+					
+				PopUpManager.addPopUp(window, this.root, true);
+				PopUpManager.centerPopUp(window);
+			}
+			
+			protected function handleSend(event : DataEvent) : void
+			{
+				this.dispatchEvent(new DataEvent('snd', true, false, event.data));
+				PopUpManager.removePopUp(event.target as MsgWindow);
+			}
+			
+		]]>
+	</mx:Script>
+	
+	<mx:Form paddingBottom="0" paddingLeft="0" paddingRight="0" paddingTop="0">
+		<mx:FormItem label="FUID:">
+			<mx:Label text="{this.data.friend_uid}" />
+		</mx:FormItem>
+		<mx:FormItem label="Last time:">
+			<mx:Label text="{this.data.last_msg_time}" />
+		</mx:FormItem>
+		<mx:FormItem label="Last view:">
+			<mx:Label text="{this.data.last_view_time}" />
+		</mx:FormItem>
+		<mx:FormItem label="NEW:">
+			<mx:Label text="{this.data.new_msgs_count}" fontWeight="bold" />
+		</mx:FormItem>
+	</mx:Form>
+	<mx:HBox>
+		<mx:Button label="Show" click="this.dispatchEvent(new Event('select'));" />
+		<mx:Button label="Send Message" click="this.handleSendMsg();" />
+	</mx:HBox>
+</mx:VBox>

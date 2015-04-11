@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:TitleWindow xmlns:mx="http://www.adobe.com/2006/mxml" close="PopUpManager.removePopUp(this);" horizontalScrollPolicy="off" verticalScrollPolicy="off" layout="vertical" width="350" height="250" title="Message {this.data.msg_id}" showCloseButton="true">
+	<mx:Script>
+		<![CDATA[
+			import mx.managers.PopUpManager;
+			
+			protected function handleClick(event : String) : void
+			{
+				this.dispatchEvent(new DataEvent(Event.SELECT, false, false, event));
+				PopUpManager.removePopUp(this);
+			}
+		]]>
+	</mx:Script>
+	
+	<mx:Form width="321" paddingBottom="4" paddingLeft="4" paddingRight="4" paddingTop="4">
+		<mx:FormItem label="Friend ID:">
+			<mx:Label text="{this.data.friend_uid}" />
+		</mx:FormItem>
+		<mx:FormItem label="Direction:">
+			<mx:Label text="{this.data.direction}" />
+		</mx:FormItem>
+		<mx:FormItem label="Time:">
+			<mx:Label text="{this.data.time}" />
+		</mx:FormItem>
+		<mx:FormItem label="Text:">
+			<mx:TextArea text="{this.data.text}"  width="225" height="63"/>
+		</mx:FormItem>
+	</mx:Form>
+	
+	<mx:ControlBar horizontalAlign="center">
+		<mx:Button label="mark as read" click="this.handleClick('read');" />
+		<mx:Button label="report spam" click="this.handleClick('spam');" />
+		<mx:Button label="delete" click="this.handleClick('del');" />		
+	</mx:ControlBar>
+</mx:TitleWindow>

@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<mx:VBox
+	xmlns:mx="http://www.adobe.com/2006/mxml"
+	label="Users"
+	width="100%"
+	height="100%"
+	xmlns:comp="com.components.items.*"
+	xmlns:parts="com.components.parts.*"
+	addedToStage="this.start();">
+	
+	<mx:Script>
+		<![CDATA[
+			import com.api.forticom.SignUtil;
+			import com.serialization.json.JSON;
+			
+			import mx.collections.XMLListCollection;
+			import mx.controls.Alert;
+			
+			protected var timer : Timer = new Timer(60000);
+			
+			[Bindable]
+			public var _friendsList : XMLListCollection;
+			
+			
+			protected function handleTimer(event : Event = null) : void
+			{
+				this.touchSession.send(SignUtil.signRequest({method:'auth.touchSession'}));
+			}
+			
+			protected function start() : void
+			{
+				// request of friends information
+				this.friendsGet.send(SignUtil.signRequest( { method:userTypes.selection.data as String } ));
+				
+				
+			}
+			
+			protected function init() : void
+			{
+				this.timer.addEventListener(TimerEvent.TIMER, this.handleTimer);
+				this.timer.start();
+			}
+			protected function handleFriendsData(data : XML) : void
+			{
+				// todo: проверка на ошибки
+				
+				this.usersGetInfo.send(SignUtil.signRequest({method:'users.getInfo',emptyPictures: this.ePic.selected ? 'true' : 'false', uids:this.getUIDs(data.uid), fields:'uid,first_name,last_name,name,gender,birthday,locale,location,current_location,current_status,pic_1,pic_2,pic_3,pic_4,url_profile,url_profile_mobile,url_chat,url_chat_mobile'}));
+			}
+			
+			protected function getUIDs(list : XMLList) : String
+			{
+				var uids : Array = [];
+				for each(var item : XML in list) uids.push(item);
+				return uids.join(",");
+			}
+			
+			protected function save() : void
+			{
+				var status : Object = { };
+				
+				if (this.lattitude.text != "" || this.altitude.text != "" || this.cellid.text != "" || this.ip.text != "" || this.country.text != "" || this.city.text != "" || this.longitude.text != "")
+				{
+					status["location"] = { };
+					if (this.lattitude.text != "")
+						status["location"]["latitude"] = parseFloat(this.lattitude.text);
+					if (this.altitude.text != "")
+						status["location"]["altitude"] = parseFloat(this.altitude.text);
+					if (this.longitude.text != "")
+						status["location"]["longitude"] = parseFloat(this.longitude.text);
+					if (this.cellid.text != "")
+						status["location"]["cellId"] = parseInt(this.cellid.text);			
+					if (this.ip.text != "")
+						status["location"]["ipAddress"] = this.ip.text;
+					if (this.country.text != "")
+						status["location"]["country"] = this.country.text;
+					if (this.city.text != "")
+						status["location"]["city"] = this.city.text;
+				}
+				status["location"] = JSON.serialize(status["location"]);
+				status["status"] = this.status.text;
+				status["method"] = "users.setStatus";
+					
+				this.saveStatus.send(SignUtil.signRequest(status));
+			}
+			
+			protected function handleSave(data : XML) : void
+			{
+				if(data.toString() == "true")
+				{
+					Alert.show("Save succesfull", "Save status");
+				}
+				else
+				{
+					Alert.show("Save failed :(", "Save status");
+				}
+			}
+
+		]]>
+	</mx:Script>
+	
+	<mx:Panel title="Own status:" width="100%" dropShadowEnabled="false">
+		<mx:HBox>
+			<mx:Form initialize="init();">
+				<mx:FormItem label="Status:">
+					<mx:TextInput id="status"  text="my cewl status"/>
+				</mx:FormItem>
+				<mx:FormItem label="Lattitude:">
+					<mx:TextInput id="lattitude" text="0" />
+				</mx:FormItem>
+				<mx:FormItem label="Longitude:">
+					<mx:TextInput id="longitude" text="0" />
+				</mx:FormItem>
+				<mx:FormItem label="Altitude:">
+					<mx:TextInput id="altitude" text="0" />
+				</mx:FormItem>
+			</mx:Form>
+			<mx:Form>
+				<mx:FormItem label="Cell ID:">
+					<mx:TextInput id="cellid" text="0" />
+				</mx:FormItem>
+				<mx:FormItem label="IP Address:">
+					<mx:TextInput id="ip" text="127.0.0.1" />
+				</mx:FormItem>
+				<mx:FormItem label="Country:">
+					<mx:TextInput id="country" text="Latvia" />
+				</mx:FormItem>
+				<mx:FormItem label="City:">
+					<mx:TextInput id="city" text="Riga" />
+				</mx:FormItem>
+			</mx:Form>
+		</mx:HBox>
+		
+		<mx:Button label="Save" click="save();" />
+	</mx:Panel>
+	<mx:Panel title="User list:" width="100%" height="100%" dropShadowEnabled="false" layout="horizontal">
+		<mx:VBox width="100%" height="100%">
+			<mx:HBox>
+				<mx:CheckBox id="ePic" name="fail" label="emptyPictures" selected="false" change="{this.start();}" />
+			</mx:HBox>
+			<mx:HBox>
+				<mx:Label text="Show" />
+				<mx:RadioButtonGroup id="userTypes" change="{this.start();}" />
+				<mx:RadioButton group="{userTypes}" label="all friends" selected="true" data="friends.get" />
+				<mx:RadioButton group="{userTypes}" label="app users" data="friends.getAppUsers" />
+			</mx:HBox>
+			<mx:Tile
+				id="userFriends"
+				width="100%"
+				height="100%">
+				<mx:Repeater id="userFriendsRepeater" dataProvider="{usersGetInfo.lastResult.user}">
+					<comp:UserItem
+						data="{userFriendsRepeater.currentItem}"
+						click="userEditor.data=(event.target is UserItem ? event.target.data : event.target.parent.data)" />
+				</mx:Repeater>
+			</mx:Tile>
+		</mx:VBox>
+		<parts:UserEditor id="userEditor" />
+	</mx:Panel>
+	
+	<mx:HTTPService
+		id="saveStatus"
+		url="{this.parentApplication._dataURL}"
+		method="GET"
+		resultFormat="e4x"
+		result="{this.handleSave(this.saveStatus.lastResult as XML)}"
+	/>
+	
+	<mx:HTTPService
+		id="friendsGet"
+		url="{this.parentApplication._dataURL}"
+		method="GET"
+		resultFormat="e4x"
+		result="{this.handleFriendsData(this.friendsGet.lastResult as XML)}"
+	/>
+	<mx:HTTPService
+		id="touchSession"
+		url="{this.parentApplication._dataURL}"
+		method="GET"
+		resultFormat="e4x"
+		result="{}"
+	/>
+	
+	<mx:HTTPService
+		id="usersGetInfo"
+		url="{this.parentApplication._dataURL}"
+		method="GET"
+		resultFormat="e4x"
+		result="{}"
+	/>
+	
+	<mx:HTTPService
+		id="usersSetStatus"
+		url="{this.parentApplication._dataURL}"
+		method="GET"
+		resultFormat="e4x"
+		result="{}"
+	/>
+</mx:VBox>

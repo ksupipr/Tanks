@@ -1,0 +1,1605 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../../print.css" type="text/css" media="print">
+<meta content="XMPPConnection,org.igniterealtime.xiff.core.XMPPConnection,STREAM_TYPE_FLASH,STREAM_TYPE_FLASH_TERMINATED,STREAM_TYPE_STANDARD,STREAM_TYPE_STANDARD_TERMINATED,_domain,_incompleteRawXML,_openConnections,_port,_resource,_server,_streamType,compressionNegotiated,saslMechanisms,socket,active,compress,domain,ignoreWhiteSpace,incomingBytes,jid,openConnections,outgoingBytes,password,port,queuePresences,resource,server,useAnonymousLogin,username,changePassword,changePassword_result,chooseStreamTags,configureAuthMechanisms,configureStreamCompression,connect,createSocket,disableSASLMechanism,disconnect,flushPresenceQueue,getRegistrationFields,getRegistrationFields_result,handleBindError,handleNodeType,handleStreamFeatures,handleStreamTLS,isActive,isLoggedIn,parseDataReceived,registerSASLMechanism,send,sendKeepAlive,sendRegistrationFields,sendXML,socketClosed,socketConnected,socketDataReceived" name="keywords">
+<title>org.igniterealtime.xiff.core.XMPPConnection</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'XMPPConnection - API Documentation';
+				var baseRef = '../../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">API Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../index-list.html')" href="../../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../../index.html?org/igniterealtime/xiff/core/XMPPConnection.html&amp;org/igniterealtime/xiff/core/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;XMPPConnection</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#eventSummary">Events</a>&nbsp;| <a href="#constantSummary">Constants</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class XMPPConnection"); titleBar_setSubNav(true,true,false,false,true,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">org.igniterealtime.xiff.core</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public class XMPPConnection</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">XMPPConnection <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../../../images/inherit-arrow.gif"> flash.events.EventDispatcher</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Subclasses</td><td><a href="../core/XMPPBOSHConnection.html">XMPPBOSHConnection</a>, <a href="../core/XMPPTLSConnection.html">XMPPTLSConnection</a></td>
+</tr>
+</table>
+<p></p>
+  This class is used to connect to and manage data coming from an XMPP server. Use one instance
+  of this class per connection.
+  <p></p>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#compress">compress</a> : Boolean<div class="summaryTableDescription">
+   Shall the zlib compression be allowed if the server supports it.</div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#domain">domain</a> : String<div class="summaryTableDescription">
+   The XMPP domain to use with the server.</div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#ignoreWhiteSpace">ignoreWhiteSpace</a> : Boolean<div class="summaryTableDescription">
+   Determines whether whitespace will be ignored on incoming XML data.</div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#incomingBytes">incomingBytes</a> : uint<div class="summaryTableDescription">[read-only]
+   Get the count of the received bytes.</div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#jid">jid</a> : <a href="../core/UnescapedJID.html">UnescapedJID</a>
+<div class="summaryTableDescription">[read-only]
+   Gets the fully qualified unescaped JID of the user.</div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#openConnections">openConnections</a> : Array<div class="summaryTableDescription">[static][read-only]
+      </div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#outgoingBytes">outgoingBytes</a> : uint<div class="summaryTableDescription">[read-only]
+   Get the count of current bytes sent by this connection
+   </div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#password">password</a> : String<div class="summaryTableDescription">
+   The password to use when logging in.</div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#port">port</a> : uint<div class="summaryTableDescription">
+   The port to use when connecting.</div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#queuePresences">queuePresences</a> : Boolean<div class="summaryTableDescription">
+   Should the connection queue presence events for a small interval so that it can send multiple in a batch?
+   </div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#resource">resource</a> : String<div class="summaryTableDescription">
+   The resource to use when logging in.</div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#server">server</a> : String<div class="summaryTableDescription">
+   The XMPP server to use for connection.</div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#useAnonymousLogin">useAnonymousLogin</a> : Boolean<div class="summaryTableDescription">
+   Whether to use anonymous login or not.</div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#username">username</a> : String<div class="summaryTableDescription">
+   The username to use for connection.</div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+</table>
+</div>
+<a name="protectedPropertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Protected Properties</div>
+<table id="summaryTableProtectedProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#active">active</a> : Boolean<div class="summaryTableDescription">
+      </div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#compressionNegotiated">compressionNegotiated</a> : Boolean = false<div class="summaryTableDescription">
+   True if both sides of the connected parties have accepted the zlib compression.</div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_domain">_domain</a> : String<div class="summaryTableDescription">
+   Domain of the user.</div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_incompleteRawXML">_incompleteRawXML</a> : String = ""<div class="summaryTableDescription">
+   Save the previously received data if it was incomplete.</div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_openConnections">_openConnections</a> : Array<div class="summaryTableDescription">[static]
+   Are there more than one connection at a time?
+   </div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_port">_port</a> : uint = 5222<div class="summaryTableDescription">
+   </div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_resource">_resource</a> : String = "xiff"<div class="summaryTableDescription">
+   </div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#saslMechanisms">saslMechanisms</a> : Object<div class="summaryTableDescription">[static]
+   The types of SASL mechanisms available.</div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_server">_server</a> : String<div class="summaryTableDescription">
+   Server to connect, could be different of the login domain.</div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#socket">socket</a> : Socket<div class="summaryTableDescription">
+   Binary socket used to connect to the XMPP server.</div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#_streamType">_streamType</a> : uint = 0<div class="summaryTableDescription">
+   One of the STREAM_TYPE_..</div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#XMPPConnection()">XMPPConnection</a>()</div>
+<div class="summaryTableDescription">
+      </div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#changePassword()">changePassword</a>(newPassword:String):void</div>
+<div class="summaryTableDescription">
+   Changes the user's account password on the server.</div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#connect()">connect</a>(streamType:uint = 0):Boolean</div>
+<div class="summaryTableDescription">
+   Connects to the server.</div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#disableSASLMechanism()">disableSASLMechanism</a>(name:String):void</div>
+<div class="summaryTableDescription">[static]
+      </div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#disconnect()">disconnect</a>():void</div>
+<div class="summaryTableDescription">
+   Disconnects from the server if currently connected.</div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getRegistrationFields()">getRegistrationFields</a>():void</div>
+<div class="summaryTableDescription">
+   Issues a request for the information that must be submitted for registration with the server.</div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#isActive()">isActive</a>():Boolean</div>
+<div class="summaryTableDescription">
+   Determines whether the connection with the server is currently active.</div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#isLoggedIn()">isLoggedIn</a>():Boolean</div>
+<div class="summaryTableDescription">
+   Determines whether the user is connected and logged into the server.</div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#registerSASLMechanism()">registerSASLMechanism</a>(name:String, authClass:Class):void</div>
+<div class="summaryTableDescription">[static]
+      </div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#send()">send</a>(o:<a href="../data/XMPPStanza.html">XMPPStanza</a>):void</div>
+<div class="summaryTableDescription">
+   Sends data to the server.</div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#sendKeepAlive()">sendKeepAlive</a>():void</div>
+<div class="summaryTableDescription">
+   Sends ping to server in order to keep the connection alive.</div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#sendRegistrationFields()">sendRegistrationFields</a>(fieldMap:Object, key:String):void</div>
+<div class="summaryTableDescription">
+   Registers a new account with the server, sending the registration data as specified in the fieldMap</div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+</table>
+</div>
+<a name="protectedMethodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Protected Methods</div>
+<table id="summaryTableProtectedMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#changePassword_result()">changePassword_result</a>(resultIQ:<a href="../data/IQ.html">IQ</a>):void</div>
+<div class="summaryTableDescription">
+      </div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#chooseStreamTags()">chooseStreamTags</a>(type:uint):void</div>
+<div class="summaryTableDescription">
+   Choose the stream start and ending tags based on the given type.</div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#configureAuthMechanisms()">configureAuthMechanisms</a>(mechanisms:XMLNode):void</div>
+<div class="summaryTableDescription">
+   Use the authentication which is first in the list (saslMechanisms) if possible.</div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#configureStreamCompression()">configureStreamCompression</a>():void</div>
+<div class="summaryTableDescription">
+   Ask the server to enable Zlib compression of the stream.</div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#createSocket()">createSocket</a>():void</div>
+<div class="summaryTableDescription">
+   </div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#flushPresenceQueue()">flushPresenceQueue</a>(event:TimerEvent):void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getRegistrationFields_result()">getRegistrationFields_result</a>(resultIQ:<a href="../data/IQ.html">IQ</a>):void</div>
+<div class="summaryTableDescription">
+      </div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#handleBindError()">handleBindError</a>(packet:<a href="../data/IQ.html">IQ</a>):void</div>
+<div class="summaryTableDescription">
+   Error handler callback
+   </div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#handleNodeType()">handleNodeType</a>(node:XMLNode):void</div>
+<div class="summaryTableDescription">
+   Calls a appropriate parser base on the nodeName.</div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#handleStreamFeatures()">handleStreamFeatures</a>(node:XMLNode):void</div>
+<div class="summaryTableDescription">
+   </div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#handleStreamTLS()">handleStreamTLS</a>(node:XMLNode):void</div>
+<div class="summaryTableDescription">
+      </div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#parseDataReceived()">parseDataReceived</a>(bytedata:ByteArray):void</div>
+<div class="summaryTableDescription">
+   Parses the data which the socket just received.</div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#sendXML()">sendXML</a>(someData:*):void</div>
+<div class="summaryTableDescription">
+   Data is untyped because it could be a string or XML.</div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#socketClosed()">socketClosed</a>(event:Event):void</div>
+<div class="summaryTableDescription">
+      </div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#socketConnected()">socketConnected</a>(event:Event):void</div>
+<div class="summaryTableDescription">
+      </div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#socketDataReceived()">socketDataReceived</a>(event:ProgressEvent):void</div>
+<div class="summaryTableDescription">
+      </div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+</table>
+</div>
+<a name="eventSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Events</div>
+<table id="summaryTableEvent" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Event</th><th>Summary</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:changePasswordSuccess">changePasswordSuccess</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched when a password change is successful.</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:connection">connection</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched when the connection is successfully made to the server.</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:disconnection">disconnection</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched when there is a disconnection from the server.</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:error">error</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched when there is some type of XMPP error.</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:incomingData">incomingData</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched whenever there is incoming XML data.</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:login">login</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched on successful authentication (login) with the server.</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:message">message</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched on incoming messages.</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:outgoingData">outgoingData</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched whenever data is sent to the server.</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:presence">presence</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched on incoming presence data.</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:registrationSuccess">registrationSuccess</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched on when new user account registration is successful.</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+</table>
+</div>
+<a name="constantSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Constants</div>
+<table id="summaryTableConstant" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Constant</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#STREAM_TYPE_FLASH">STREAM_TYPE_FLASH</a> : uint = 2<div class="summaryTableDescription">[static]
+   Stream type lets user set opening/closing tag.</div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#STREAM_TYPE_FLASH_TERMINATED">STREAM_TYPE_FLASH_TERMINATED</a> : uint = 3<div class="summaryTableDescription">[static]
+   Stream type lets user set opening/closing tag.</div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#STREAM_TYPE_STANDARD">STREAM_TYPE_STANDARD</a> : uint = 0<div class="summaryTableDescription">[static]
+   Stream type lets user set opening/closing tag.</div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#STREAM_TYPE_STANDARD_TERMINATED">STREAM_TYPE_STANDARD_TERMINATED</a> : uint = 1<div class="summaryTableDescription">[static]
+   Stream type lets user set opening/closing tag.</div>
+</td><td class="summaryTableOwnerCol">XMPPConnection</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="propertyDetail"></a>
+<div class="detailSectionHeader">Property detail</div>
+<a name="active"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">active</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>active:Boolean</code>&nbsp;&nbsp;[read-write]<p>
+      </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;protected function get active():Boolean</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;protected function set active(value:Boolean):void</code>
+<br>
+</div>
+<a name="compress"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">compress</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>compress:Boolean</code>&nbsp;&nbsp;[read-write]<p>
+   Shall the zlib compression be allowed if the server supports it.
+   </p><p>The default value is <code>false</code>.</p>
+<span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get compress():Boolean</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set compress(value:Boolean):void</code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://xmpp.org/extensions/xep-0138.html" target="mm_external">http://xmpp.org/extensions/xep-0138.html</a>
+</div>
+</div>
+<a name="compressionNegotiated"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">compressionNegotiated</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var compressionNegotiated:Boolean = false</code><p>
+   True if both sides of the connected parties have accepted the zlib compression.
+   </p></div>
+<a name="_domain"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">_domain</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var _domain:String</code><p>
+   Domain of the user. Might differ from the one used in the connection.
+   </p></div>
+<a name="domain"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">domain</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>domain:String</code>&nbsp;&nbsp;[read-write]<p>
+   The XMPP domain to use with the server.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get domain():String</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set domain(value:String):void</code>
+<br>
+</div>
+<a name="ignoreWhiteSpace"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">ignoreWhiteSpace</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>ignoreWhiteSpace:Boolean</code>&nbsp;&nbsp;[read-write]<p>
+   Determines whether whitespace will be ignored on incoming XML data.
+   Behaves the same as <code>XML.ignoreWhitespace</code>
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get ignoreWhiteSpace():Boolean</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set ignoreWhiteSpace(value:Boolean):void</code>
+<br>
+</div>
+<a name="incomingBytes"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">incomingBytes</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>incomingBytes:uint</code>&nbsp;&nbsp;[read-only]<p>
+   Get the count of the received bytes.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get incomingBytes():uint</code>
+<br>
+</div>
+<a name="_incompleteRawXML"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">_incompleteRawXML</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var _incompleteRawXML:String = ""</code><p>
+   Save the previously received data if it was incomplete.
+   </p></div>
+<a name="jid"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">jid</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>jid:<a href="../core/UnescapedJID.html">UnescapedJID</a></code>&nbsp;&nbsp;[read-only]<p>
+   Gets the fully qualified unescaped JID of the user.
+   A fully-qualified JID includes the resource. A bare JID does not.
+   To get the bare JID, use the <code>bareJID</code> property of the UnescapedJID.
+      </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get jid():<a href="../core/UnescapedJID.html">UnescapedJID</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../core/UnescapedJID.html#bareJID" target="">org.igniterealtime.xiff.core.UnescapedJID.bareJID</a>
+</div>
+</div>
+<a name="_openConnections"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">_openConnections</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected static var _openConnections:Array</code><p>
+   Are there more than one connection at a time?
+   </p></div>
+<a name="openConnections"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">openConnections</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>openConnections:Array</code>&nbsp;&nbsp;[read-only]<p>
+      </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get openConnections():Array</code>
+<br>
+</div>
+<a name="outgoingBytes"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">outgoingBytes</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>outgoingBytes:uint</code>&nbsp;&nbsp;[read-only]<p>
+   Get the count of current bytes sent by this connection
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get outgoingBytes():uint</code>
+<br>
+</div>
+<a name="password"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">password</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>password:String</code>&nbsp;&nbsp;[read-write]<p>
+   The password to use when logging in.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get password():String</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set password(value:String):void</code>
+<br>
+</div>
+<a name="_port"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">_port</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var _port:uint = 5222</code><p>
+   </p><p>The default value is <code>5222</code>.</p>
+</div>
+<a name="port"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">port</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>port:uint</code>&nbsp;&nbsp;[read-write]<p>
+   The port to use when connecting. The default XMPP port is 5222.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get port():uint</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set port(value:uint):void</code>
+<br>
+</div>
+<a name="queuePresences"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">queuePresences</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>queuePresences:Boolean</code>&nbsp;&nbsp;[read-write]<p>
+   Should the connection queue presence events for a small interval so that it can send multiple in a batch?
+   </p><p>The default value is <code>true To maintain original behavior -- has to be explicitly set to false to disable.</code>.</p>
+<span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get queuePresences():Boolean</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set queuePresences(value:Boolean):void</code>
+<br>
+</div>
+<a name="_resource"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">_resource</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var _resource:String = "xiff"</code><p>
+   </p><p>The default value is <code>xiff</code>.</p>
+</div>
+<a name="resource"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">resource</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>resource:String</code>&nbsp;&nbsp;[read-write]<p>
+   The resource to use when logging in. A resource is required (defaults to "XIFF") and
+   allows a user to login using the same account simultaneously (most likely from multiple machines).
+   Typical examples of the resource include "Home" or "Office" to indicate the user's current location.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get resource():String</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set resource(value:String):void</code>
+<br>
+</div>
+<a name="saslMechanisms"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">saslMechanisms</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected static var saslMechanisms:Object</code><p>
+   The types of SASL mechanisms available.
+   </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../auth/Anonymous.html" target="">org.igniterealtime.xiff.auth.Anonymous</a>
+<br>
+<a href="../auth/DigestMD5.html" target="">org.igniterealtime.xiff.auth.DigestMD5</a>
+<br>
+<a href="../auth/External.html" target="">org.igniterealtime.xiff.auth.External</a>
+<br>
+<a href="../auth/Plain.html" target="">org.igniterealtime.xiff.auth.Plain</a>
+</div>
+</div>
+<a name="_server"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">_server</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var _server:String</code><p>
+   Server to connect, could be different of the login domain.
+   </p></div>
+<a name="server"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">server</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>server:String</code>&nbsp;&nbsp;[read-write]<p>
+   The XMPP server to use for connection.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get server():String</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set server(value:String):void</code>
+<br>
+</div>
+<a name="socket"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">socket</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var socket:Socket</code><p>
+   Binary socket used to connect to the XMPP server.
+   </p></div>
+<a name="_streamType"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">_streamType</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var _streamType:uint = 0</code><p>
+   One of the STREAM_TYPE_.. constants.
+   </p><p>The default value is <code>STREAM_TYPE_STANDARD</code>.</p>
+</div>
+<a name="useAnonymousLogin"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">useAnonymousLogin</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>useAnonymousLogin:Boolean</code>&nbsp;&nbsp;[read-write]<p>
+   Whether to use anonymous login or not.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get useAnonymousLogin():Boolean</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set useAnonymousLogin(value:Boolean):void</code>
+<br>
+</div>
+<a name="username"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">username</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>username:String</code>&nbsp;&nbsp;[read-write]<p>
+   The username to use for connection. If this property is null when <code>connect()</code> is called,
+   the class will fetch registration field data rather than attempt to login.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get username():String</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set username(value:String):void</code>
+<br>
+</div>
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor detail</div>
+<a name="XMPPConnection()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">XMPPConnection</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function XMPPConnection()</code><p>
+      </p></div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="changePassword()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">changePassword</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function changePassword(newPassword:String):void</code><p>
+   Changes the user's account password on the server. If the password change is successful,
+   the class will broadcast a <code>ChangePasswordSuccessEvent.PASSWORD_SUCCESS</code> event.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">newPassword</span>:String</code> &mdash; The new password
+   </td>
+</tr>
+</table>
+</div>
+<a name="changePassword_result()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">changePassword_result</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function changePassword_result(resultIQ:<a href="../data/IQ.html">IQ</a>):void</code><p>
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">resultIQ</span>:<a href="../data/IQ.html">IQ</a></code></td>
+</tr>
+</table>
+</div>
+<a name="chooseStreamTags()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">chooseStreamTags</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function chooseStreamTags(type:uint):void</code><p>
+   Choose the stream start and ending tags based on the given type.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">type</span>:uint</code> &mdash; One of the <code>STREAM_TYPE_...</code> constants of this class.
+   </td>
+</tr>
+</table>
+</div>
+<a name="configureAuthMechanisms()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">configureAuthMechanisms</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function configureAuthMechanisms(mechanisms:XMLNode):void</code><p>
+   Use the authentication which is first in the list (saslMechanisms) if possible.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">mechanisms</span>:XMLNode</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../core/XMPPConnection.html#saslMechanisms" target="">saslMechanisms</a>
+</div>
+</div>
+<a name="configureStreamCompression()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">configureStreamCompression</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function configureStreamCompression():void</code><p>
+   Ask the server to enable Zlib compression of the stream.
+   </p></div>
+<a name="connect()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">connect</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function connect(streamType:uint = 0):Boolean</code><p>
+   Connects to the server. Use one of the STREAM_TYPE_.. constants.
+   Possible options are:
+   <ul>
+   <li>standard (default)</li>
+   <li>standard terminated</li>
+   <li>flash</li>
+   <li>flash terminated</li>
+   </ul>
+   Some servers, like Jabber, Inc.'s XCP and Jabberd 1.4 expect &lt;flash:stream&gt; from
+   a Flash client instead of the standard &lt;stream:stream&gt;.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">streamType</span>:uint</code> (default = <code>0</code>)<code></code> &mdash; Any of the STREAM_TYPE_.. constants.
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Boolean</code> &mdash; A boolean indicating whether the server was found.
+   </td>
+</tr>
+</table>
+</div>
+<a name="createSocket()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">createSocket</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function createSocket():void</code><p>
+   </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">flash.net.Socket</div>
+</div>
+<a name="disableSASLMechanism()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">disableSASLMechanism</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function disableSASLMechanism(name:String):void</code><p>
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">name</span>:String</code></td>
+</tr>
+</table>
+</div>
+<a name="disconnect()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">disconnect</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function disconnect():void</code><p>
+   Disconnects from the server if currently connected. After disconnect,
+   a <code>DisconnectionEvent.DISCONNECT</code> event is broadcast.
+   </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../events/DisconnectionEvent.html" target="">org.igniterealtime.xiff.events.DisconnectionEvent</a>
+</div>
+</div>
+<a name="flushPresenceQueue()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">flushPresenceQueue</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function flushPresenceQueue(event:TimerEvent):void</code><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">event</span>:TimerEvent</code></td>
+</tr>
+</table>
+</div>
+<a name="getRegistrationFields()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getRegistrationFields</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getRegistrationFields():void</code><p>
+   Issues a request for the information that must be submitted for registration with the server.
+   When the data returns, a <code>RegistrationFieldsEvent.REG_FIELDS</code> event is dispatched
+   containing the requested data.
+   </p></div>
+<a name="getRegistrationFields_result()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getRegistrationFields_result</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function getRegistrationFields_result(resultIQ:<a href="../data/IQ.html">IQ</a>):void</code><p>
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">resultIQ</span>:<a href="../data/IQ.html">IQ</a></code></td>
+</tr>
+</table>
+</div>
+<a name="handleBindError()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">handleBindError</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function handleBindError(packet:<a href="../data/IQ.html">IQ</a>):void</code><p>
+   Error handler callback
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">packet</span>:<a href="../data/IQ.html">IQ</a></code></td>
+</tr>
+</table>
+</div>
+<a name="handleNodeType()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">handleNodeType</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function handleNodeType(node:XMLNode):void</code><p>
+   Calls a appropriate parser base on the nodeName.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">node</span>:XMLNode</code></td>
+</tr>
+</table>
+</div>
+<a name="handleStreamFeatures()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">handleStreamFeatures</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function handleStreamFeatures(node:XMLNode):void</code><p>
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">node</span>:XMLNode</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://xmpp.org/registrar/stream-features.html" target="mm_external">http://xmpp.org/registrar/stream-features.html</a>
+</div>
+</div>
+<a name="handleStreamTLS()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">handleStreamTLS</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function handleStreamTLS(node:XMLNode):void</code><p>
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">node</span>:XMLNode</code> &mdash; The feature containing starttls tag.
+   </td>
+</tr>
+</table>
+</div>
+<a name="isActive()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">isActive</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function isActive():Boolean</code><p>
+   Determines whether the connection with the server is currently active. (Not necessarily logged in.
+   For login status, use the <code>isLoggedIn()</code> method.)
+      </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Boolean</code> &mdash; A boolean indicating whether the connection is active.
+   </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../core/XMPPConnection.html#isLoggedIn" target="">org.igniterealtime.xiff.core.XMPPConnection.isLoggedIn</a>
+</div>
+</div>
+<a name="isLoggedIn()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">isLoggedIn</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function isLoggedIn():Boolean</code><p>
+   Determines whether the user is connected and logged into the server.
+      </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Boolean</code> &mdash; A boolean indicating whether the user is logged in.
+   </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../core/XMPPConnection.html#isActive" target="">org.igniterealtime.xiff.core.XMPPConnection.isActive</a>
+</div>
+</div>
+<a name="parseDataReceived()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">parseDataReceived</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function parseDataReceived(bytedata:ByteArray):void</code><p>
+   Parses the data which the socket just received.
+   Used to simplify the overrides from classes extending this one.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">bytedata</span>:ByteArray</code></td>
+</tr>
+</table>
+</div>
+<a name="registerSASLMechanism()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">registerSASLMechanism</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function registerSASLMechanism(name:String, authClass:Class):void</code><p>
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">name</span>:String</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">authClass</span>:Class</code></td>
+</tr>
+</table>
+</div>
+<a name="send()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">send</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function send(o:<a href="../data/XMPPStanza.html">XMPPStanza</a>):void</code><p>
+   Sends data to the server. If the data to send cannot be serialized properly,
+   this method throws a <code>SerializeException</code>.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">o</span>:<a href="../data/XMPPStanza.html">XMPPStanza</a></code> &mdash; The data to send. This must be an instance of a class that implements the ISerializable interface.
+   </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../data/ISerializable.html" target="">org.igniterealtime.xiff.data.ISerializable</a>
+</div>
+<br>
+<span class="label">Example</span>
+<br>The following example sends a basic chat message to the user with the
+   JID "sideshowbob<p></p>
+</div>
+<a name="sendKeepAlive()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">sendKeepAlive</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function sendKeepAlive():void</code><p>
+   Sends ping to server in order to keep the connection alive.
+   </p></div>
+<a name="sendRegistrationFields()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">sendRegistrationFields</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function sendRegistrationFields(fieldMap:Object, key:String):void</code><p>
+   Registers a new account with the server, sending the registration data as specified in the fieldMap</p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">fieldMap</span>:Object</code> &mdash; An object map containing the data to use for registration. The map should be composed of
+   attribute:value pairs for each registration data item.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">key</span>:String</code> &mdash; (Optional) If a key was passed in the "data" field of the "registrationFields" event,
+   that key must also be passed here.
+   required field needed for registration.
+   </td>
+</tr>
+</table>
+</div>
+<a name="sendXML()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">sendXML</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function sendXML(someData:*):void</code><p>
+   Data is untyped because it could be a string or XML.
+   TODO: Accept only XML.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">someData</span>:*</code></td>
+</tr>
+</table>
+</div>
+<a name="socketClosed()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">socketClosed</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function socketClosed(event:Event):void</code><p>
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">event</span>:Event</code></td>
+</tr>
+</table>
+</div>
+<a name="socketConnected()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">socketConnected</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function socketConnected(event:Event):void</code><p>
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">event</span>:Event</code></td>
+</tr>
+</table>
+</div>
+<a name="socketDataReceived()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">socketDataReceived</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function socketDataReceived(event:ProgressEvent):void</code><p>
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">event</span>:ProgressEvent</code></td>
+</tr>
+</table>
+</div>
+<div class="detailSectionHeader">Event detail</div>
+<a name="event:changePasswordSuccess"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">changePasswordSuccess</td><td class="detailHeaderType">event&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/ChangePasswordSuccessEvent.html"><code>org.igniterealtime.xiff.events.ChangePasswordSuccessEvent</code></a>
+<br>
+<p></p><p>
+  Dispatched when a password change is successful.
+    </p></div>
+<a name="event:connection"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">connection</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/ConnectionSuccessEvent.html"><code>org.igniterealtime.xiff.events.ConnectionSuccessEvent</code></a>
+<br>
+<p></p><p>
+  Dispatched when the connection is successfully made to the server.
+    </p></div>
+<a name="event:disconnection"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">disconnection</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/DisconnectionEvent.html"><code>org.igniterealtime.xiff.events.DisconnectionEvent</code></a>
+<br>
+<p></p><p>
+  Dispatched when there is a disconnection from the server.
+    </p></div>
+<a name="event:error"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">error</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/XIFFErrorEvent.html"><code>org.igniterealtime.xiff.events.XIFFErrorEvent</code></a>
+<br>
+<p></p><p>
+  Dispatched when there is some type of XMPP error.
+    </p></div>
+<a name="event:incomingData"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">incomingData</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/IncomingDataEvent.html"><code>org.igniterealtime.xiff.events.IncomingDataEvent</code></a>
+<br>
+<p></p><p>
+  Dispatched whenever there is incoming XML data.
+    </p></div>
+<a name="event:login"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">login</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/LoginEvent.html"><code>org.igniterealtime.xiff.events.LoginEvent</code></a>
+<br>
+<p></p><p>
+  Dispatched on successful authentication (login) with the server.
+    </p></div>
+<a name="event:message"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">message</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/MessageEvent.html"><code>org.igniterealtime.xiff.events.MessageEvent</code></a>
+<br>
+<p></p><p>
+  Dispatched on incoming messages.
+    </p></div>
+<a name="event:outgoingData"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">outgoingData</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/OutgoingDataEvent.html"><code>org.igniterealtime.xiff.events.OutgoingDataEvent</code></a>
+<br>
+<p></p><p>
+  Dispatched whenever data is sent to the server.
+    </p></div>
+<a name="event:presence"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">presence</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/PresenceEvent.html"><code>org.igniterealtime.xiff.events.PresenceEvent</code></a>
+<br>
+<p></p><p>
+  Dispatched on incoming presence data.
+    </p></div>
+<a name="event:registrationSuccess"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">registrationSuccess</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/RegistrationSuccessEvent.html"><code>org.igniterealtime.xiff.events.RegistrationSuccessEvent</code></a>
+<br>
+<p></p><p>
+  Dispatched on when new user account registration is successful.
+    </p></div>
+<a name="constantDetail"></a>
+<div class="detailSectionHeader">Constant detail</div>
+<a name="STREAM_TYPE_FLASH"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">STREAM_TYPE_FLASH</td><td class="detailHeaderType">constant</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const STREAM_TYPE_FLASH:uint = 2</code><p>
+   Stream type lets user set opening/closing tag.
+   <code>&lt;flash:stream&gt;</code>
+   </p></div>
+<a name="STREAM_TYPE_FLASH_TERMINATED"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">STREAM_TYPE_FLASH_TERMINATED</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const STREAM_TYPE_FLASH_TERMINATED:uint = 3</code><p>
+   Stream type lets user set opening/closing tag.
+   <code>&lt;flash:stream /&gt;</code>
+   </p></div>
+<a name="STREAM_TYPE_STANDARD"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">STREAM_TYPE_STANDARD</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const STREAM_TYPE_STANDARD:uint = 0</code><p>
+   Stream type lets user set opening/closing tag.
+   <code>&lt;stream:stream&gt;</code>
+   </p></div>
+<a name="STREAM_TYPE_STANDARD_TERMINATED"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">STREAM_TYPE_STANDARD_TERMINATED</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const STREAM_TYPE_STANDARD_TERMINATED:uint = 1</code><p>
+   Stream type lets user set opening/closing tag.
+   <code>&lt;stream:stream /&gt;</code>
+   </p></div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> 
+</center>
+</div>
+</body>
+</html>
+<!-- -->

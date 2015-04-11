@@ -1,0 +1,12 @@
+{application, xlab_fun_share,
+ [
+  {description, "shared function for any modules"},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [kernel,stdlib]},
+%% Ключ mod определяет модуль обратного вызова и начальный аргумент приложения
+%%   {mod, { xlab_res_loc_app, []}},
+%% он отпилен значит в аппликухе ничего стартовать не будет и будут шариться функции в нутри модулей определнных далее
+ {modules, [etanks_fun]},
+  {env, []}
+ ]}.

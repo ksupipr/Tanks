@@ -1,0 +1,10 @@
+{application,etanks,
+             [{description,"Elrlang server for Tanks 2"},
+              {vsn,[]},
+              {registered,[]},
+              {applications,[kernel,stdlib,sasl,gproc,xlab_db,efcgi_client]},
+              {modules,[etanks_app,etanks_auth,etanks_mods,etanks_mods_fun,
+                        etanks_mods_info,etanks_profile,etanks_result,
+                        etanks_subscriber,etanks_sup]},
+              {mod,{etanks_app,[]}},
+              {env,[]}]}.

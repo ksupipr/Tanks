@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<mx:VBox
+	xmlns:mx="http://www.adobe.com/2006/mxml"
+	height="100%"
+	horizontalScrollPolicy="off">
+		
+	<mx:Script>
+		<![CDATA[
+			import com.api.forticom.SignUtil;
+			import mx.controls.Alert;
+			
+			protected function sendNotification() : void
+			{
+				var item : Object = { };
+					item['type'] = "user_to_user";
+					item['to_ids'] = this.uidText.text;
+					item['method'] = "notifications.send";
+					item['notification'] = NotificationField.text;
+					
+				this.sendNotificationId.send(SignUtil.signRequest(item));
+			}
+			
+			protected function handleSave(data : XML) : void
+			{
+				if(data.uid[0] == this.data.uid)
+				{
+					Alert.show("Save succesfull", "Save status");
+				}
+				else
+				{
+					Alert.show("Save failed :(", "Save status");
+				}
+			}
+			
+			protected function getOnlineData(type : String) : void
+			{
+				var request : Object = { };
+				request["method"] = "friends.getOnline";
+				// request["uid"] = this.data.uid;
+				request["online"] = type;
+				
+				this.getOnline.send(SignUtil.signRequest(request));
+			}
+			
+			protected function handleOnlineData(data : XML) : void
+			{
+				Alert.show(data.toXMLString(), "friends.getOnline");
+			}
+			
+			protected function getBirthdays(future : Boolean = false) : void
+			{
+				var request : Object = { };
+				// request["uid"] = this.data.uid;
+				request["method"] = "friends.getBirthdays";
+				request["future"] = future.toString();
+				
+				this.getBirth.send(SignUtil.signRequest(request));
+			}
+			
+			protected function handleData(data : XML) : void
+			{
+				Alert.show(data.toXMLString(), "friends.getBirthdays");
+			}
+		]]>
+	</mx:Script>
+		
+	<mx:Form>
+		<mx:FormHeading label="Send notification to user:" />
+		<mx:FormItem label="User id:">
+			<mx:TextInput id="uidText" text="{data.uid}"/>
+		</mx:FormItem>
+		<mx:FormItem label="Notification:">
+			<mx:TextArea id="NotificationField" text="" />
+		</mx:FormItem>
+		<mx:FormItem>
+			<mx:Button label="send" click="{sendNotification();}" />
+		</mx:FormItem>
+	</mx:Form>
+	<mx:Spacer height="50" />
+	<mx:Label text="friends.getBirthdays"  fontWeight="bold"/>
+	<mx:HBox>
+		<mx:Button label="simple" click="{this.getBirthdays();}" />
+		<mx:Button label="future" click="this.getBirthdays(true);" />
+	</mx:HBox>
+	<mx:Label text="friends.getOnline"  fontWeight="bold"/>
+	<mx:HBox>
+		<mx:Button label="web" click="{this.getOnlineData('web');}" />
+		<mx:Button label="wap" click="{this.getOnlineData('wap');}" />
+		<mx:Button label="mobile" click="{this.getOnlineData('mobile');}" />
+	</mx:HBox>
+	
+	<mx:HTTPService
+		id="sendNotificationId"
+		url="{this.parentApplication._dataURL}"
+		method="GET"
+		resultFormat="e4x"
+		result="this.handleSave(sendNotificationId.lastResult as XML);"
+	/>
+	
+	<mx:HTTPService
+		id="getBirth"
+		url="{this.parentApplication._dataURL}"
+		method="GET"
+		resultFormat="e4x"
+		result="this.handleData(getBirth.lastResult as XML);"
+		/>
+	<mx:HTTPService
+		id="getOnline"
+		url="{this.parentApplication._dataURL}"
+		method="GET"
+		resultFormat="e4x"
+		result="this.handleOnlineData(getOnline.lastResult as XML);"
+		/>
+	
+</mx:VBox>

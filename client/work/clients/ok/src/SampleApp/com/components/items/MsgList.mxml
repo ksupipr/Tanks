@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:VBox xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100%" verticalScrollPolicy="auto" xmlns:items="com.components.items.*">
+	
+	<mx:Metadata>
+		[Event(name="select", type="flash.events.DataEvent")]
+	</mx:Metadata>
+	
+	<mx:Script>
+		<![CDATA[
+			
+			protected function handleClick(obj : Object) : void
+			{
+				this.dispatchEvent(new DataEvent("select", false, false, obj.data.msg_id));
+			}
+			
+		]]>
+	</mx:Script>
+	
+	<mx:Repeater id="rep" dataProvider="{this.data}">
+		<items:MsgListItem data="{rep.currentItem}" click="this.handleClick(event.target);" />
+	</mx:Repeater>
+</mx:VBox>

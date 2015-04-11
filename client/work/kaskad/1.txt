@@ -1,0 +1,8 @@
+colors
+
+0xB5FEA5 ready
+0xFF9933 go
+0xEAC195 close
+
+["ter"+i]
+["front"+i]
